@@ -1,0 +1,7 @@
+parameter,mean,sd,eti89_lb,eti89_ub,ess_bulk,ess_tail,r_hat
+Intercept,-1.93,0.246,-2.3,-1.5,2036,2003,1.00
+fin_has_credit_line,0.33,0.097,0.18,0.49,2117,2137,1.00
+sbfn_member,-0.57,0.300,-1.00,-0.091,797,1186,1.01
+fin_has_credit_line:sbfn_member,0.072,0.211,-0.26,0.40,1894,1994,1.00
+wgi_rq_z,0.344,0.116,0.16,0.53,932,1273,1.00
+fin_has_credit_line:wgi_rq_z,0.004,0.087,-0.13,0.14,2270,2325,1.00

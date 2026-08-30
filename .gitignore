@@ -216,3 +216,27 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project: raw research data (large, not for git)
+raw_data/
+*.zip
+data/processed/*.dta
+data/processed/*.parquet
+data/processed/*.pkl
+data/processed/*.joblib
+output/*.pdf
+
+# Copyrighted reference articles (shared for style reference only, not ours to redistribute)
+1-s2.0-*.pdf
+
+# LaTeX build artifacts
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*_log*.txt
+latex/*.fls
+latex/*.fdb_latexmk
+latex/*.synctex.gz

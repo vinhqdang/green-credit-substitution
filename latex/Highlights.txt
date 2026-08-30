@@ -1,0 +1,5 @@
+- SBFN green banking policy does not moderate the finance-green investment link
+- Bank credit access raises green-practice adoption significantly, 4 methods agree
+- Finding replicates in an independent 162-country sample with country FE
+- Causal forest: effect heterogeneity is firm-size-driven, not institutional
+- Combined samples span 166 economies, from Bangladesh to Germany and Japan

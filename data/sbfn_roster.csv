@@ -1,0 +1,71 @@
+member_name,region,join_year,notes
+Angola,Africa,2024,
+Central African Republic,Africa,2022,"Covered via ""Central African States"" regional entry -- assumed to represent the BEAC/CEMAC zone bank supervisors (Cameroon, CAR, Chad, Congo, Equatorial Guinea, Gabon); flagged as an inference, not an explicit per-country SBFN listing"
+Cameroon,Africa,2022,"See Central African Republic note -- same regional inference"
+Chad,Africa,2022,"See Central African Republic note -- same regional inference"
+Congo,Africa,2022,"See Central African Republic note -- same regional inference"
+Equatorial Guinea,Africa,2022,"See Central African Republic note -- same regional inference"
+Gabon,Africa,2022,"See Central African Republic note -- same regional inference"
+Ghana,Africa,2016,
+Kenya,Africa,2015,
+Nigeria,Africa,2012,
+South Africa,Africa,2016,
+Tanzania,Africa,2023,
+Zambia,Africa,2023,
+Cambodia,East Asia and Pacific,2016,
+China,East Asia and Pacific,2012,
+Fiji,East Asia and Pacific,2017,
+Indonesia,East Asia and Pacific,2012,
+Lao PDR,East Asia and Pacific,2012,
+Mongolia,East Asia and Pacific,2012,
+Papua New Guinea,East Asia and Pacific,2024,
+Philippines,East Asia and Pacific,2013,
+Samoa,East Asia and Pacific,2019,
+Thailand,East Asia and Pacific,2012,
+Viet Nam,East Asia and Pacific,2012,
+Vietnam,East Asia and Pacific,2012,"alias for Viet Nam"
+Albania,Europe and Central Asia,2024,
+Armenia,Europe and Central Asia,2021,
+Azerbaijan,Europe and Central Asia,2022,
+Bosnia and Herzegovina,Europe and Central Asia,2024,
+Georgia,Europe and Central Asia,2017,
+Kazakhstan,Europe and Central Asia,2021,
+Kosovo,Europe and Central Asia,2022,
+Kyrgyz Republic,Europe and Central Asia,2018,
+Moldova,Europe and Central Asia,2023,
+Montenegro,Europe and Central Asia,2024,
+North Macedonia,Europe and Central Asia,2024,
+Serbia,Europe and Central Asia,2020,
+Tajikistan,Europe and Central Asia,2023,
+Turkiye,Europe and Central Asia,2015,
+Türkiye,Europe and Central Asia,2015,"alias"
+Ukraine,Europe and Central Asia,2020,
+Argentina,Latin America and Caribbean,2016,
+Brazil,Latin America and Caribbean,2012,
+Chile,Latin America and Caribbean,2023,
+Colombia,Latin America and Caribbean,2012,
+Costa Rica,Latin America and Caribbean,2019,
+Dominican Republic,Latin America and Caribbean,2017,
+Antigua and Barbuda,Latin America and Caribbean,2021,"Covered via ""Eastern Caribbean States"" regional entry -- assumed to represent the Eastern Caribbean Central Bank (ECCB) member states; flagged as an inference"
+Grenada,Latin America and Caribbean,2021,"See Antigua and Barbuda note -- same regional inference"
+St. Lucia,Latin America and Caribbean,2021,"See Antigua and Barbuda note -- same regional inference"
+St. Vincent and the Grenadines,Latin America and Caribbean,2021,"See Antigua and Barbuda note -- same regional inference"
+Ecuador,Latin America and Caribbean,2016,
+Guatemala,Latin America and Caribbean,2021,
+Honduras,Latin America and Caribbean,2015,
+Jamaica,Latin America and Caribbean,2022,
+Mexico,Latin America and Caribbean,2016,
+Panama,Latin America and Caribbean,2017,
+Paraguay,Latin America and Caribbean,2015,
+Peru,Latin America and Caribbean,2013,
+Egypt,Middle East and North Africa,2016,
+Iraq,Middle East and North Africa,2019,
+Jordan,Middle East and North Africa,2016,
+Morocco,Middle East and North Africa,2014,
+Tunisia,Middle East and North Africa,2019,
+Bangladesh,South Asia,2012,
+India,South Asia,2016,
+Maldives,South Asia,2021,
+Nepal,South Asia,2014,
+Pakistan,South Asia,2015,
+Sri Lanka,South Asia,2016,

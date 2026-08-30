@@ -1,0 +1,13 @@
+estimate,value,ci_low,ci_high,n
+Overall ATE,0.0733,-0.0396,0.1862,23914
+CATE | SBFN non-member,0.0723,-0.0300,0.1746,16863
+CATE | SBFN member,0.0758,-0.0591,0.2107,7051
+CATE | regulatory quality tercile: low,0.0753,-0.0568,0.2075,8562
+CATE | regulatory quality tercile: mid,0.0697,-0.0355,0.1749,7995
+CATE | regulatory quality tercile: high,0.0749,-0.0203,0.1701,7357
+
+feature,importance
+sbfn_member,0.0257
+wgi_regulatory_quality,0.1993
+log_sales,0.7562
+exporter_dummy,0.0189

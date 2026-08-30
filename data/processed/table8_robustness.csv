@@ -1,0 +1,6 @@
+specification,outcome,finance_measure,coef_finance,p_finance,coef_sbfn,p_sbfn,coef_interaction,p_interaction,n,n_countries
+(a) Continuous index OLS,green_adoption_index,fin_has_credit_line,0.0528,0.000,-0.0924,0.000,0.0064,0.739,23212,41
+(b1) Overdraft,green_adoption_binary,fin_has_overdraft,0.2741,0.011,-0.9053,0.000,-0.3458,0.031,23212,41
+(b2) Finance obstacle (reverse-coded),green_adoption_binary,fin_access_ease,-0.0099,0.827,-1.0110,0.000,-0.0119,0.849,23212,41
+(c1) Manufacturing subsample,green_adoption_binary,fin_has_credit_line,0.4796,0.000,-1.0471,0.000,-0.0401,0.826,13340,41
+(c2) Services subsample,green_adoption_binary,fin_has_credit_line,0.4482,0.000,-0.9141,0.001,0.1946,0.426,9538,41
