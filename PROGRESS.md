@@ -154,6 +154,33 @@ the existing gap:
   guest editors credit this as meeting their stated bar is still their call, but the paper's actual
   identification-strategy portfolio is now substantively stronger, not just better-argued.
 
+## Third review pass (2026-09, round 3) and fixes applied
+
+A third review (`output/review_cfp_fit_2026-09_v3.md`) re-verified the round-2 table-numbering fix
+holds under the new Section 6 (recompiled fresh and re-checked `manuscript.aux` directly rather than
+trusting the change log) and independently re-swept the whole manuscript for code/file-language leakage
+(clean). It then critiqued Section 6 on its own merits and raised two findings, both since fixed:
+
+- **Terminology imprecision (fixed).** The Discussion and Conclusion each described Section 6's result
+  as "the null on institutional moderation," but Section 6 tests a main effect (does adoption shift a
+  country outcome), not a moderation effect (does adoption change a firm-level slope, what H2/H3
+  actually test) -- a real conflation risk in exactly the two places a guest editor is likely to read
+  closely. Fixed in both spots: replaced with "the absence of a beneficial institutional effect" plus an
+  explicit sentence distinguishing the two claims.
+- **Missing control-group robustness check (fixed, not just disclosed).** Section 6 originally reported
+  only the `never_treated` comparison group; re-ran the doubly-robust specification for both outcomes
+  with `not_yet_treated` as well (`src/run_macro_event_study.py` updated to run both and rebuild Table
+  11 with all 8 rows). Both outcomes are essentially unchanged under the alternative control group
+  (CO2: 0.313 vs. 0.349, both significant; renewables: 0.653 vs. 0.674, neither significant) -- genuine
+  confirmation the result doesn't hinge on that choice, not an assumption.
+- Also lightly varied one instance of a "we are not spinning this into X or Y" rhetorical pattern that
+  had started to repeat across the paper (round 3's B3, minor polish).
+- Round 3's upgraded verdict: **good fit, contingent on the terminology fix** -- now applied. Round 1's
+  CRITICAL identification-strategy finding is resolved, not just better-disclosed.
+
+Recompiled and re-verified (pdflatex + bibtex, no undefined references, table renders within margins,
+75 pages). `manuscript/*.md` kept in sync.
+
 ## Pending
 
 - **Waiting on reply from the managing editor (Jan-Egbert Sturm, sturm@kof.ethz.ch) regarding

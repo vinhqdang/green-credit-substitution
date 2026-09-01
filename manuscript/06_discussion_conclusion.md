@@ -28,8 +28,12 @@ methodological guidance asks for. That it too finds no clean evidence of a benef
 effect (a precise null on renewable-energy share, and a positive CO2 association that shrinks
 substantially under a development-stage control and whose dynamics look more like pre-existing
 divergence than a policy-caused shift) is, we think, the single hardest-to-dismiss piece of evidence in
-the paper that the null on institutional moderation is a real feature of how SBFN adoption relates to
-environmental outcomes, not an artefact of the firm-level data's own identification limits.
+the paper that the absence of a beneficial institutional effect is a real feature of how SBFN adoption
+relates to environmental outcomes, not an artefact of the firm-level data's own identification limits.
+This is a distinct claim from H2/H3's moderation null — Section 6 tests whether adoption itself shifts
+a country outcome, not whether it changes a firm-level slope — but it is evidence of the same kind:
+another design, at another level, finding nothing supportive of the policy working as its own
+institutional design intends.
 
 This is worth dwelling on precisely because it complicates rather than confirms the implicit
 premise of much of the existing green-credit-policy literature, which is disproportionately built on
@@ -158,9 +162,11 @@ measured with a different outcome item, and identified under a materially sharpe
 strategy. Fifth, and most importantly for the paper's overall credibility, an entirely independent
 country-level staggered event-study (Section 6), built specifically to supply the adoption-timing
 identification strategy the firm-level data cannot, likewise finds no clean evidence that SBFN
-adoption improves aggregate environmental outcomes — the single strongest piece of evidence in the
-paper that the null on institutional moderation is a real feature of how this policy relates to
-outcomes rather than an artefact of any one sample, data source, level of analysis, or estimator.
+adoption improves aggregate environmental outcomes — a different claim from the firm-level moderation
+null in results First-Fourth (a main effect at country level, not a slope change at firm level), but
+the single strongest piece of evidence in the paper that the absence of a beneficial institutional
+effect is a real feature of how this policy relates to outcomes rather than an artefact of any one
+sample, data source, level of analysis, or estimator.
 
 For policy, the implication is not that green banking guidelines are ineffective, but that our
 evidence does not support treating them as an effective lever specifically for widening the gap in

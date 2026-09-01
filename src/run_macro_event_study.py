@@ -3,8 +3,10 @@ Callaway & Sant'Anna (2021) staggered-adoption event study of SBFN
 membership on country-level macro environmental outcomes (renewable-energy
 share, CO2 emissions per capita), with and without a log-GDP-per-capita
 control, plus a naive two-way-fixed-effects comparison illustrating the
-staggered-timing bias the CS estimator avoids. Produces Table 11 (summary)
-and Figure 6 (event-study plot, GDP-controlled specification).
+staggered-timing bias the CS estimator avoids, and a not-yet-treated
+comparison-group robustness check for the doubly-robust specification.
+Produces Table 11 (summary) and Figure 6 (event-study plot, GDP-controlled,
+never-treated specification).
 
 Requires: pandas, numpy, requests, statsmodels, matplotlib, differences==0.3.0
 (a separate virtual environment is recommended -- these pin newer pandas/numpy
@@ -34,12 +36,12 @@ df["log_gdppc"] = np.log(df["gdppc"])
 print(f"Panel: {df['iso3'].nunique()} countries x {df['year'].nunique()} years = {len(df)} rows")
 
 
-def run_cs(outcome, formula, est_method, tag):
+def run_cs(outcome, formula, est_method, tag, control_group="never_treated"):
     sub = df.dropna(subset=[c for c in [outcome] + (["log_gdppc"] if "log_gdppc" in formula else []) if c]).copy()
     sub["cohort"] = sub["join_year"]  # NaN = never treated (required convention)
     sub = sub.set_index(["iso3", "year"])
     att_gt = ATTgt(data=sub, cohort_column="cohort")
-    att_gt.fit(formula=formula, control_group="never_treated", est_method=est_method,
+    att_gt.fit(formula=formula, control_group=control_group, est_method=est_method,
                boot_iterations=999, random_state=42, progress_bar=False)
     simple = att_gt.aggregate("simple")
     event = att_gt.aggregate("event")
@@ -53,6 +55,11 @@ run_cs("renew_pct", "renew_pct", "reg", "renew_pct")
 run_cs("co2_pc", "co2_pc", "reg", "co2_pc")
 run_cs("co2_pc", "co2_pc ~ log_gdppc", "dr", "co2_pc_gdpctrl")
 run_cs("renew_pct", "renew_pct ~ log_gdppc", "dr", "renew_pct_gdpctrl")
+# Robustness: not-yet-treated comparison group (vs. the never-treated default
+# above), doubly-robust specification only -- addresses the completeness gap
+# flagged in the third review pass (output/review_cfp_fit_2026-09_v3.md, B2).
+run_cs("co2_pc", "co2_pc ~ log_gdppc", "dr", "co2_pc_gdpctrl_notyet", control_group="not_yet_treated")
+run_cs("renew_pct", "renew_pct ~ log_gdppc", "dr", "renew_pct_gdpctrl_notyet", control_group="not_yet_treated")
 
 # --- Naive TWFE comparison (known to be biased under staggered adoption when
 #     already-treated units serve as controls for later-treated ones) ---
@@ -82,7 +89,10 @@ for outcome, label in [("renew_pct", "Renewable energy % (WDI EG.FEC.RNEW.ZS)"),
     summary.append({"outcome": label, "specification": "Callaway-Sant'Anna, no covariates",
                      "att": att, "se": se, "ci_low": lo, "ci_high": hi, "sig_5pct": sig})
     att, se, lo, hi, sig = read_simple_att(f"data/processed/macro_did_simple_att_{outcome}_gdpctrl.csv")
-    summary.append({"outcome": label, "specification": "Callaway-Sant'Anna, doubly-robust, log GDP p.c. control",
+    summary.append({"outcome": label, "specification": "Callaway-Sant'Anna, doubly-robust, log GDP p.c. control (never-treated)",
+                     "att": att, "se": se, "ci_low": lo, "ci_high": hi, "sig_5pct": sig})
+    att, se, lo, hi, sig = read_simple_att(f"data/processed/macro_did_simple_att_{outcome}_gdpctrl_notyet.csv")
+    summary.append({"outcome": label, "specification": "Callaway-Sant'Anna, doubly-robust, log GDP p.c. control (not-yet-treated)",
                      "att": att, "se": se, "ci_low": lo, "ci_high": hi, "sig_5pct": sig})
     with open(f"data/processed/macro_did_naive_twfe_{outcome}.txt") as f:
         d = dict(line.strip().split("=") for line in f if line.strip())
