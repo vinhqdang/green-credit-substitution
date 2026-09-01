@@ -159,8 +159,8 @@ Because the overdraft interaction (the one coefficient in the paper that clears 
 significance threshold) is one of many credit x institutional-moderator tests reported across the
 frequentist specifications in this paper, we additionally apply a Benjamini-Hochberg
 false-discovery-rate correction across the full family of 13 such coefficients reported under a
-classical (non-Bayesian, non-forest) estimator in Tables 4, 8, and 9 (Table 10; script and output in
-the replication package). The overdraft interaction's raw p = 0.031 becomes p = 0.403 after
+classical (non-Bayesian, non-forest) estimator in Tables 4, 8, and 9 (Table 10; full calculation
+reported in the replication package). The overdraft interaction's raw p = 0.031 becomes p = 0.403 after
 correction, and no coefficient in the family survives at a false discovery rate of 0.10 or even
 0.40. We read this as reinforcing, with a formal multiple-testing accounting rather than only a
 qualitative caveat, the suggestive-not-conclusive framing we already give this result in Section 6:

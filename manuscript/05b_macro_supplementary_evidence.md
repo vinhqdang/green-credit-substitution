@@ -21,10 +21,10 @@ economies); economies that have never joined SBFN, as of
 the roster's most recent update, serve as the never-treated comparison group. This yields 68
 ever-treated economies (join years 2012-2024, the same real staggered-adoption variation described in
 Section 2) and 149 never-treated economies. Outcome data come from the World Bank's World Development
-Indicators, fetched via its public API: renewable energy consumption (% of total final energy
+Indicators, retrieved via the World Bank DataBank API: renewable energy consumption (% of total final energy
 consumption, `EG.FEC.RNEW.ZS`) and CO2 emissions per capita (AR5 GWP-consistent series,
 `EN.GHG.CO2.PC.CE.AR5`), both available for the large majority of economies from 2000 through at least
-2021-2024. We additionally fetch GDP per capita (constant 2015 US$, `NY.GDP.PCAP.KD`) as a covariate, to
+2021-2024. We additionally draw on GDP per capita (constant 2015 US$, `NY.GDP.PCAP.KD`) as a covariate, to
 net out the obvious confound that SBFN-adopting economies are disproportionately still-industrializing,
 faster-growing economies whose emissions profiles are shaped by their development stage independently
 of any banking-sector policy.
