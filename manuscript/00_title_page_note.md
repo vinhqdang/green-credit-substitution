@@ -1,7 +1,7 @@
 # Title page (separate file for double-anonymized submission)
 
 **Working title:** Credible on Paper? Green Banking Policy, Access to Finance, and Institutional
-Capacity in the Greening of Firms Across 47 Emerging and Transition Economies
+Capacity in the Greening of Firms Worldwide
 
 **Author(s):** [AUTHOR NAME(S) — TO BE COMPLETED BY USER]
 **Affiliation(s):** [AFFILIATION(S) — TO BE COMPLETED BY USER]
