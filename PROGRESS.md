@@ -71,6 +71,40 @@ A draft cover letter addressing the CFP's identification-strategy language direc
 the review) is at `latex/cover_letter.md` — needs the bracketed fields filled in and a final human
 read before submission.
 
+## Re-review (2026-09, round 2)
+
+A second review pass (`output/review_cfp_fit_2026-09_v2.md`) verified the round-1 fixes against the
+actual manuscript rather than rubber-stamping them: all substantive fixes were genuinely applied
+(identification-strategy transparency, causal-language hygiene, the FDR correction, H4's honest
+exploratory framing, the three new Discussion paragraphs). One finding was NOT addressed by design —
+the endogeneity/wild-cluster-bootstrap/Oster's-delta items still require microdata not in this
+repository — and that remains correctly disclosed rather than silently dropped.
+
+The pass also caught a real, verified defect introduced by round 1's own new table: inserting the
+multiple-testing-correction table shifted LaTeX's auto-numbering of every table after it (robustness
+8->9, global-sample regressions 9->10), and the new table's rows had hardcoded the old numbers as
+plain text instead of cross-references — so it was citing itself and its neighbors incorrectly. This
+also exposed a **pre-existing** numbering bug, unrelated to any of this review cycle's changes: two
+hardcoded "Table 4" mentions (Stage 5 description; Section 5.7) actually resolve to Table 3, confirmed
+present in the same form in the original pre-review commit (`5039e0a`). Root cause: the manuscript's
+own apparent intended numbering (matching the `data/processed/table4_baseline_regressions.csv`-style
+filenames — composition=1, baseline=4, multilevel=5, ...) implies a Table 2 and Table 3 between
+composition and baseline that were never actually inserted into `latex/manuscript.tex` (a
+`table2_summary_stats.csv` exists in the repo with no corresponding table in the manuscript body).
+
+Fixed: every hardcoded "Table N" mention in `latex/manuscript.tex` now uses `\ref{}`, so the compiled
+numbering is internally self-consistent (verified against `manuscript.aux` after recompiling — no
+mismatches remain). Two small precision/tone edits from the same pass were also applied (an imprecise
+cross-reference for H4's empirical section; a hedge-consistency callback in the Discussion's closing
+paragraph), and mirrored into `manuscript/*.md`.
+
+**Not fixed, and flagged rather than silently resolved:** the deeper structural question of the
+missing Table 2/3 slot (should a summary-statistics table be inserted? was `tab:vardef` meant to sit
+elsewhere?) needs an author decision, not a unilateral renumbering — the current fix makes every
+in-document reference correct relative to the tables that actually exist, but does not attempt to
+restore the apparent originally-intended Table 1-9 sequence, which would require either adding new
+table content or reordering existing tables in a way I'm not positioned to decide alone.
+
 ## Pending
 
 - **Waiting on reply from the managing editor (Jan-Egbert Sturm, sturm@kof.ethz.ch) regarding

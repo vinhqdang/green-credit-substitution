@@ -106,7 +106,8 @@ reports formally (Table 10), it does not survive a Benjamini-Hochberg correction
 comparisons at any conventional false discovery rate — and our data cannot
 directly verify the underlying loan-tenor mechanism.
 
-Read against this special issue's organizing themes of state capacity and policy credibility, our
+Read against this special issue's organizing themes of state capacity and policy credibility, and
+holding to the same best-current-account framing as above rather than treating it as settled, our
 results sit closer to a state-capacity-is-necessary-but-firm-level-frictions-bind-independently
 story than to a straightforward institutional-complementarity one in which stronger regulatory
 quality unlocks a latent policy effect that would otherwise lie dormant. Regulatory quality
