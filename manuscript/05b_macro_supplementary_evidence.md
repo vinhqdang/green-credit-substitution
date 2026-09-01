@@ -15,8 +15,9 @@ a genuine answer, however it comes out, is more useful than leaving the question
 
 We assemble a country-year panel spanning every World Bank member economy with a non-aggregate ISO3
 code (217 economies), 2000-2024. Treatment timing is each economy's SBFN join year, drawn from the same
-roster (`data/sbfn_roster.csv`) and cross-checked against the global-sample SBFN coding used in Section
-5.7 (zero disagreements across 61 overlapping economies); economies that have never joined SBFN, as of
+SBFN data portal membership roster used to construct the global sample (Section 4) and cross-checked
+against the global-sample SBFN coding used in Section 5.7 (zero disagreements across 61 overlapping
+economies); economies that have never joined SBFN, as of
 the roster's most recent update, serve as the never-treated comparison group. This yields 68
 ever-treated economies (join years 2012-2024, the same real staggered-adoption variation described in
 Section 2) and 149 never-treated economies. Outcome data come from the World Bank's World Development
