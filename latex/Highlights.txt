@@ -1,5 +1,5 @@
 - SBFN green banking policy does not moderate the finance-green investment link
-- Bank credit access is associated with significantly higher green adoption, 4 methods agree
+- Bank credit access is associated with significantly higher green adoption
 - Finding replicates in an independent 162-country sample with country FE
 - Causal forest: effect heterogeneity is firm-size-driven, not institutional
-- Combined samples span 166 economies, from Bangladesh to Germany and Japan
+- Staggered event-study (217 countries, 2000-2024) also finds no clean policy effect

@@ -20,6 +20,8 @@ Beck, T., Demirgüç-Kunt, A., Maksimovic, V., 2005. Financial and Legal Constra
 
 Beck, T., Demirgüç-Kunt, A., Maksimovic, V., 2008. Financing Patterns Around the World: Are Small Firms Different? Journal of Financial Economics 89(3), 467-487. https://doi.org/10.1016/j.jfineco.2007.10.005
 
+Callaway, B., Sant'Anna, P. H. C., 2021. Difference-in-Differences with multiple time periods. Journal of Econometrics 225(2), 200-230. https://doi.org/10.1016/j.jeconom.2020.12.001
+
 Cameron, A. C., Miller, D. L., 2015. A Practitioner's Guide to Cluster-Robust Inference. Journal of Human Resources 50(2), 317-372. https://doi.org/10.3368/jhr.50.2.317
 
 Chernozhukov, V., Chetverikov, D., Demirer, M., Duflo, E., Hansen, C., Newey, W., Robins, J., 2018. Double/debiased machine learning for treatment and structural parameters. The Econometrics Journal 21(1), C1-C68. https://doi.org/10.1111/ectj.12097
@@ -39,6 +41,8 @@ Gelman, A., Hill, J., 2007. Data Analysis Using Regression and Multilevel/Hierar
 Gelman, A., Hill, J., Vehtari, A., 2020. Regression and Other Stories. Cambridge University Press. https://doi.org/10.1017/9781139161879
 
 Ghosh, D., Dutta, M., 2022. Environmental behaviour under credit constraints - Evidence from panel of Indian manufacturing firms. Structural Change and Economic Dynamics 63, 490-500. https://doi.org/10.1016/j.strueco.2022.07.004
+
+Goodman-Bacon, A., 2021. Difference-in-differences with variation in treatment timing. Journal of Econometrics 225(2), 254-277. https://doi.org/10.1016/j.jeconom.2021.03.014
 
 Hall, P. A., Soskice, D. (Eds.), 2001. Varieties of Capitalism: The Institutional Foundations of Comparative Advantage. Oxford University Press. ISBN 0-19-924774-9.
 

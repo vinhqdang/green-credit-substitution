@@ -1,0 +1,7 @@
+outcome,specification,att,se,ci_low,ci_high,sig_5pct
+Renewable energy % (WDI EG.FEC.RNEW.ZS),"Callaway-Sant'Anna, no covariates",-1.1918142533651819,0.8018025084148279,-2.7633182925721185,0.3796897858417545,False
+Renewable energy % (WDI EG.FEC.RNEW.ZS),"Callaway-Sant'Anna, doubly-robust, log GDP p.c. control",0.6738396308009788,0.9162361609010329,-1.121950245898292,2.4696295075002492,False
+Renewable energy % (WDI EG.FEC.RNEW.ZS),"Naive TWFE (post dummy, country+year FE)",-4.672132,1.127282,-6.88160472,-2.4626592800000005,True
+CO2 emissions per capita (WDI EN.GHG.CO2.PC.CE.AR5),"Callaway-Sant'Anna, no covariates",0.6309485052558826,0.17904817121208755,0.2800205381824297,0.9818764723293356,True
+CO2 emissions per capita (WDI EN.GHG.CO2.PC.CE.AR5),"Callaway-Sant'Anna, doubly-robust, log GDP p.c. control",0.349255206228599,0.15587214550495057,0.043751414845909,0.6547589976112891,True
+CO2 emissions per capita (WDI EN.GHG.CO2.PC.CE.AR5),"Naive TWFE (post dummy, country+year FE)",0.901029,0.204396,0.50041284,1.30164516,True

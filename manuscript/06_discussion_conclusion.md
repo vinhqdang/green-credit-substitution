@@ -1,4 +1,4 @@
-## 6. Discussion
+## 7. Discussion
 
 Put in plain economic terms, the paper's central finding is this: a firm holding a bank credit line
 is associated with an adoption probability roughly 13 percentage points higher than an
@@ -18,6 +18,18 @@ primary sample cannot touch at all. A finding that held only in the 41-country E
 plausibly be a regional or period-specific artefact; a finding that survives unchanged when
 re-estimated on 162 largely non-overlapping economies under a sharper identification strategy is
 considerably harder to explain away as such.
+
+Section 6's country-level staggered event-study adds a third, independently identified data point to
+this convergence, and arguably the most demanding one: a completely different data source (World Bank
+World Development Indicators rather than firm surveys), a completely different unit of analysis
+(country-year rather than firm), and, for the first time in the paper, an identification strategy that
+exploits exogenous variation in adoption *timing* specifically — the design this special issue's own
+methodological guidance asks for. That it too finds no clean evidence of a beneficial institutional
+effect (a precise null on renewable-energy share, and a positive CO2 association that shrinks
+substantially under a development-stage control and whose dynamics look more like pre-existing
+divergence than a policy-caused shift) is, we think, the single hardest-to-dismiss piece of evidence in
+the paper that the null on institutional moderation is a real feature of how SBFN adoption relates to
+environmental outcomes, not an artefact of the firm-level data's own identification limits.
 
 This is worth dwelling on precisely because it complicates rather than confirms the implicit
 premise of much of the existing green-credit-policy literature, which is disproportionately built on
@@ -120,7 +132,7 @@ about whether firms below a certain scale can absorb a green investment's fixed 
 credit is available — a question about firm-level absorptive capacity that sits one level down from
 the state-capacity question the SBFN framework itself is designed to address.
 
-## 7. Conclusion
+## 8. Conclusion
 
 This paper set out to test whether the wave of green banking policy adoption coordinated through the
 Sustainable Banking and Finance Network changes the relationship between firm-level access to
@@ -140,12 +152,15 @@ in the paper and replicates independently in both the small waste-minimization s
 relationship in any of the four estimators, on either sample, though both shift the general level of
 green adoption directly and substantially in the primary sample. Third, where genuine effect
 heterogeneity does exist, it is concentrated at the level of firm size rather than country
-institutions. Fourth, and most importantly for the paper's overall credibility, this entire pattern
+institutions. Fourth, this entire pattern
 replicates on a sample sharing almost no economies with the primary one, fielded years later,
 measured with a different outcome item, and identified under a materially sharper econometric
-strategy — the single strongest piece of evidence in the paper that the null on institutional
-moderation is a real feature of the data rather than an artefact of any one sample, period, or
-estimator.
+strategy. Fifth, and most importantly for the paper's overall credibility, an entirely independent
+country-level staggered event-study (Section 6), built specifically to supply the adoption-timing
+identification strategy the firm-level data cannot, likewise finds no clean evidence that SBFN
+adoption improves aggregate environmental outcomes — the single strongest piece of evidence in the
+paper that the null on institutional moderation is a real feature of how this policy relates to
+outcomes rather than an artefact of any one sample, data source, level of analysis, or estimator.
 
 For policy, the implication is not that green banking guidelines are ineffective, but that our
 evidence does not support treating them as an effective lever specifically for widening the gap in
@@ -158,7 +173,7 @@ grants, or credit guarantees — that address smaller firms' absorptive-capacity
 rather than assuming that a bank-level supervisory mandate alone will reach firms regardless of
 scale.
 
-We close with six limitations that bound how far these conclusions travel. First, both samples are
+We close with seven limitations that bound how far these conclusions travel. First, both samples are
 single cross-sections per country (Section 4.1 discusses why a genuine panel on this outcome, and
 the staggered-adoption design it would support, does not exist in the published WBES data): they cannot rule out reverse causality (firms already predisposed
 to green investment may find it easier to obtain credit) or unobserved, time-invariant country
@@ -188,8 +203,14 @@ the intensive margin of the credit-to-green channel (the adoption gap between fi
 unfinanced firms); it cannot rule out that SBFN policy operates instead on the extensive margin of
 which firms obtain credit in the first place, nor can our firm-reported outcome measure distinguish
 actual practice adoption from a compliance-reporting gap between what firms report and what banks
-report to their supervisor (Section 6). We leave each of these to
-future work.
+report to their supervisor (Section 7). Seventh, Section 6's country-level event-study is an
+ecological-level test: it speaks to whether SBFN adoption shifts a country's aggregate environmental
+trajectory, not to the firm-level financing mechanism the rest of the paper investigates, and the two
+should not be conflated. Its one significant result (CO2 per capita) is netted against a single
+covariate, log GDP per capita; we cannot rule out that a richer set of development-stage controls
+(energy-mix transition, industrial composition, population growth) would shrink the estimated
+association further still, or that some genuine, if small and confounded, relationship remains. We
+leave each of these to future work.
 
 ## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
@@ -197,7 +218,9 @@ During the preparation of this work the author(s) used Claude (Anthropic) to ass
 extraction and cleaning from World Bank Enterprise Surveys microdata (including identification and
 extraction of the standardized cross-country database underlying the global sample), construction of
 the analysis datasets and merge with country-level SBFN and Worldwide Governance Indicators data,
-execution of the statistical and machine-learning analyses reported in Section 5, generation of
-Figures 1-3, and drafting of portions of the manuscript text. After using this tool, the author(s)
+execution of the statistical and machine-learning analyses reported in Section 5, construction of the
+country-year World Development Indicators panel and the Callaway-Sant'Anna staggered event-study
+reported in Section 6, generation of Figures 1-3 and Figure 6, and drafting of portions of the
+manuscript text. After using this tool, the author(s)
 reviewed and edited the content as needed and take full responsibility for the content of the
 published article.

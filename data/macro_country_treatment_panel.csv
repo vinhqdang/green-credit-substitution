@@ -1,0 +1,218 @@
+iso3,name,region,income_level,name_norm,join_year,ever_treated
+ABW,Aruba,Latin America & Caribbean ,High income,aruba,,False
+AFG,Afghanistan,"Middle East, North Africa, Afghanistan & Pakistan",Low income,afghanistan,,False
+AGO,Angola,Sub-Saharan Africa ,Lower middle income,angola,2024.0,True
+ALB,Albania,Europe & Central Asia,Upper middle income,albania,2024.0,True
+AND,Andorra,Europe & Central Asia,High income,andorra,,False
+ARE,United Arab Emirates,"Middle East, North Africa, Afghanistan & Pakistan",High income,united arab emirates,,False
+ARG,Argentina,Latin America & Caribbean ,Upper middle income,argentina,2016.0,True
+ARM,Armenia,Europe & Central Asia,Upper middle income,armenia,2021.0,True
+ASM,American Samoa,East Asia & Pacific,High income,american samoa,,False
+ATG,Antigua and Barbuda,Latin America & Caribbean ,High income,antigua and barbuda,2021.0,True
+AUS,Australia,East Asia & Pacific,High income,australia,,False
+AUT,Austria,Europe & Central Asia,High income,austria,,False
+AZE,Azerbaijan,Europe & Central Asia,Upper middle income,azerbaijan,2022.0,True
+BDI,Burundi,Sub-Saharan Africa ,Low income,burundi,,False
+BEL,Belgium,Europe & Central Asia,High income,belgium,,False
+BEN,Benin,Sub-Saharan Africa ,Lower middle income,benin,,False
+BFA,Burkina Faso,Sub-Saharan Africa ,Low income,burkina faso,,False
+BGD,Bangladesh,South Asia,Lower middle income,bangladesh,2012.0,True
+BGR,Bulgaria,Europe & Central Asia,High income,bulgaria,,False
+BHR,Bahrain,"Middle East, North Africa, Afghanistan & Pakistan",High income,bahrain,,False
+BHS,"Bahamas, The",Latin America & Caribbean ,High income,"bahamas, the",,False
+BIH,Bosnia and Herzegovina,Europe & Central Asia,Upper middle income,bosnia and herzegovina,2024.0,True
+BLR,Belarus,Europe & Central Asia,Upper middle income,belarus,,False
+BLZ,Belize,Latin America & Caribbean ,Upper middle income,belize,,False
+BMU,Bermuda,North America,High income,bermuda,,False
+BOL,Bolivia,Latin America & Caribbean ,Lower middle income,bolivia,,False
+BRA,Brazil,Latin America & Caribbean ,Upper middle income,brazil,2012.0,True
+BRB,Barbados,Latin America & Caribbean ,High income,barbados,,False
+BRN,Brunei Darussalam,East Asia & Pacific,High income,brunei darussalam,,False
+BTN,Bhutan,South Asia,Lower middle income,bhutan,,False
+BWA,Botswana,Sub-Saharan Africa ,Upper middle income,botswana,,False
+CAF,Central African Republic,Sub-Saharan Africa ,Low income,central african republic,2022.0,True
+CAN,Canada,North America,High income,canada,,False
+CHE,Switzerland,Europe & Central Asia,High income,switzerland,,False
+CHI,Channel Islands,Europe & Central Asia,High income,channel islands,,False
+CHL,Chile,Latin America & Caribbean ,High income,chile,2023.0,True
+CHN,China,East Asia & Pacific,Upper middle income,china,2012.0,True
+CIV,Cote d'Ivoire,Sub-Saharan Africa ,Lower middle income,cote d'ivoire,,False
+CMR,Cameroon,Sub-Saharan Africa ,Lower middle income,cameroon,2022.0,True
+COD,"Congo, Dem. Rep.",Sub-Saharan Africa ,Low income,"congo, dem. rep.",,False
+COG,"Congo, Rep.",Sub-Saharan Africa ,Lower middle income,"congo, rep.",2022.0,True
+COL,Colombia,Latin America & Caribbean ,Upper middle income,colombia,2012.0,True
+COM,Comoros,Sub-Saharan Africa ,Lower middle income,comoros,,False
+CPV,Cabo Verde,Sub-Saharan Africa ,Upper middle income,cabo verde,,False
+CRI,Costa Rica,Latin America & Caribbean ,High income,costa rica,2019.0,True
+CUB,Cuba,Latin America & Caribbean ,Upper middle income,cuba,,False
+CUW,Curacao,Latin America & Caribbean ,High income,curacao,,False
+CYM,Cayman Islands,Latin America & Caribbean ,High income,cayman islands,,False
+CYP,Cyprus,Europe & Central Asia,High income,cyprus,,False
+CZE,Czechia,Europe & Central Asia,High income,czechia,,False
+DEU,Germany,Europe & Central Asia,High income,germany,,False
+DJI,Djibouti,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,djibouti,,False
+DMA,Dominica,Latin America & Caribbean ,Upper middle income,dominica,,False
+DNK,Denmark,Europe & Central Asia,High income,denmark,,False
+DOM,Dominican Republic,Latin America & Caribbean ,Upper middle income,dominican republic,2017.0,True
+DZA,Algeria,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,algeria,,False
+ECU,Ecuador,Latin America & Caribbean ,Upper middle income,ecuador,2016.0,True
+EGY,"Egypt, Arab Rep.","Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,"egypt, arab rep.",2016.0,True
+ERI,Eritrea,Sub-Saharan Africa ,Low income,eritrea,,False
+ESP,Spain,Europe & Central Asia,High income,spain,,False
+EST,Estonia,Europe & Central Asia,High income,estonia,,False
+ETH,Ethiopia,Sub-Saharan Africa ,Low income,ethiopia,,False
+FIN,Finland,Europe & Central Asia,High income,finland,,False
+FJI,Fiji,East Asia & Pacific,Upper middle income,fiji,2017.0,True
+FRA,France,Europe & Central Asia,High income,france,,False
+FRO,Faroe Islands,Europe & Central Asia,High income,faroe islands,,False
+FSM,"Micronesia, Fed. Sts.",East Asia & Pacific,Upper middle income,"micronesia, fed. sts.",,False
+GAB,Gabon,Sub-Saharan Africa ,Upper middle income,gabon,2022.0,True
+GBR,United Kingdom,Europe & Central Asia,High income,united kingdom,,False
+GEO,Georgia,Europe & Central Asia,Upper middle income,georgia,2017.0,True
+GHA,Ghana,Sub-Saharan Africa ,Lower middle income,ghana,2016.0,True
+GIB,Gibraltar,Europe & Central Asia,High income,gibraltar,,False
+GIN,Guinea,Sub-Saharan Africa ,Lower middle income,guinea,,False
+GMB,"Gambia, The",Sub-Saharan Africa ,Low income,"gambia, the",,False
+GNB,Guinea-Bissau,Sub-Saharan Africa ,Low income,guinea-bissau,,False
+GNQ,Equatorial Guinea,Sub-Saharan Africa ,Upper middle income,equatorial guinea,2022.0,True
+GRC,Greece,Europe & Central Asia,High income,greece,,False
+GRD,Grenada,Latin America & Caribbean ,Upper middle income,grenada,2021.0,True
+GRL,Greenland,Europe & Central Asia,High income,greenland,,False
+GTM,Guatemala,Latin America & Caribbean ,Upper middle income,guatemala,2021.0,True
+GUM,Guam,East Asia & Pacific,High income,guam,,False
+GUY,Guyana,Latin America & Caribbean ,High income,guyana,,False
+HKG,"Hong Kong SAR, China",East Asia & Pacific,High income,"hong kong sar, china",,False
+HND,Honduras,Latin America & Caribbean ,Lower middle income,honduras,2015.0,True
+HRV,Croatia,Europe & Central Asia,High income,croatia,,False
+HTI,Haiti,Latin America & Caribbean ,Lower middle income,haiti,,False
+HUN,Hungary,Europe & Central Asia,High income,hungary,,False
+IDN,Indonesia,East Asia & Pacific,Upper middle income,indonesia,2012.0,True
+IMN,Isle of Man,Europe & Central Asia,High income,isle of man,,False
+IND,India,South Asia,Lower middle income,india,2016.0,True
+IRL,Ireland,Europe & Central Asia,High income,ireland,,False
+IRN,"Iran, Islamic Rep.","Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,"iran, islamic rep.",,False
+IRQ,Iraq,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,iraq,2019.0,True
+ISL,Iceland,Europe & Central Asia,High income,iceland,,False
+ISR,Israel,"Middle East, North Africa, Afghanistan & Pakistan",High income,israel,,False
+ITA,Italy,Europe & Central Asia,High income,italy,,False
+JAM,Jamaica,Latin America & Caribbean ,Upper middle income,jamaica,2022.0,True
+JOR,Jordan,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,jordan,2016.0,True
+JPN,Japan,East Asia & Pacific,High income,japan,,False
+KAZ,Kazakhstan,Europe & Central Asia,Upper middle income,kazakhstan,2021.0,True
+KEN,Kenya,Sub-Saharan Africa ,Lower middle income,kenya,2015.0,True
+KGZ,Kyrgyz Republic,Europe & Central Asia,Lower middle income,kyrgyz republic,2018.0,True
+KHM,Cambodia,East Asia & Pacific,Lower middle income,cambodia,2016.0,True
+KIR,Kiribati,East Asia & Pacific,Lower middle income,kiribati,,False
+KNA,St. Kitts and Nevis,Latin America & Caribbean ,High income,st. kitts and nevis,,False
+KOR,"Korea, Rep.",East Asia & Pacific,High income,"korea, rep.",,False
+KWT,Kuwait,"Middle East, North Africa, Afghanistan & Pakistan",High income,kuwait,,False
+LAO,Lao PDR,East Asia & Pacific,Lower middle income,lao pdr,2012.0,True
+LBN,Lebanon,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,lebanon,,False
+LBR,Liberia,Sub-Saharan Africa ,Low income,liberia,,False
+LBY,Libya,"Middle East, North Africa, Afghanistan & Pakistan",Upper middle income,libya,,False
+LCA,St. Lucia,Latin America & Caribbean ,Upper middle income,st. lucia,2021.0,True
+LIE,Liechtenstein,Europe & Central Asia,High income,liechtenstein,,False
+LKA,Sri Lanka,South Asia,Upper middle income,sri lanka,2016.0,True
+LSO,Lesotho,Sub-Saharan Africa ,Lower middle income,lesotho,,False
+LTU,Lithuania,Europe & Central Asia,High income,lithuania,,False
+LUX,Luxembourg,Europe & Central Asia,High income,luxembourg,,False
+LVA,Latvia,Europe & Central Asia,High income,latvia,,False
+MAC,"Macao SAR, China",East Asia & Pacific,High income,"macao sar, china",,False
+MAF,St. Martin (French part),Latin America & Caribbean ,High income,st. martin (french part),,False
+MAR,Morocco,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,morocco,2014.0,True
+MCO,Monaco,Europe & Central Asia,High income,monaco,,False
+MDA,Moldova,Europe & Central Asia,Upper middle income,moldova,2023.0,True
+MDG,Madagascar,Sub-Saharan Africa ,Low income,madagascar,,False
+MDV,Maldives,South Asia,Upper middle income,maldives,2021.0,True
+MEX,Mexico,Latin America & Caribbean ,Upper middle income,mexico,2016.0,True
+MHL,Marshall Islands,East Asia & Pacific,Upper middle income,marshall islands,,False
+MKD,North Macedonia,Europe & Central Asia,Upper middle income,north macedonia,2024.0,True
+MLI,Mali,Sub-Saharan Africa ,Low income,mali,,False
+MLT,Malta,"Middle East, North Africa, Afghanistan & Pakistan",High income,malta,,False
+MMR,Myanmar,East Asia & Pacific,Lower middle income,myanmar,,False
+MNE,Montenegro,Europe & Central Asia,Upper middle income,montenegro,2024.0,True
+MNG,Mongolia,East Asia & Pacific,Upper middle income,mongolia,2012.0,True
+MNP,Northern Mariana Islands,East Asia & Pacific,High income,northern mariana islands,,False
+MOZ,Mozambique,Sub-Saharan Africa ,Low income,mozambique,,False
+MRT,Mauritania,Sub-Saharan Africa ,Lower middle income,mauritania,,False
+MUS,Mauritius,Sub-Saharan Africa ,Upper middle income,mauritius,,False
+MWI,Malawi,Sub-Saharan Africa ,Low income,malawi,,False
+MYS,Malaysia,East Asia & Pacific,Upper middle income,malaysia,,False
+NAM,Namibia,Sub-Saharan Africa ,Lower middle income,namibia,,False
+NCL,New Caledonia,East Asia & Pacific,High income,new caledonia,,False
+NER,Niger,Sub-Saharan Africa ,Low income,niger,,False
+NGA,Nigeria,Sub-Saharan Africa ,Lower middle income,nigeria,2012.0,True
+NIC,Nicaragua,Latin America & Caribbean ,Lower middle income,nicaragua,,False
+NLD,Netherlands,Europe & Central Asia,High income,netherlands,,False
+NOR,Norway,Europe & Central Asia,High income,norway,,False
+NPL,Nepal,South Asia,Lower middle income,nepal,2014.0,True
+NRU,Naoero,East Asia & Pacific,High income,naoero,,False
+NZL,New Zealand,East Asia & Pacific,High income,new zealand,,False
+OMN,Oman,"Middle East, North Africa, Afghanistan & Pakistan",High income,oman,,False
+PAK,Pakistan,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,pakistan,2015.0,True
+PAN,Panama,Latin America & Caribbean ,High income,panama,2017.0,True
+PER,Peru,Latin America & Caribbean ,Upper middle income,peru,2013.0,True
+PHL,Philippines,East Asia & Pacific,Upper middle income,philippines,2013.0,True
+PLW,Palau,East Asia & Pacific,High income,palau,,False
+PNG,Papua New Guinea,East Asia & Pacific,Lower middle income,papua new guinea,2024.0,True
+POL,Poland,Europe & Central Asia,High income,poland,,False
+PRI,Puerto Rico (US),Latin America & Caribbean ,High income,puerto rico (us),,False
+PRK,"Korea, Dem. People's Rep.",East Asia & Pacific,Low income,"korea, dem. people's rep.",,False
+PRT,Portugal,Europe & Central Asia,High income,portugal,,False
+PRY,Paraguay,Latin America & Caribbean ,Upper middle income,paraguay,2015.0,True
+PSE,West Bank and Gaza,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,west bank and gaza,,False
+PYF,French Polynesia,East Asia & Pacific,High income,french polynesia,,False
+QAT,Qatar,"Middle East, North Africa, Afghanistan & Pakistan",High income,qatar,,False
+ROU,Romania,Europe & Central Asia,High income,romania,,False
+RUS,Russian Federation,Europe & Central Asia,High income,russian federation,,False
+RWA,Rwanda,Sub-Saharan Africa ,Low income,rwanda,,False
+SAU,Saudi Arabia,"Middle East, North Africa, Afghanistan & Pakistan",High income,saudi arabia,,False
+SDN,Sudan,Sub-Saharan Africa ,Low income,sudan,,False
+SEN,Senegal,Sub-Saharan Africa ,Lower middle income,senegal,,False
+SGP,Singapore,East Asia & Pacific,High income,singapore,,False
+SLB,Solomon Islands,East Asia & Pacific,Lower middle income,solomon islands,,False
+SLE,Sierra Leone,Sub-Saharan Africa ,Low income,sierra leone,,False
+SLV,El Salvador,Latin America & Caribbean ,Upper middle income,el salvador,,False
+SMR,San Marino,Europe & Central Asia,High income,san marino,,False
+SOM,"Somalia, Fed. Rep.",Sub-Saharan Africa ,Low income,"somalia, fed. rep.",,False
+SRB,Serbia,Europe & Central Asia,Upper middle income,serbia,2020.0,True
+SSD,South Sudan,Sub-Saharan Africa ,Low income,south sudan,,False
+STP,Sao Tome and Principe,Sub-Saharan Africa ,Lower middle income,sao tome and principe,,False
+SUR,Suriname,Latin America & Caribbean ,Upper middle income,suriname,,False
+SVK,Slovak Republic,Europe & Central Asia,High income,slovak republic,,False
+SVN,Slovenia,Europe & Central Asia,High income,slovenia,,False
+SWE,Sweden,Europe & Central Asia,High income,sweden,,False
+SWZ,Eswatini,Sub-Saharan Africa ,Lower middle income,eswatini,,False
+SXM,Sint Maarten (Dutch part),Latin America & Caribbean ,High income,sint maarten (dutch part),,False
+SYC,Seychelles,Sub-Saharan Africa ,High income,seychelles,,False
+SYR,Syrian Arab Republic,"Middle East, North Africa, Afghanistan & Pakistan",Low income,syrian arab republic,,False
+TCA,Turks and Caicos Islands,Latin America & Caribbean ,High income,turks and caicos islands,,False
+TCD,Chad,Sub-Saharan Africa ,Low income,chad,2022.0,True
+TGO,Togo,Sub-Saharan Africa ,Lower middle income,togo,,False
+THA,Thailand,East Asia & Pacific,Upper middle income,thailand,2012.0,True
+TJK,Tajikistan,Europe & Central Asia,Lower middle income,tajikistan,2023.0,True
+TKM,Turkmenistan,Europe & Central Asia,Upper middle income,turkmenistan,,False
+TLS,Timor-Leste,East Asia & Pacific,Lower middle income,timor-leste,,False
+TON,Tonga,East Asia & Pacific,Upper middle income,tonga,,False
+TTO,Trinidad and Tobago,Latin America & Caribbean ,High income,trinidad and tobago,,False
+TUN,Tunisia,"Middle East, North Africa, Afghanistan & Pakistan",Lower middle income,tunisia,2019.0,True
+TUR,Turkiye,Europe & Central Asia,Upper middle income,turkiye,2015.0,True
+TUV,Tuvalu,East Asia & Pacific,Upper middle income,tuvalu,,False
+TZA,Tanzania,Sub-Saharan Africa ,Lower middle income,tanzania,2023.0,True
+UGA,Uganda,Sub-Saharan Africa ,Low income,uganda,,False
+UKR,Ukraine,Europe & Central Asia,Upper middle income,ukraine,2020.0,True
+URY,Uruguay,Latin America & Caribbean ,High income,uruguay,,False
+USA,United States,North America,High income,united states,,False
+UZB,Uzbekistan,Europe & Central Asia,Lower middle income,uzbekistan,,False
+VCT,St. Vincent and the Grenadines,Latin America & Caribbean ,Upper middle income,st. vincent and the grenadines,2021.0,True
+VEN,"Venezuela, RB",Latin America & Caribbean ,Lower middle income,"venezuela, rb",,False
+VGB,British Virgin Islands,Latin America & Caribbean ,High income,british virgin islands,,False
+VIR,Virgin Islands (U.S.),Latin America & Caribbean ,High income,virgin islands (u.s.),,False
+VNM,Viet Nam,East Asia & Pacific,Upper middle income,viet nam,2012.0,True
+VUT,Vanuatu,East Asia & Pacific,Lower middle income,vanuatu,,False
+WSM,Samoa,East Asia & Pacific,Upper middle income,samoa,2019.0,True
+XKX,Kosovo,Europe & Central Asia,Upper middle income,kosovo,2022.0,True
+YEM,"Yemen, Rep.","Middle East, North Africa, Afghanistan & Pakistan",Low income,"yemen, rep.",,False
+ZAF,South Africa,Sub-Saharan Africa ,Upper middle income,south africa,2016.0,True
+ZMB,Zambia,Sub-Saharan Africa ,Lower middle income,zambia,2023.0,True
+ZWE,Zimbabwe,Sub-Saharan Africa ,Lower middle income,zimbabwe,,False

@@ -20,31 +20,44 @@ financial-sector governance specifically.
 
 We want to address directly, rather than leave for reviewers to discover, how our identification
 strategy relates to the designs the call for papers names (staggered DID/event studies, RDD,
-synthetic control, and related quasi-experimental approaches). We considered and did not use a
+synthetic control, and related quasi-experimental approaches). At the firm level, we do not use a
 staggered difference-in-differences design around each economy's own SBFN adoption date, despite
 real variation in adoption timing in our sample (join years 2012-2024): the World Bank Enterprise
-Surveys' Green Economy module, on which our outcome variable is built, has been fielded to a given
-country, in nearly every case, exactly once, as a special one-off module rather than a repeated
-panel instrument, and the small subset of countries in our data surveyed more than once by the core
-WBES instrument were not re-surveyed with a comparable Green Economy module in a second wave. A
-within-country before/after comparison around each economy's SBFN join date is accordingly not
-implementable with a consistently defined outcome in the currently published WBES microdata for this
-specific question. We say this plainly in the manuscript itself (Section 4.1) rather than only here,
-because we think it is more useful to the special issue's screening process to see exactly where
-that gap comes from than to leave it implicit.
+Surveys' Green Economy module, on which our firm-level outcome variable is built, has been fielded to
+a given country, in nearly every case, exactly once, as a special one-off module rather than a
+repeated panel instrument, and the small subset of countries in our data surveyed more than once by
+the core WBES instrument were not re-surveyed with a comparable Green Economy module in a second
+wave. A within-country before/after comparison around each economy's SBFN join date is accordingly
+not implementable with a consistently defined firm-level outcome in the currently published WBES
+microdata. We say this plainly in the manuscript itself (Section 4.1) rather than only here, because
+we think it is more useful to the special issue's screening process to see exactly where that gap
+comes from than to leave it implicit.
 
-Given that constraint, our response was to substitute breadth and independent replication for
-panel-based identification: we test the same relationship four ways (a classical benchmark chosen
-specifically to expose its own limitation, a Bayesian hierarchical model built for the two-level
-question at hand, a causal forest imposing no linear functional form, and a country-fixed-effects
-specification on a second, independently assembled 162-economy sample that our first sample's
-single-wave design cannot support), and the same qualitative result — a robust finance-green
-association, no detectable institutional moderation — survives across all four estimators and both
-samples, on a different outcome, a different set of countries, and a different half-decade. We do
-not present this as equivalent to a quasi-experimental design; we present it as the strongest
-evidence we can construct, given the data genuinely available for this question, that the null on
-institutional moderation is a real feature of the relationship rather than an artefact of any one
-specification.
+Rather than stop there, we built the staggered-adoption design the special issue's own guidance
+asks for using a different, independent data source: a country-year panel (217 economies, 2000-2024)
+from World Bank World Development Indicators, exploiting the same SBFN adoption-timing variation in a
+proper Callaway-Sant'Anna (2021) staggered event-study, with never-treated economies as the
+comparison group (Section 6). This is not a substitute for the firm-level analysis -- it answers a
+related but distinct question, whether SBFN adoption shifts a country's aggregate environmental
+trajectory, rather than the firm-level finance-to-green channel the rest of the paper investigates --
+but it directly supplies the identification strategy the CFP names first, on the exact policy-timing
+variation at the center of the paper's argument. It finds no effect on renewable-energy share, and a
+positive association with CO2 emissions per capita that shrinks by roughly 45% once we control for
+GDP per capita and whose dynamics look more like a pre-existing divergence in adopting economies'
+growth trajectories than a policy-caused shift. We report this honestly rather than spin it either
+direction: a genuinely quasi-experimental test, independent of the firm-level data's own limits,
+converges on the same substantive conclusion as the rest of the paper.
+
+Combined, the paper now offers four estimators on the firm-level question (a classical benchmark
+chosen specifically to expose its own limitation, a Bayesian hierarchical model built for the
+two-level question at hand, a causal forest imposing no linear functional form, and a
+country-fixed-effects specification on a second, independently assembled 162-economy sample), plus
+the country-level staggered event-study above -- five independent tests, three different data
+sources, three different units and levels of analysis, and, for the event-study specifically, genuine
+identification off adoption timing rather than cross-sectional comparison. The same qualitative
+result -- no detectable institutional moderation, no clean evidence of a beneficial policy effect --
+survives all five. We think this combination, rather than any single design among them, is what
+should be weighed against the special issue's identification-strategy expectations.
 
 We would also flag for the guest editors' attention what we think is the paper's most
 system-relevant finding: having ruled out a country-institutional interaction across four

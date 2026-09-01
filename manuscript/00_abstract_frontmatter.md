@@ -33,7 +33,15 @@ interaction tests reported in the paper, and we treat it as suggestive rather th
 interpret the combined evidence as more consistent with green banking policy's binding constraint
 operating through firm-level absorptive capacity than through the country-level regulatory capacity
 its own institutional design targets, though we report this as our best current account of an
-auxiliary, exploratory finding rather than as a settled result.
+auxiliary, exploratory finding rather than as a settled result. Finally, because none of the above
+designs exploits exogenous variation in SBFN adoption *timing*, we additionally build a country-year
+panel (217 economies, 2000-2024) from World Bank World Development Indicators and estimate a
+Callaway-Sant'Anna staggered event-study around each economy's own adoption date -- the identification
+strategy this literature most often calls for. It shows no effect on renewable-energy share and a
+positive association with CO2 emissions per capita that shrinks by roughly 45% once GDP per capita is
+controlled for and whose event-study profile is more consistent with pre-existing differences in
+adopting economies' growth trajectories than with a causal effect of adoption; this independent,
+differently-identified test converges on the same substantive conclusion as the firm-level analysis.
 
 **Keywords:** green banking policy; access to finance; institutional complementarity; firm-level
 green investment; causal forest; hierarchical Bayesian model
@@ -43,7 +51,7 @@ green investment; causal forest; hierarchical Bayesian model
 ## Highlights
 
 - SBFN green banking policy does not moderate the finance-green investment link
-- Bank credit access is associated with a 13pp higher green-adoption rate, four estimators agree
-- Country fixed effects cannot identify a time-invariant policy moderator in the primary sample
-- An independent 162-economy global sample, with country fixed effects, replicates the same null
-- Causal forest: effect heterogeneity is firm-size-driven (75.6%), not institutional
+- Bank credit access is associated with significantly higher green adoption
+- Finding replicates in an independent 162-country sample with country FE
+- Causal forest: effect heterogeneity is firm-size-driven, not institutional
+- Staggered event-study (217 countries, 2000-2024) also finds no clean policy effect

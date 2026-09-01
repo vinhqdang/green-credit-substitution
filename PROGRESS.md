@@ -105,6 +105,55 @@ in-document reference correct relative to the tables that actually exist, but do
 restore the apparent originally-intended Table 1-9 sequence, which would require either adding new
 table content or reordering existing tables in a way I'm not positioned to decide alone.
 
+## New analysis: country-level staggered event-study (2026-09)
+
+In response to the CRITICAL identification-strategy finding (the paper's four firm-level estimators
+all share one identifying assumption; none matches the CFP's named staggered-DID/event-study class),
+built and added a genuinely new, independent supplementary analysis rather than only better-disclosing
+the existing gap:
+
+- **New Section 6** ("Supplementary evidence: a country-level staggered event-study on macro
+  environmental outcomes"), with two subsections (data/design; results), new Table 11, and new
+  Figure 6. Discussion and Conclusion renumbered to Sections 7-8 accordingly (all cross-references
+  are `\ref{}`-based, verified self-consistent after recompiling — checked the same way the earlier
+  table-numbering bug was caught, by reading resolved numbers out of `manuscript.aux`).
+- **Data**: a country-year panel (217 economies, 2000-2024) built from scratch — SBFN join years from
+  `data/sbfn_roster.csv` name-matched to a full World Bank country list (zero unmatched, zero
+  disagreements against the existing `data/global_sbfn.csv` coding), joined to World Development
+  Indicators panels (renewable energy %, CO2 per capita, GDP per capita as a covariate) fetched live
+  via the public WDI API. New scripts: `src/build_macro_country_universe.py`,
+  `src/fetch_macro_wdi_panel.py`, `src/run_macro_event_study.py` (needs a separate environment --
+  `src/requirements_macro_did.txt` -- pinning newer pandas/numpy than the rest of the repo assumes).
+  New data: `data/macro_country_treatment_panel.csv`, `data/macro_wdi_panel_raw.csv`,
+  `data/macro_wdi_gdppc.csv`, `data/processed/macro_did_*` (raw estimator output),
+  `data/processed/table11_macro_did_summary.csv`.
+- **Method**: Callaway & Sant'Anna (2021) staggered-adoption DID (`differences` Python package),
+  never-treated comparison group, both unconditional and doubly-robust (log-GDP-per-capita-controlled)
+  specifications, plus a naive TWFE regression reported explicitly as a biased comparison (not a
+  preferred estimate) to illustrate the known staggered-timing bias.
+- **Result, reported honestly rather than spun either direction**: no effect on renewable-energy
+  share (clean null, flat pre- and post-trends). CO2 per capita shows a positive, "wrong-signed"
+  association that shrinks ~45% once GDP per capita is controlled for, and whose event-study profile
+  (smoothly diverging post-period, not a discrete jump; two marginal pre-trend leads) reads as more
+  consistent with pre-existing growth-trajectory differences between adopting and non-adopting
+  economies than a genuine policy-caused effect. Neither result supports treating SBFN adoption as a
+  country-level lever that improves environmental outcomes -- converging with, and substantially
+  strengthening, the paper's firm-level central finding from an entirely independent design that
+  meets the CFP's own identification-strategy bar.
+- Abstract, Highlights, Introduction's contribution list (now six, was five), Discussion, Conclusion
+  (five consistent results, was four; seven limitations, was six), the AI-disclosure paragraph, the
+  Data Availability statement, `latex/references.bib` (Callaway & Sant'Anna 2021; Goodman-Bacon 2021),
+  and `latex/cover_letter.md` all updated to reflect this; `manuscript/*.md` kept in sync (new file
+  `manuscript/05b_macro_supplementary_evidence.md` mirrors the new Section 6).
+- Recompiled and verified clean (pdflatex + bibtex, no undefined references, table formatting fixed
+  to fit page margins) — 74 pages, up from 67.
+- Special-issue-fit reassessment: this materially changes the picture from the prior two review
+  rounds. The paper no longer merely explains why it lacks a staggered design at the firm level --
+  it now contains one, on the identical policy-timing variation, using an independent data source,
+  and that design also returns no clean evidence of a beneficial institutional effect. Whether the
+  guest editors credit this as meeting their stated bar is still their call, but the paper's actual
+  identification-strategy portfolio is now substantively stronger, not just better-argued.
+
 ## Pending
 
 - **Waiting on reply from the managing editor (Jan-Egbert Sturm, sturm@kof.ethz.ch) regarding

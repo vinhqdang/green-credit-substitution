@@ -1,0 +1,4 @@
+,SimpleAggregation,SimpleAggregation,SimpleAggregation,SimpleAggregation,SimpleAggregation
+,,analytic,pointwise conf. band,pointwise conf. band,pointwise conf. band
+,ATT,std_error,lower,upper,zero_not_in_cband
+0,0.6738396308009788,0.9162361609010329,-1.121950245898292,2.4696295075002492,
