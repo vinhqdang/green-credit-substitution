@@ -1,0 +1,14 @@
+table,specification,term,raw_p,p_type,bh_adjusted_p
+Table 8,(b1) Overdraft,Overdraft x SBFN,0.031,exact,0.403
+Table 9,M2 (country FE),Credit x SBFN,0.205,exact,0.7986
+Table 9,M1 (no country FE),Credit x RegQuality,0.3013,approx (z=coef/se),0.7986
+Table 4,M3 (triple interaction),Credit x RegQuality,0.3105,approx (z=coef/se),0.7986
+Table 9,M2 (country FE),Credit x RegQuality,0.346,exact,0.7986
+Table 8,(c2) Services subsample,Credit x SBFN,0.426,exact,0.7986
+Table 9,M1 (no country FE),Credit x SBFN,0.43,exact,0.7986
+Table 4,M3 (triple interaction),Credit x SBFN x RegQuality,0.7022,approx (z=coef/se),0.892
+Table 8,"(a) Continuous index, OLS",Credit x SBFN,0.739,exact,0.892
+Table 4,M2 (SBFN),Credit x SBFN,0.773,exact,0.892
+Table 8,(c1) Manufacturing subsample,Credit x SBFN,0.826,exact,0.892
+Table 8,(b2) Finance obstacle (reverse-coded),Obstacle x SBFN,0.849,exact,0.892
+Table 4,M3 (triple interaction),Credit x SBFN,0.892,approx (z=coef/se),0.892

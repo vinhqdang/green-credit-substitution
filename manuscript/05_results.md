@@ -87,11 +87,12 @@ independent estimators, one parametric and hierarchical, one nonparametric and f
 on the absence of institutional moderation.
 
 The forest's feature-importance decomposition adds a genuinely new result rather than only
-confirming the null: of the four candidate effect-modifiers, firm size (log sales) accounts for
+confirming the null, and speaks directly to the auxiliary H4 introduced in Section 3.4: of the four
+candidate effect-modifiers, firm size (log sales) accounts for
 75.6% of the model's explained heterogeneity, versus 19.9% for regulatory quality, 2.6% for SBFN
 status, and 1.9% for exporter status. Whatever heterogeneity exists in how strongly credit access
 predicts green adoption is, on this evidence, primarily a firm-level rather than a
-country-institutional phenomenon. Collapsing this into the Enterprise Surveys' own coarse size
+country-institutional phenomenon, supporting H4. Collapsing this into the Enterprise Surveys' own coarse size
 strata (Table 6b), however, does not reveal a clean monotonic gradient: the estimated effect is 0.080
 for small firms, 0.075 for medium firms, and 0.057 for large firms (all with wide, overlapping
 confidence intervals spanning zero), which if anything runs opposite to a simple "larger firms
@@ -153,6 +154,41 @@ replicate within each sector separately (manufacturing: credit b = 0.480, p < 0.
 b = -0.040, p = 0.826; services: credit b = 0.448, p < 0.001, interaction b = 0.195, p = 0.426) —
 the paper's central null is not an artefact of pooling two structurally different production
 technologies.
+
+Because the overdraft interaction (the one coefficient in the paper that clears a conventional
+significance threshold) is one of many credit x institutional-moderator tests reported across the
+frequentist specifications in this paper, we additionally apply a Benjamini-Hochberg
+false-discovery-rate correction across the full family of 13 such coefficients reported under a
+classical (non-Bayesian, non-forest) estimator in Tables 4, 8, and 9 (Table 10; script and output in
+the replication package). The overdraft interaction's raw p = 0.031 becomes p = 0.403 after
+correction, and no coefficient in the family survives at a false discovery rate of 0.10 or even
+0.40. We read this as reinforcing, with a formal multiple-testing accounting rather than only a
+qualitative caveat, the suggestive-not-conclusive framing we already give this result in Section 6:
+an isolated nominally-significant interaction among more than a dozen tested is exactly what a pure
+false-discovery process would be expected to produce roughly one time in twenty, and this correction
+does not let us reject that account.
+
+**Table 10. Multiple-testing correction: Benjamini-Hochberg false discovery rate applied to every
+credit x institutional-moderator interaction coefficient reported under a frequentist estimator
+(Tables 4, 8, 9).** Entries marked (approx.) are recovered from the reported coefficient and
+standard error via a normal approximation (z = coef/se), since the text reports only the coefficient
+and standard error for these terms.
+
+| Source | Term | Raw p | BH-adjusted p |
+| --- | --- | --- | --- |
+| Table 8 (b1) Overdraft | Overdraft x SBFN | 0.031 | 0.403 |
+| Table 9 M2 (country FE) | Credit x SBFN | 0.205 | 0.799 |
+| Table 9 M1 (no country FE) | Credit x Reg. quality (approx.) | 0.301 | 0.799 |
+| Table 4 M3 (approx.) | Credit x Reg. quality | 0.310 | 0.799 |
+| Table 9 M2 (country FE) | Credit x Reg. quality | 0.346 | 0.799 |
+| Table 8 (c2) Services | Credit x SBFN | 0.426 | 0.799 |
+| Table 9 M1 (no country FE) | Credit x SBFN | 0.430 | 0.799 |
+| Table 4 M3 (approx.) | Credit x SBFN x Reg. quality | 0.702 | 0.892 |
+| Table 8 (a) Continuous index, OLS | Credit x SBFN | 0.739 | 0.892 |
+| Table 4 M2 | Credit x SBFN | 0.773 | 0.892 |
+| Table 8 (c1) Manufacturing | Credit x SBFN | 0.826 | 0.892 |
+| Table 8 (b2) Finance obstacle (reverse-coded) | Obstacle x SBFN | 0.849 | 0.892 |
+| Table 4 M3 (approx.) | Credit x SBFN | 0.892 | 0.892 |
 
 ### 5.7 Global-sample replication with country fixed effects (Table 9)
 

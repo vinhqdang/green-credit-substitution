@@ -26,13 +26,14 @@ indistinguishable from zero — the identical qualitative pattern, on a differen
 set of economies, and a materially sharper identification strategy. The causal forest's
 feature-importance decomposition attributes the bulk of genuine effect heterogeneity in the primary
 sample (75.6%) to firm size rather than to either institutional moderator (regulatory quality 19.9%;
-SBFN status 2.6%). One finance-instrument-specific check finds a significant negative credit x SBFN
-interaction when finance access is measured via overdraft rather than term credit, consistent
-with — though not proof of — SBFN-guided lending being channelled preferentially through the term
-instruments that actually finance long-horizon green capital expenditure. We interpret the combined
-evidence as showing that green banking policy's binding constraint operates through firm-level
-absorptive capacity rather than through the country-level regulatory capacity its own institutional
-design targets.
+SBFN status 2.6%). One finance-instrument-specific check finds a nominally significant negative credit x SBFN
+interaction when finance access is measured via overdraft rather than term credit, though this does
+not survive a Benjamini-Hochberg correction for multiple comparisons across the full family of
+interaction tests reported in the paper, and we treat it as suggestive rather than established. We
+interpret the combined evidence as more consistent with green banking policy's binding constraint
+operating through firm-level absorptive capacity than through the country-level regulatory capacity
+its own institutional design targets, though we report this as our best current account of an
+auxiliary, exploratory finding rather than as a settled result.
 
 **Keywords:** green banking policy; access to finance; institutional complementarity; firm-level
 green investment; causal forest; hierarchical Bayesian model
@@ -42,7 +43,7 @@ green investment; causal forest; hierarchical Bayesian model
 ## Highlights
 
 - SBFN green banking policy does not moderate the finance-green investment link
-- Bank credit access raises green-practice adoption by 13pp across four estimators
+- Bank credit access is associated with a 13pp higher green-adoption rate, four estimators agree
 - Country fixed effects cannot identify a time-invariant policy moderator in the primary sample
 - An independent 162-economy global sample, with country fixed effects, replicates the same null
 - Causal forest: effect heterogeneity is firm-size-driven (75.6%), not institutional
