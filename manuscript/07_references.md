@@ -72,6 +72,8 @@ Nguyen, M. P., Phan, A., 2025. Impact of green credit policy on the operation of
 
 Phan, Q. T., 2026. The impact of green economy practices on firm innovation using data from the World Bank Enterprise Surveys. Discover Sustainability 7(1), 848. https://doi.org/10.1007/s43621-026-03226-5
 
+Salvatier, J., Wiecki, T. V., Fonnesbeck, C., 2016. Probabilistic programming in Python using PyMC3. PeerJ Computer Science 2, e55. https://doi.org/10.7717/peerj-cs.55
+
 Siewers, S., Martínez-Zarzoso, I., Baghdadi, L., 2024. Global value chains and firms' environmental performance. World Development 173, 106395. https://doi.org/10.1016/j.worlddev.2023.106395
 
 Tran, T. T. C., Nguyen, L., Do, T. K., 2026. The impact of Fintech credit on green innovation: international evidence. Journal of Economics and Development 28(2), 111-127. https://doi.org/10.1108/JED-05-2025-0177

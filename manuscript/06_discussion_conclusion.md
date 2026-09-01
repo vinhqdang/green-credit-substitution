@@ -2,231 +2,130 @@
 
 Put in plain economic terms, the paper's central finding is this: a firm holding a bank credit line
 is associated with an adoption probability roughly 13 percentage points higher than an
-otherwise-similar firm without one — an association net of the observed firm and country controls,
-not a causally identified effect, for the reasons given in Limitation 1 below — comparable in
-magnitude to the gap between a small firm and a large one — and that gap is essentially the same size whether the firm sits in an SBFN
-sustainable-finance policy adopter or a non-adopter, and essentially the same size whether the
-country's regulatory quality sits in the bottom, middle, or top third of the sample (Figure 4). Firms
-in SBFN-adopting economies are, on average, some 15-20 percentage points *less* likely to have adopted
-a green practice at all — a level gap, not a slope gap.
+otherwise-similar firm without one — an association net of observed controls, not a causally
+identified effect (Limitation 1) — and that gap is essentially unchanged whether the firm sits in an
+SBFN adopter or non-adopter, or across the full range of regulatory quality (Figure 4). Firms in
+SBFN-adopting economies are, on average, 15-20 percentage points *less* likely to have adopted a
+green practice at all — a level gap, not a slope gap.
 
-This convergence matters most because of how differently the two samples could have failed to agree.
-The primary and global samples share almost no economies in common, were fielded in different
-half-decades, measure green practice adoption with entirely different survey items, and reach
-institutional settings — high-income, non-SBFN economies such as Australia and Germany — that the
-primary sample cannot touch at all. A finding that held only in the 41-country ECA-MENA sample could
-plausibly be a regional or period-specific artefact; a finding that survives unchanged when
-re-estimated on 162 largely non-overlapping economies under a sharper identification strategy is
-considerably harder to explain away as such.
+This convergence is informative precisely because of how differently the evidence could have failed
+to agree. The primary and global samples share almost no economies, span different half-decades, use
+different outcome items, and reach institutional settings — high-income, non-SBFN economies such as
+Australia and Germany — the primary sample cannot touch. Section 6's country-level staggered
+event-study adds a third, independent test on top of this: a different data source, a different unit
+of analysis, and the paper's only design that exploits exogenous variation in adoption *timing*. That
+it too finds no clean evidence of a beneficial institutional effect — a precise null on
+renewable-energy share, and a CO2 association that shrinks substantially once development stage is
+controlled for — is the hardest-to-dismiss evidence that this is a real feature of the data, not an
+artefact of any one sample, level of analysis, or estimator. (This is a distinct claim from H2/H3's
+firm-level moderation null — a main effect at country level, not a slope change at firm level — but
+evidence of the same kind.)
 
-Section 6's country-level staggered event-study adds a third, independently identified data point to
-this convergence, and arguably the most demanding one: a completely different data source (World Bank
-World Development Indicators rather than firm surveys), a completely different unit of analysis
-(country-year rather than firm), and, for the first time in the paper, an identification strategy that
-exploits exogenous variation in adoption *timing* specifically — the design this special issue's own
-methodological guidance asks for. That it too finds no clean evidence of a beneficial institutional
-effect (a precise null on renewable-energy share, and a positive CO2 association that shrinks
-substantially under a development-stage control and whose dynamics look more like pre-existing
-divergence than a policy-caused shift) is, we think, the single hardest-to-dismiss piece of evidence in
-the paper that the absence of a beneficial institutional effect is a real feature of how SBFN adoption
-relates to environmental outcomes, not an artefact of the firm-level data's own identification limits.
-This is a distinct claim from H2/H3's moderation null — Section 6 tests whether adoption itself shifts
-a country outcome, not whether it changes a firm-level slope — but it is evidence of the same kind:
-another design, at another level, finding nothing supportive of the policy working as its own
-institutional design intends.
+This complicates rather than confirms the implicit premise of a green-credit-policy literature
+disproportionately built on China's unusually mature, well-resourced guidelines (Li, Feng, Li, and
+Zhou, 2023; Huang, Gao, and Jia, 2023; Dai et al., 2025). Our sample spans every stage of SBFN's own
+progression framework, from Jordan and the Kyrgyz Republic's initial "Commitment" to Mongolia's
+"Advancing," and across that range we find no evidence that formal adoption changes how credit access
+translates into green investment. The causal forest's feature-importance decomposition (Section 5.4)
+offers one redirection rather than a tidy answer: the heterogeneity that does exist is overwhelmingly
+a firm-size phenomenon (75.6% of explained variance) rather than institutional (regulatory quality
+19.9%, SBFN 2.6%) — though it does not resolve into a clean size gradient, so we can say where the
+heterogeneity sits without yet saying in which direction it runs. If the binding constraint is which
+firms can absorb a green investment's fixed costs once financed, rather than whether a supervisory
+guideline nudges banks to lend more broadly, a country-level mandate on the extensive margin of
+lending may be aimed at the wrong margin regardless of its own credibility.
 
-This is worth dwelling on precisely because it complicates rather than confirms the implicit
-premise of much of the existing green-credit-policy literature, which is disproportionately built on
-evidence from China's unusually mature, unusually well-resourced green credit guidelines (Li, Feng,
-Li, and Zhou, 2023; Huang, Gao, and Jia, 2023; Dai et al., 2025). Our sample includes economies at
-every stage of the SBFN's own progression framework — from Jordan and the Kyrgyz Republic's initial
-"Commitment" stage to Mongolia's "Advancing" implementation a full seven years after founding
-membership — and across that entire range, we find no evidence that formal policy adoption changes
-how a firm's credit access translates into green investment behaviour. Section 5.4's most novel
-result gives one plausible redirection of the question, though not a tidy answer to it: the
-heterogeneity that *does* exist in the credit-green relationship is overwhelmingly a firm-size
-phenomenon (75.6% of explained variance) rather than a country-institutional one (regulatory quality
-19.9%, SBFN status a mere 2.6%) — yet, as Section 5.4 reports honestly, collapsing this into the
-Surveys' own coarse Small/Medium/Large strata does not recover a clean gradient in either direction,
-so we cannot yet say whether it is small or large firms for whom the credit-green channel runs
-stronger, only that firm scale — in some more granular or non-monotonic form than a three-category
-split reveals — is where the forest locates most of the effect heterogeneity a country-level policy
-variable does not. What this does support is a reorientation of where policy attention belongs: if the
-operative constraint sits at the level of which individual firms can absorb a green investment's fixed
-costs once financed, rather than at the level of whether a supervisory guideline nudges banks to lend
-more broadly, then a country-level supervisory mandate operating on the extensive margin of bank
-lending decisions may be aimed at the wrong margin regardless of its own institutional credibility —
-a question future work with a finer-grained firm-size or capacity measure is better placed to resolve
-than the coarse categories available here.
+"No interaction detected" is not the same claim as "no institutional complementarity exists," and we
+do not want the former to be read as settling the latter. Two alternative readings stay live: a linear
+interaction may be the wrong functional form for a genuinely threshold-shaped complementarity, given
+SBFN's own graded progression framework and our binary coding of it (Limitation 2); and the Worldwide
+Governance Indicators may simply not proxy the banking-supervisory capacity a green-lending guideline
+depends on (Limitation 5). We think our preferred reading — no complementarity through this channel —
+is best supported by the evidence, but hold it as the best current account rather than a claim that
+rules the alternatives out.
 
-It is worth being precise about what this null does and does not establish. "No interaction
-detected" and "no institutional complementarity exists" are not the same claim, and we do not want
-the paper's repeated confirmation of the former to be read as having settled the latter. At least
-three distinct readings remain open. First, our preferred reading throughout the paper: the
-complementarity genuinely does not operate through this channel. Second, a linear interaction term
-may simply be the wrong functional form to detect a genuinely threshold-shaped complementarity —
-SBFN's own Multi-Tiered Progress Framework (Section 2) treats policy adoption as a graded process
-from an initial "Commitment" stage through "Consolidating," and our binary membership coding
-(Limitation 2 below) could easily average over a complementarity that only activates once a
-jurisdiction clears a particular progression stage, in a way four estimators built around a single
-membership dummy cannot recover. Third, the Worldwide Governance Indicators' broad, economy-wide
-regulatory-quality measure may simply not proxy the specific banking-supervisory capacity a
-green-lending guideline actually depends on (Limitation 5); a null on this proxy is evidence about
-the proxy's channel, not necessarily about supervisory capacity in general. We think the first
-reading is the best-supported of the three given the evidence in Section 5, but we hold it as the
-best current account rather than as a claim the paper has definitively ruled the other two out.
+Two further limits are worth naming directly. First, SBFN guidelines could in principle be working on
+the *extensive* margin of who obtains credit at all, rather than the *intensive* margin our
+interaction terms test; testing that would require modelling credit access itself as a function of
+SBFN status, which our demand-side design does not do. Second, every outcome in this paper is
+firm-reported, and we cannot rule out a compliance-reporting-versus-practice gap between what firms
+report and what banks report to their own supervisor — a limit no firm-level survey instrument can
+fully resolve on its own. Read together with Section 6, whose null is, to our knowledge, the first
+test of the SBFN framework's own theory of change against outcomes on the ground rather than its own
+tracked policy-stage progression, both point the same way: a framework can look like it is working by
+every measure the network itself tracks while the channel it is meant to move remains, on this
+evidence, unmoved.
 
-A further alternative worth engaging directly, since it is the more theoretically interesting
-institutional-mechanism story a system-change-oriented reading of our results would want addressed:
-SBFN guidelines could, in principle, be working exactly as intended on the *extensive* margin of who
-obtains credit at all, rather than on the *intensive* margin our interaction terms test. If a
-green-banking guideline induces banks in adopting jurisdictions to extend credit more broadly to
-environmentally promising firms that would otherwise have gone unfinanced, that effect shows up as a
-shift in *which* firms hold a credit line, not as a different adoption gap between financed and
-unfinanced firms conditional on already holding one — exactly the quantity our credit x SBFN
-interaction estimates. Testing this directly would require modelling credit access itself, rather
-than green adoption conditional on credit access, as a function of SBFN status and firm
-environmental characteristics; our design, built around the demand-side finance-to-green channel,
-does not do this, and we flag it explicitly as an unaddressed alternative mechanism rather than one
-our null result rules out.
+The one interaction that clears a conventional significance threshold — a negative credit x SBFN
+effect for overdraft rather than term-credit access (Section 5) — is more consistent with this
+redirection than with a simple policy failure: overdrafts finance working capital, not the
+long-horizon expenditure our outcome measures, so a supervisor successfully steering credit toward
+term instruments would produce exactly this pattern. We flag it as suggestive only: it is one
+significant coefficient among many tested, and does not survive a Benjamini-Hochberg correction at any
+conventional false discovery rate (Table 8).
 
-We should also be candid about a limit of our outcome measure itself. Every green-practice-adoption
-item in this paper is firm-reported, and we cannot rule out that self-reported adoption rates differ
-systematically from banks' own compliance reporting to their SBFN supervisor in ways our data cannot
-observe — a general concern about compliance-reporting-versus-practice gaps that applies to any
-policy evaluated through the regulated party's own attestations, and one a firm-level survey
-instrument, however carefully harmonized, cannot fully resolve on its own.
-
-To our knowledge, this paper is also the first to test the SBFN framework's own theory of change
-against firm-level, rather than bank-level or policy-stage, outcomes: the network's periodic Global
-Progress Reports (Section 2) measure and publicize each member jurisdiction's regulatory-output
-stage, but not whether that output changes what happens on the ground for the firms the policy
-ultimately targets. Read this way, our null result is directly relevant to the SBFN's and the IFC's
-own self-evaluation practice, independent of what it implies for the academic
-institutional-complementarity literature: a framework can progress steadily through Commitment,
-Developing, and Advancing stages by every measure the network itself tracks, while the firm-level
-channel that is its ultimate point remains, on this evidence, unmoved.
-
-The one interaction that does clear a conventional significance threshold — a *negative*
-credit x SBFN effect when finance access is measured through overdraft facilities rather than
-term credit lines (Section 5.6) — is, we think, more consistent with this redirection than with a
-simple failure of green banking policy. Overdrafts finance working capital, not the kind of
-multi-year capital expenditure our outcome variable measures; if SBFN-guided lending is
-disproportionately channelled through the term-loan instruments better suited to financing a solar
-installation or an energy-efficiency retrofit, exactly the pattern we find — a null-to-positive
-effect on credit lines, a negative one on overdrafts — is what a supervisor successfully steering
-credit toward long-horizon green investment, rather than short-horizon working capital, would
-produce. We flag this as suggestive rather than established, since it is a single significant
-coefficient among the many interaction tests reported across Tables 4-8 — and, as Section 5.6
-reports formally (Table 10), it does not survive a Benjamini-Hochberg correction for multiple
-comparisons at any conventional false discovery rate — and our data cannot
-directly verify the underlying loan-tenor mechanism.
-
-Read against this special issue's organizing themes of state capacity and policy credibility, and
-holding to the same best-current-account framing as above rather than treating it as settled, our
-results sit closer to a state-capacity-is-necessary-but-firm-level-frictions-bind-independently
-story than to a straightforward institutional-complementarity one in which stronger regulatory
-quality unlocks a latent policy effect that would otherwise lie dormant. Regulatory quality
-matters — it raises the general baseline propensity to adopt green practices regardless of a firm's
-own financing arrangement — but it does not appear to be the missing ingredient that would let a
-green banking guideline reshape the credit-to-green channel specifically. This suggests, tentatively,
-that the binding constraint on green credit policy's effectiveness in our sample is less about
-whether the supervising jurisdiction has the state capacity to make the guideline credible, and more
-about whether firms below a certain scale can absorb a green investment's fixed costs at all once
-credit is available — a question about firm-level absorptive capacity that sits one level down from
-the state-capacity question the SBFN framework itself is designed to address.
+Read against this special issue's themes of state capacity and policy credibility, our results sit
+closer to a state-capacity-is-necessary-but-firm-level-frictions-bind-independently story than a
+straightforward complementarity one. Regulatory quality raises the baseline propensity to adopt green
+practices, but is not the missing ingredient that lets a green banking guideline reshape the
+credit-to-green channel specifically. The binding constraint looks less like whether the supervising
+jurisdiction can make its guideline credible, and more like whether firms below a certain scale can
+absorb a green investment's fixed costs once credit is available — a question one level down from the
+one the SBFN framework is designed to answer.
 
 ## 8. Conclusion
 
 This paper set out to test whether the wave of green banking policy adoption coordinated through the
-Sustainable Banking and Finance Network changes the relationship between firm-level access to
-finance and green investment behaviour, and whether any such moderation depends on the regulatory
-capacity available to make the underlying policy credible. Using harmonized World Bank Enterprise
-Survey data spanning 41 economies' full 2018-2020 Green Economy Module rollout, a four-country
-waste-minimization supplementary check, and an independently assembled 162-economy global sample
-spanning 2021-2026 and reaching for the first time into high-income, non-SBFN economies, we apply a
-deliberately escalating sequence of estimators — a classical benchmark chosen to expose its own
-limitation, a Bayesian hierarchical model built to give the moderation hypothesis a fair test, a
-causal forest imposing no functional-form assumption at all, and, on the global sample specifically,
-a country-fixed-effects specification the primary sample's single wave cannot support — and find four
-consistent results. First, access to bank credit is robustly associated with a firm's green practice
-adoption, a relationship that survives every specification, subsample, and alternative-outcome check
-in the paper and replicates independently in both the small waste-minimization sample and the full
-162-economy global sample. Second, neither SBFN policy adoption nor regulatory quality moderates that
-relationship in any of the four estimators, on either sample, though both shift the general level of
-green adoption directly and substantially in the primary sample. Third, where genuine effect
-heterogeneity does exist, it is concentrated at the level of firm size rather than country
-institutions. Fourth, this entire pattern
-replicates on a sample sharing almost no economies with the primary one, fielded years later,
-measured with a different outcome item, and identified under a materially sharper econometric
-strategy. Fifth, and most importantly for the paper's overall credibility, an entirely independent
-country-level staggered event-study (Section 6), built specifically to supply the adoption-timing
-identification strategy the firm-level data cannot, likewise finds no clean evidence that SBFN
-adoption improves aggregate environmental outcomes — a different claim from the firm-level moderation
-null in results First-Fourth (a main effect at country level, not a slope change at firm level), but
-the single strongest piece of evidence in the paper that the absence of a beneficial institutional
-effect is a real feature of how this policy relates to outcomes rather than an artefact of any one
-sample, data source, level of analysis, or estimator.
+Sustainable Banking and Finance Network changes the relationship between firm-level access to finance
+and green investment behaviour, and whether that depends on the regulatory capacity available to make
+the policy credible. Using harmonized WBES data across 41 economies (2018-2020), a four-country
+waste-minimization check, and an independently assembled 162-economy global sample (2021-2026)
+reaching for the first time into high-income, non-SBFN economies, we apply four escalating estimators
+and find five consistent results. First, bank credit access is robustly associated with green practice
+adoption, surviving every specification, subsample, and alternative-outcome check, and replicating in
+both the small waste-minimization sample and the full global sample. Second, neither SBFN adoption nor
+regulatory quality moderates that relationship under any estimator, on either sample, though both
+shift the general level of adoption directly in the primary sample. Third, where effect heterogeneity
+does exist, it sits at the level of firm size rather than country institutions. Fourth, this pattern
+replicates on a sample sharing almost no economies with the primary one, under a materially sharper
+identification strategy. Fifth, and most importantly for the paper's credibility, an independent
+country-level staggered event-study (Section 6) — a main-effect test, not a repeat of the firm-level
+moderation null — likewise finds no clean evidence that SBFN adoption improves aggregate environmental
+outcomes, the single strongest evidence that this null is a real feature of the data rather than an
+artefact of any one sample, data source, level of analysis, or estimator.
 
 For policy, the implication is not that green banking guidelines are ineffective, but that our
-evidence does not support treating them as an effective lever specifically for widening the gap in
-green investment between financed and unfinanced firms — the margin most green-credit-policy
-literature implicitly assumes they operate on. If our tentative loan-tenor interpretation of the
-overdraft-interaction finding is correct, policymakers designing or refining SBFN-style frameworks
-may find more traction focusing supervisory attention on the term-lending instruments that actually
-finance green capital expenditure, and on complementary measures — technical assistance, matching
-grants, or credit guarantees — that address smaller firms' absorptive-capacity constraints directly,
-rather than assuming that a bank-level supervisory mandate alone will reach firms regardless of
-scale.
+evidence does not support treating them as a lever for widening the green-investment gap between
+financed and unfinanced firms — the margin most of this literature implicitly assumes they operate on.
+If our tentative loan-tenor reading of the overdraft result is correct, policymakers may find more
+traction focusing on the term-lending instruments that actually finance green capital expenditure, and
+on complementary measures — technical assistance, matching grants, credit guarantees — that address
+smaller firms' absorptive-capacity constraints directly.
 
-We close with seven limitations that bound how far these conclusions travel. First, both samples are
-single cross-sections per country (Section 4.1 discusses why a genuine panel on this outcome, and
-the staggered-adoption design it would support, does not exist in the published WBES data): they cannot rule out reverse causality (firms already predisposed
-to green investment may find it easier to obtain credit) or unobserved, time-invariant country
-characteristics correlated with both SBFN adoption and the baseline propensity to adopt green
-practices, and our identification rests on firm-level variation in credit access interacting with a
-plausibly firm-exogenous country-level policy indicator, not a natural experiment; the global
-sample's country fixed effects sharpen this only for the interaction terms, not for the credit main
-effect itself. Second, SBFN membership is a binary proxy for what the network's own multi-tiered
-progression framework treats as a genuinely graded process; a natural extension would model policy
-stage — Commitment through Consolidating — as an ordinal or continuous treatment rather than
-collapsing it to membership status, which our binary coding necessarily does, and which for the
-global sample's regional entries (the CEMAC and Eastern Caribbean groupings, Section 4.1)
-additionally rests on an inference about which specific economies a regional listing covers rather
-than an explicit per-country statement. Third, the four-economy waste-minimization check cannot
-re-test the SBFN contrast itself, since three of its four economies are SBFN members, and combines
-non-identical outcome items across countries by construction of the WBES's own shortened, randomized
-module design in later survey waves — a genuine data-availability constraint rather than a
-methodological choice. Fourth, the global sample's CO2-monitoring outcome is a single item rather
-than the primary sample's seven-item composite, and is a narrower construct than "green practice
-adoption" in the sense the primary sample measures it; that the same qualitative pattern holds on
-this narrower measure is reassuring but does not establish that it would hold on a richer one, were a
-richer one available at global scale. Fifth, the Worldwide Governance Indicators' regulatory-quality
-measure is a broad, economy-wide governance indicator rather than a banking-supervision-specific
-capacity measure; a supervisor-specific index, were one available consistently across this country
-set, would sharpen the institutional-complementarity test considerably. Sixth, our design tests only
-the intensive margin of the credit-to-green channel (the adoption gap between financed and
-unfinanced firms); it cannot rule out that SBFN policy operates instead on the extensive margin of
-which firms obtain credit in the first place, nor can our firm-reported outcome measure distinguish
-actual practice adoption from a compliance-reporting gap between what firms report and what banks
-report to their supervisor (Section 7). Seventh, Section 6's country-level event-study is an
-ecological-level test: it speaks to whether SBFN adoption shifts a country's aggregate environmental
-trajectory, not to the firm-level financing mechanism the rest of the paper investigates, and the two
-should not be conflated. Its one significant result (CO2 per capita) is netted against a single
-covariate, log GDP per capita; we cannot rule out that a richer set of development-stage controls
-(energy-mix transition, industrial composition, population growth) would shrink the estimated
-association further still, or that some genuine, if small and confounded, relationship remains. We
-leave each of these to future work.
+We close with seven limitations. First, both firm-level samples are single cross-sections (Section 4
+explains why a genuine panel does not exist for this outcome): they cannot rule out reverse causality
+or unobserved country characteristics correlated with both SBFN adoption and baseline green-adoption
+propensity, and the global sample's fixed effects sharpen this only for the interaction terms, not the
+credit main effect. Second, SBFN membership is a binary proxy for what the network's own framework
+treats as a graded process; the global sample's regional roster entries (the CEMAC and Eastern
+Caribbean groupings, Section 4) additionally rest on an inference about coverage rather than an
+explicit per-country statement. Third, the four-economy waste-minimization check cannot re-test the
+SBFN contrast (three of its four economies are members) and combines non-identical outcome items by
+construction of WBES's own shortened module design — a data-availability constraint, not a
+methodological choice. Fourth, the global sample's CO2-monitoring outcome is a single item, narrower
+than the primary sample's seven-item composite; that the same pattern holds on it is reassuring but
+does not establish it would hold on a richer measure. Fifth, the Worldwide Governance Indicators
+measure is a broad governance indicator, not a banking-supervision-specific capacity measure. Sixth,
+our design tests only the intensive margin of the credit-to-green channel and cannot rule out that
+SBFN policy operates on the extensive margin of who obtains credit, nor distinguish firm-reported
+practice adoption from a bank-compliance-reporting gap (Section 7). Seventh, Section 6's event-study
+is an ecological-level test of a related but distinct question; its one significant result (CO2 per
+capita) is netted against a single covariate, and we cannot rule out that a richer set of
+development-stage controls would shrink it further, or that some genuine, small, confounded
+relationship remains. We leave each of these to future work.
 
 ## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
 
-During the preparation of this work the author(s) used Claude (Anthropic) to assist with data
-extraction and cleaning from World Bank Enterprise Surveys microdata (including identification and
-extraction of the standardized cross-country database underlying the global sample), construction of
-the analysis datasets and merge with country-level SBFN and Worldwide Governance Indicators data,
-execution of the statistical and machine-learning analyses reported in Section 5, construction of the
-country-year World Development Indicators panel and the Callaway-Sant'Anna staggered event-study
-reported in Section 6, generation of Figures 1-3 and Figure 6, and drafting of portions of the
-manuscript text. After using this tool, the author(s)
-reviewed and edited the content as needed and take full responsibility for the content of the
-published article.
+During the preparation of this work the author(s) used AI-assisted tools to help polish the writing.
+After using these tools, the author(s) reviewed and edited the content as needed and take full
+responsibility for the content of the published article.

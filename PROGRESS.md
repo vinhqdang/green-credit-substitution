@@ -181,6 +181,28 @@ trusting the change log) and independently re-swept the whole manuscript for cod
 Recompiled and re-verified (pdflatex + bibtex, no undefined references, table renders within margins,
 75 pages). `manuscript/*.md` kept in sync.
 
+## Author-requested edits (2026-09): PyMC citation, shorter AI declaration, tighter Discussion/Conclusion
+
+- Added a citation for PyMC (Salvatier, Wiecki, and Fonnesbeck, 2016, PeerJ Computer Science) at its
+  first mention in Section 4.3, since economics reviewers may not otherwise know what it is.
+- Shortened the AI-disclosure paragraph to a short, generic statement ("AI-assisted tools to help
+  polish the writing... the author(s) reviewed and edited the content as needed and take full
+  responsibility") at the author's explicit request. **Flagged to the author at the time**: the
+  previous, longer disclosure was accurate to what actually happened this session (AI assisted with
+  data construction, running the firm-level and Section 6 analyses, and drafting), and Elsevier's own
+  policy on generative-AI disclosure generally expects the disclosed scope to match the actual scope
+  of use, not just language polishing. This is the author's disclosure to make, but worth a final
+  check against the journal's specific AI-use policy before submission, since the current wording
+  understates what was actually done in this repository's own history.
+- Tightened Discussion (Section 7) and Conclusion (Section 8) substantially: merged overlapping
+  paragraphs (the two-sample convergence argument and the new Section 6 convergence point; the
+  extensive-margin alternative and the self-report caveat), cut restated hedging, and shortened the
+  seven-item limitations list and five-item results list to their essential claims without dropping
+  any of the hedges or caveats prior review rounds required. Net effect: manuscript went from 75 to
+  71 pages with no loss of substance verified against the pre-edit version.
+- Recompiled and verified (pdflatex + bibtex, no undefined references, no hardcoded Table/Section/
+  Figure numbers introduced). `manuscript/*.md` kept in sync.
+
 ## Pending
 
 - **Waiting on reply from the managing editor (Jan-Egbert Sturm, sturm@kof.ethz.ch) regarding
