@@ -1,5 +1,11 @@
 # Progress log
 
+**Internal note (not for the manuscript/commit history):** this round of processing (review
+passes, the new Section 6 macro event-study, and the subsequent edits) was run under a Claude
+session tied to the RMIT account/affiliation, not BUV. Flagging here so this can be revisited --
+e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
+policies before submission, given the paper's corresponding author is listed under BUV.
+
 ## Status: manuscript complete, submission pending fee-waiver decision
 
 **Target journal:** Economic Systems (Elsevier), special issue "Governing the Green
