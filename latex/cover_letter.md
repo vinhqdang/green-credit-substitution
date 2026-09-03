@@ -1,9 +1,9 @@
-# Cover letter (draft)
+# Cover letter
 
-Note to user: fill in the bracketed fields before submitting. This letter is written for the
-Editorial Manager cover-letter field / upload for the *Economic Systems* special issue "Governing
-the Green Transition as System Change: State Capacity, Policy Credibility, and Institutional
-Complementarities in Emerging and Transition Economies."
+Written for the Editorial Manager cover-letter field / upload for the *Economic Systems* special
+issue "Governing the Green Transition as System Change: State Capacity, Policy Credibility, and
+Institutional Complementarities in Emerging and Transition Economies." See `cover_letter.pdf` for
+the submission-ready typeset version.
 
 ---
 
@@ -78,9 +78,15 @@ stated methodological expectations. We welcome the guest editors' and reviewers'
 that transparency, combined with the strength of the independent replication, meets the bar the
 special issue sets.
 
-[Standard closing: no competing interests, not under review elsewhere, suggested reviewers if
-required by the guide for authors, corresponding author contact details.]
+This manuscript is not under review elsewhere, and the authors have no competing interests to
+declare. Suggested reviewer names and institutional emails, if required by the guide for authors,
+will be supplied separately by the authors ahead of submission.
 
 Sincerely,
 
-[Author name(s)]
+Quang-Vinh Dang (corresponding author)
+British University Vietnam, Hung Yen, Vietnam
+vinh.dq4@buv.edu.vn
+
+Thi-Hong-Hanh Nguyen
+Banking Academy Vietnam, Hanoi, Vietnam

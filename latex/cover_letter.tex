@@ -1,0 +1,38 @@
+\documentclass[11pt]{letter}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+\signature{Quang-Vinh Dang\\Corresponding author\\British University Vietnam}
+\address{Quang-Vinh Dang \\ British University Vietnam \\ Hung Yen, Vietnam \\ vinh.dq4@buv.edu.vn}
+\date{\today}
+
+\begin{document}
+
+\begin{letter}{Prof. Dr. Jan-Egbert Sturm, Managing Editor\\Prof. Dr. Yu Hao, Prof. Mariya Gubareva, Prof. Xunpeng (Roc) Shi, Guest Editors\\\textit{Economic Systems}}
+
+\opening{Dear Guest Editors Hao, Gubareva, and Shi, and Managing Editor Prof. Sturm,}
+
+We submit ``Credible on Paper? Green Banking Policy, Access to Finance, and Institutional Capacity in the Greening of Firms Worldwide'' for consideration in the special issue ``Governing the Green Transition as System Change: State Capacity, Policy Credibility, and Institutional Complementarities in Emerging and Transition Economies.''
+
+The paper tests whether green-banking-policy adoption (via the Sustainable Banking and Finance Network) changes the firm-level relationship between access to finance and green-practice adoption, and whether that depends on the regulatory capacity available to make the policy credible --- the special issue's own ``Policy Design $\times$ System Conditions $\to$ System Outcomes'' framing, applied to financial-sector governance specifically.
+
+We want to address directly, rather than leave for reviewers to discover, how our identification strategy relates to the designs the call for papers names (staggered DID/event studies, RDD, synthetic control, and related quasi-experimental approaches). At the firm level, we do not use a staggered difference-in-differences design around each economy's own SBFN adoption date, despite real variation in adoption timing in our sample (join years 2012--2024): the World Bank Enterprise Surveys' Green Economy module, on which our firm-level outcome variable is built, has been fielded to a given country, in nearly every case, exactly once, as a special one-off module rather than a repeated panel instrument, and the small subset of countries in our data surveyed more than once by the core WBES instrument were not re-surveyed with a comparable Green Economy module in a second wave. A within-country before/after comparison around each economy's SBFN join date is accordingly not implementable with a consistently defined firm-level outcome in the currently published WBES microdata. We say this plainly in the manuscript itself (Section 4.1) rather than only here, because we think it is more useful to the special issue's screening process to see exactly where that gap comes from than to leave it implicit.
+
+Rather than stop there, we built the staggered-adoption design the special issue's own guidance asks for using a different, independent data source: a country-year panel (217 economies, 2000--2024) from World Bank World Development Indicators, exploiting the same SBFN adoption-timing variation in a proper Callaway-Sant'Anna (2021) staggered event-study, with never-treated economies as the comparison group (Section 6). This is not a substitute for the firm-level analysis --- it answers a related but distinct question, whether SBFN adoption shifts a country's aggregate environmental trajectory, rather than the firm-level finance-to-green channel the rest of the paper investigates --- but it directly supplies the identification strategy the CFP names first, on the exact policy-timing variation at the center of the paper's argument. It finds no effect on renewable-energy share, and a positive association with CO2 emissions per capita that shrinks by roughly 45\% once we control for GDP per capita and whose dynamics look more like a pre-existing divergence in adopting economies' growth trajectories than a policy-caused shift. We report this honestly rather than spin it either direction: a genuinely quasi-experimental test, independent of the firm-level data's own limits, converges on the same substantive conclusion as the rest of the paper.
+
+Combined, the paper now offers four estimators on the firm-level question (a classical benchmark chosen specifically to expose its own limitation, a Bayesian hierarchical model built for the two-level question at hand, a causal forest imposing no linear functional form, and a country-fixed-effects specification on a second, independently assembled 162-economy sample), plus the country-level staggered event-study above --- five independent tests, three different data sources, three different units and levels of analysis, and, for the event-study specifically, genuine identification off adoption timing rather than cross-sectional comparison. The same qualitative result --- no detectable institutional moderation, no clean evidence of a beneficial policy effect --- survives all five. We think this combination, rather than any single design among them, is what should be weighed against the special issue's identification-strategy expectations.
+
+We would also flag for the guest editors' attention what we think is the paper's most system-relevant finding: having ruled out a country-institutional interaction across four estimators and two samples, we find (an auxiliary, exploratory result reported as such --- Sections 3.4 and 5.4) that the effect heterogeneity that does exist is concentrated at the level of firm size rather than country institutions. We read this as relocating, rather than resolving, the paper's institutional question --- which ``system condition'' actually governs whether a green-credit policy reaches its intended margin --- and think it speaks directly to this special issue's organizing concern with how governance structures shape policy effectiveness, even though the specific institutional variables we test (SBFN status, regulatory quality) turn out not to be the operative one in our data.
+
+We believe the paper is squarely on-topic for this special issue (institutional complementarities in financial systems and credit allocation; state capacity and policy credibility, tested across a sample spanning every SBFN progression stage) and we have tried, above and in the manuscript itself, to be transparent about where its identification strategy sits relative to the special issue's stated methodological expectations. We welcome the guest editors' and reviewers' judgment on whether that transparency, combined with the strength of the independent replication, meets the bar the special issue sets.
+
+This manuscript is not under review elsewhere, and the authors have no competing interests to declare. Suggested reviewer names and institutional emails, if required by the guide for authors, will be supplied separately by the authors ahead of submission.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
