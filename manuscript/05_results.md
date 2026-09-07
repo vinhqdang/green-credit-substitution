@@ -12,7 +12,7 @@ are counted — and every European Union member state in the sample is, consiste
 a non-adopter. At the firm level, bank credit access correlates positively with the green-adoption
 index (r = 0.18) but is essentially uncorrelated with a firm's own perceived finance obstacle
 (r = -0.02) — a first hint, well before any regression, that realized access to credit rather than
-perceived financing difficulty is what tracks green behaviour, and the two are evidently not
+perceived financing difficulty is what tracks green behavior, and the two are evidently not
 interchangeable measures of the same underlying constraint.
 
 Figure 2 previews the paper's central finding graphically before a single regression is estimated:
@@ -48,7 +48,7 @@ its thirty-three non-adopters. Table 4 accordingly reports main effects and inte
 without country fixed effects; what it shows is a genuine test of H2 and, in M3, of H3, not a
 placeholder — and that test returns no interaction on either. The
 question the remaining stages are built to answer is whether that null result reflects a real
-absence of policy moderation, or an artefact of forcing a two-level question (does a country-level
+absence of policy moderation, or an artifact of forcing a two-level question (does a country-level
 policy variable reshape a firm-level financing relationship?) through a single-level model with
 country-clustered standard errors computed over only 41 clusters, a setting in which such standard
 errors are known to be unreliable (Cameron and Miller, 2015).
@@ -163,7 +163,7 @@ Third, splitting the sample into manufacturing (N = 13,340) and services (N = 9,
 shows the credit-access main effect, the SBFN main effect, and the null credit x SBFN interaction all
 replicate within each sector separately (manufacturing: credit b = 0.480, p < 0.001, interaction
 b = -0.040, p = 0.826; services: credit b = 0.448, p < 0.001, interaction b = 0.195, p = 0.426) —
-the paper's central null is not an artefact of pooling two structurally different production
+the paper's central null is not an artifact of pooling two structurally different production
 technologies.
 
 Because the overdraft interaction (the one coefficient in the paper that clears a conventional

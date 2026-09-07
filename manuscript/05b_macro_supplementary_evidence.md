@@ -8,7 +8,7 @@ finance-to-green-investment channel specifically; it does not apply to a differe
 question that the same SBFN adoption-timing variation can answer directly: does a country's aggregate
 environmental trajectory shift around its own SBFN adoption date? This section builds and reports that
 test, using an entirely independent data source and unit of analysis, precisely because it is the
-identification strategy this literature -- and this special issue in particular -- asks for, and because
+identification strategy this literature most often asks for, and because
 a genuine answer, however it comes out, is more useful than leaving the question unaddressed.
 
 ### 6.1 Data and design
@@ -98,7 +98,7 @@ section depends on which set of untreated economies serves as the counterfactual
 Neither result supports a "green banking policy backfires" reading, and neither supports a "green
 banking policy works" one. The more measured reading is that a macro-level design -- built using exactly
 the identification strategy (staggered adoption timing, a proper Callaway-Sant'Anna estimator,
-never-treated controls) this special issue's own methodological expectations call for -- also does not
+never-treated controls) this literature's own methodological expectations call for -- also does not
 produce clean evidence that SBFN adoption changes a country's aggregate environmental trajectory for
 the better, and the one statistically significant result we do find is more parsimoniously explained by
 which economies self-select into SBFN membership than by what the policy itself does once adopted. This

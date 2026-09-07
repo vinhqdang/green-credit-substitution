@@ -17,7 +17,7 @@ of analysis, and the paper's only design that exploits exogenous variation in ad
 it too finds no clean evidence of a beneficial institutional effect — a precise null on
 renewable-energy share, and a CO2 association that shrinks substantially once development stage is
 controlled for — is the hardest-to-dismiss evidence that this is a real feature of the data, not an
-artefact of any one sample, level of analysis, or estimator. (This is a distinct claim from H2/H3's
+artifact of any one sample, level of analysis, or estimator. (This is a distinct claim from H2/H3's
 firm-level moderation null — a main effect at country level, not a slope change at firm level — but
 evidence of the same kind.)
 
@@ -46,7 +46,7 @@ rules the alternatives out.
 
 Two further limits are worth naming directly. First, SBFN guidelines could in principle be working on
 the *extensive* margin of who obtains credit at all, rather than the *intensive* margin our
-interaction terms test; testing that would require modelling credit access itself as a function of
+interaction terms test; testing that would require modeling credit access itself as a function of
 SBFN status, which our demand-side design does not do. Second, every outcome in this paper is
 firm-reported, and we cannot rule out a compliance-reporting-versus-practice gap between what firms
 report and what banks report to their own supervisor — a limit no firm-level survey instrument can
@@ -64,7 +64,7 @@ term instruments would produce exactly this pattern. We flag it as suggestive on
 significant coefficient among many tested, and does not survive a Benjamini-Hochberg correction at any
 conventional false discovery rate (Table 8).
 
-Read against this special issue's themes of state capacity and policy credibility, our results sit
+Read against the broader themes of state capacity and policy credibility, our results sit
 closer to a state-capacity-is-necessary-but-firm-level-frictions-bind-independently story than a
 straightforward complementarity one. Regulatory quality raises the baseline propensity to adopt green
 practices, but is not the missing ingredient that lets a green banking guideline reshape the
@@ -77,7 +77,7 @@ one the SBFN framework is designed to answer.
 
 This paper set out to test whether the wave of green banking policy adoption coordinated through the
 Sustainable Banking and Finance Network changes the relationship between firm-level access to finance
-and green investment behaviour, and whether that depends on the regulatory capacity available to make
+and green investment behavior, and whether that depends on the regulatory capacity available to make
 the policy credible. Using harmonized WBES data across 41 economies (2018-2020), a four-country
 waste-minimization check, and an independently assembled 162-economy global sample (2021-2026)
 reaching for the first time into high-income, non-SBFN economies, we apply four escalating estimators
@@ -92,7 +92,7 @@ identification strategy. Fifth, and most importantly for the paper's credibility
 country-level staggered event-study (Section 6) — a main-effect test, not a repeat of the firm-level
 moderation null — likewise finds no clean evidence that SBFN adoption improves aggregate environmental
 outcomes, the single strongest evidence that this null is a real feature of the data rather than an
-artefact of any one sample, data source, level of analysis, or estimator.
+artifact of any one sample, data source, level of analysis, or estimator.
 
 For policy, the implication is not that green banking guidelines are ineffective, but that our
 evidence does not support treating them as a lever for widening the green-investment gap between

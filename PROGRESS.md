@@ -6,11 +6,15 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: manuscript complete, submission pending fee-waiver decision
+## Status: desk-rejected at Economic Systems; corrected and retargeted to Borsa Istanbul Review
 
-**Target journal:** Economic Systems (Elsevier), special issue "Governing the Green
-Transition as System Change: State Capacity, Policy Credibility, and Institutional
-Complementarities in Emerging and Transition Economies."
+**Target journal:** Borsa Istanbul Review (Elsevier, open access; CiteScore 13.1, IF 5.7).
+Submission portal: https://www.editorialmanager.com/bir/. Single/double anonymized review,
+APA 7th-edition reference style, American spelling throughout.
+
+**Previous target:** Economic Systems (Elsevier), special issue "Governing the Green Transition
+as System Change." **Desk-rejected (2026-09)** on four grounds, two of them genuine technical
+errors in the manuscript. See "Desk rejection and corrections" below.
 
 **Corresponding author:** Quang-Vinh Dang (British University Vietnam)
 **Co-author:** Thi-Hong-Hanh Nguyen (Banking Academy Vietnam)
@@ -32,6 +36,74 @@ Complementarities in Emerging and Transition Economies."
 - Three independent review passes completed and fixed: numeric accuracy against source data,
   bibliography/citation integrity, Elsevier compliance + LaTeX structural checks.
 - Repository pushed to GitHub: `vinhqdang/green-credit-substitution`.
+
+## Desk rejection and corrections (2026-09)
+
+The *Economic Systems* SI editor desk-rejected the paper on four points. Two were real errors and
+have been fixed; two were fair criticisms already acknowledged as limitations.
+
+**Point 1 (real error, now fixed): country fixed effects and the interaction term.** Section 4.3
+claimed a country fixed effect would absorb Credit x SBFN "completely, making beta_2 and beta_3
+unidentifiable by construction." That is false for beta_3. The interaction is a *firm-level*
+regressor; a country dummy absorbs country-level regressors only, and credit access varies within
+country, so beta_3 stays identified. The manuscript stated the correct rule for Stage 5 fifteen
+lines later in the same section, and `src/analysis_global.py`'s docstring had it right all along --
+so the paper contradicted itself on first-course material. This undercut the stated rationale for
+the whole Stage 1 -> Stage 2 escalation.
+
+Corrected argument now in the manuscript: country FE absorbs the SBFN main effect only; on the
+primary sample it would identify beta_3 off the contrast between within-country credit variation in
+8 adopter economies and 33 non-adopters, while making the SBFN level shift unreportable. The route
+is imprecise, not infeasible. Mirrored in the abstract, introduction, Section 3.3, Section 5.2, and
+`src/analysis_baseline.py`'s docstring, which carried the same false claim.
+
+**Point 2 (real error, now fixed): H3's three-way interaction.** The Bayesian hierarchical model was
+billed as the primary vehicle for testing H2 "and H3," but it carries two two-way cross-level
+interactions and no Credit x SBFN x RegQuality term, so it cannot test H3 as posed. H3 was in fact
+already tested -- by Table 4's M3 triple interaction (b = -0.104, se = 0.272, p = 0.702) and by the
+global sample's saturated no-FE specification -- just not where the paper claimed. Section 5.3 is now
+scoped to H2, Section 5.2 reports the three-way term by name, and Stage 5's description notes that
+its FE column omits that term. Same correction in `src/analysis_multilevel.py`'s docstring.
+
+**Points 3 and 4 (fair, not newly actionable):** construct validity of binary SBFN membership as a
+proxy for a graded policy process (already Limitation 2), and interpretation outrunning the evidence
+on the causal-forest feature importance and the country-level event study (already hedged in
+Sections 5.4, 6, and 7).
+
+**Nothing was recomputed.** Both errors were in prose describing the econometrics, not in the
+analysis: no estimate, table, or figure changed. Note that the WBES microdata is not present in
+this repo (gitignored, and restricted-access at source), so re-running the pipeline requires
+re-downloading it.
+
+## Retargeting to Borsa Istanbul Review (2026-09)
+
+- Journal name updated in `latex/manuscript.tex` and `latex/titlepage.tex`.
+- All special-issue framing removed (7 passages in the tex, 7 in `manuscript/*.md`), including the
+  "Policy Design x System Conditions -> System Outcomes" framing that belonged to the ES call.
+- Journal-fit paragraph rewritten. It previously cited six *Economic Systems* papers; it now cites
+  five *Borsa Istanbul Review* papers, each verified independently via Crossref before use
+  (Jia et al. 2026; Chi & Yang 2023; Shi et al. 2024; Ullah et al. 2024; Jin 2026). The Section 3.3
+  institutional-complementarity paragraph was rewritten on the same basis, replacing Barra &
+  Falcone (2026). See `data/bibliography.md` section 6 for the verification record and section 7
+  for the withdrawn ES entries.
+- The six now-uncited ES references were removed from `references.bib` (BIR's checklist requires
+  reference list and text to match exactly). Bib is now 42 entries, all cited; verified
+  programmatically that used keys and defined bibitems match exactly.
+- **Reference style converted to APA 7th edition.** `apacite` conflicts with `elsarticle`, and no
+  Elsevier APA-like bst (`model5-names`) is installed, so the reference list is generated from
+  `references.bib` by `bib2apa.py` and embedded inline as a `thebibliography` block with
+  natbib-compatible `\bibitem[Author(Year)]` labels. Handles sentence-casing (proper nouns
+  protected by braces in the .bib), ampersands, article numbers vs page ranges, DOIs as
+  https://doi.org/, and APA surname-then-initial sort order. Same-surname authors (Ullah, B. 2025
+  vs Ullah, W. et al. 2024) carry initials in their in-text labels per APA.
+  **If `references.bib` changes, the inline block must be regenerated** -- it is no longer built by
+  bibtex.
+- Spelling standardized to American English throughout body text (behaviour -> behavior, artefact ->
+  artifact, modelling -> modeling, favourably -> favorably, centre -> center). Cited works' published
+  titles left untouched.
+- Cover letter rewritten for BIR (`latex/cover_letter.tex` / `.md`). It discloses the desk rejection
+  and both corrected errors explicitly rather than leaving them to be discovered.
+- All three documents compile clean: manuscript 73 pages, no undefined citations or references.
 
 ## Review response (2026-09)
 

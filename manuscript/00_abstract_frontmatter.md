@@ -3,7 +3,7 @@
 Green banking policy frameworks coordinated through the Sustainable Banking and Finance Network
 (SBFN) have been adopted across more than sixty emerging and developing economies since 2012, on the
 premise that supervisory guidelines directing banks to price environmental risk into lending will
-strengthen the link between firms' access to credit and their green investment behaviour. We test
+strengthen the link between firms' access to credit and their green investment behavior. We test
 this premise using two independent World Bank Enterprise Survey samples. The primary sample
 harmonizes the Bank's full 2018-2020 Green Economy Module rollout across 41 economies (28,042 firms)
 on a rich seven-item green-practice-adoption outcome, matched to each economy's SBFN policy-adoption

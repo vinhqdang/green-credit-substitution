@@ -53,7 +53,32 @@ Verified, DOI-checked reference list compiled for the manuscript on SBFN green b
 - Gelman, A., Hill, J., & Vehtari, A. (2020). *Regression and Other Stories*. Cambridge University Press. DOI: 10.1017/9781139161879 (ISBN 9781107023987 hardback / 9781107676510 paperback)
 - Cameron, A. C., & Miller, D. L. (2015). A Practitioner's Guide to Cluster-Robust Inference. *Journal of Human Resources*, 50(2), 317–372. DOI: 10.3368/jhr.50.2.317
 
-## 6. Recent Economic Systems (Elsevier) Articles on Related Themes
+## 6. Recent Borsa Istanbul Review (Elsevier) Articles on Related Themes
+
+Compiled when the manuscript was retargeted to *Borsa Istanbul Review*. Each entry below was verified
+three ways during compilation: Crossref (journal title, ISSN 2214-8450, volume/issue/pages), a second
+independent index (DOAJ or OpenAlex), and live DOI resolution. ScienceDirect returns 403 to automated
+requests, so publisher HTML pages were not used as the verification route.
+
+- Jia, S., Farooq, U., Alomair, A., & Aljughaiman, A. A. (2026). Credit with a climate purpose: Does green credit policy accelerate sustainable production in BRICS? *Borsa Istanbul Review*, 26(3), 100817. DOI: 10.1016/j.bir.2026.100817
+- Jin, W. (2026). Choosing not to borrow: Imprinting effects of informality on firms' credit self-rationing. *Borsa Istanbul Review*, 26(2), 100785. DOI: 10.1016/j.bir.2026.100785
+- Shi, Y., Zhu, Q., & Khan, M. A. (2024). The efficacy of green finance for environmental sustainability: Does control of corruption makes a difference? *Borsa Istanbul Review*, 24(6), 1179-1189. DOI: 10.1016/j.bir.2024.07.002
+- Ullah, W., Zubir, A. S. M., & Ariff, A. M. (2024). Exploring the moderating effect of regulatory quality on the relationship between financial development and economic growth/economic volatility for developed and developing countries. *Borsa Istanbul Review*, 24(5), 934-944. DOI: 10.1016/j.bir.2024.04.015
+- Chi, Y., & Yang, Y. (2023). Green finance and green transition by enterprises: An exploration of market-oriented governance mechanisms. *Borsa Istanbul Review*, 23(3), 628-646. DOI: 10.1016/j.bir.2023.01.003
+
+Additional verified *Borsa Istanbul Review* articles on adjacent themes, compiled but not cited in the
+current draft: Jin & Wang (2025), 25(2), 275-285, DOI 10.1016/j.bir.2025.01.002 (climate regulation and
+firms' cost of debt); Tekin (2025), 25(5), 930-938, DOI 10.1016/j.bir.2025.05.008 (green banking
+strategies in Turkish banks); Huynh (2024), 24(4), 838-855, DOI 10.1016/j.bir.2024.04.014 (banking
+uncertainty and trade credit); Yarba, Er, & Sengul (2024), 24(6), 1137-1145, DOI
+10.1016/j.bir.2024.07.003 (credit expansion diverted to financial rather than real activity).
+
+## 7. Withdrawn: Economic Systems Articles Cited in the Earlier Submission
+
+These were cited only in the journal-fit paragraph written for the earlier *Economic Systems*
+submission. They are no longer cited in the manuscript and have been removed from `references.bib`,
+since the journal's checklist requires the reference list and the text to match exactly. Retained here
+as a verified record.
 
 - Yan, Z., Jia, Y., & Zhang, B. (2024). Environmental protection taxes and green productivity: Evidence from listed companies in China. *Economic Systems*, 48(4), 101213. DOI: 10.1016/j.ecosys.2024.101213
 - Barra, C., & Falcone, P. M. (2026). Institutional factors and environmental performance: Insights from global economies. *Economic Systems*, 50(2), 101364. DOI: 10.1016/j.ecosys.2025.101364
