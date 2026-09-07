@@ -2,11 +2,14 @@
 Bayesian hierarchical (multilevel) logistic model: firms nested in
 countries, with a random slope on access-to-finance and cross-level
 interactions with the SBFN policy indicator and WGI regulatory quality.
-This is the paper's primary specification for H2/H3 -- it lets country
+This is the paper's primary specification for H2 -- it lets country
 be a random effect (so SBFN status, a level-2 constant, is identified
 rather than absorbed) while properly modeling the correlated-error
 structure that ~41 country clusters make unreliable for cluster-robust
-OLS (Cameron & Miller, 2015).
+OLS (Cameron & Miller, 2015). It carries two two-way cross-level
+interactions only, so it does NOT test H3, which is a three-way claim
+(credit x SBFN x regulatory quality). H3 is tested by the saturated
+triple interaction in analysis_baseline.py (M3) and analysis_global.py (M1).
 """
 import arviz as az
 import bambi as bmb

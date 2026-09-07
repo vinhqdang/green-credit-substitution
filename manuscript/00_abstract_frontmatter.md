@@ -9,7 +9,8 @@ harmonizes the Bank's full 2018-2020 Green Economy Module rollout across 41 econ
 on a rich seven-item green-practice-adoption outcome, matched to each economy's SBFN policy-adoption
 status and Worldwide Governance Indicators regulatory quality as of its survey year. Because SBFN
 status is fixed within country in a single-wave cross-section, a classical country-fixed-effects
-specification cannot identify it or its interactions; we show this explicitly, then re-estimate the
+specification cannot identify its main effect, and identifies its interaction with credit access
+only off the eight adopter economies in that sample; we show this explicitly, then re-estimate the
 relationship with a Bayesian hierarchical model (country-varying slopes) and a causal forest that
 impose no linear-interaction functional form. All three approaches agree: bank credit access is
 robustly associated with green practice adoption (average marginal effect of 13 percentage points in
@@ -20,7 +21,7 @@ sample of 162 further economies (89,797-100,115 firms depending on specification
 2021-2026 and reaching, for the first time in this literature, into high-income economies such as
 Australia, Germany, and Japan, built from a World Bank standardized cross-country database not
 previously exploited for this purpose. On a narrower CO2-emissions-monitoring outcome and with
-country fixed effects the primary sample's single-wave design cannot support, credit access remains
+country fixed effects the primary sample's single-wave design cannot support informatively, credit access remains
 significant while both SBFN and regulatory-quality interactions remain statistically
 indistinguishable from zero — the identical qualitative pattern, on a different outcome, a different
 set of economies, and a materially sharper identification strategy. The causal forest's

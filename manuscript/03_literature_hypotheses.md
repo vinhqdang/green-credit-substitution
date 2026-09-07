@@ -18,7 +18,7 @@ A green banking guideline is only as effective as the supervisory apparatus behi
 
 > **H3.** The policy-moderation effect described in H2 is itself increasing in regulatory quality: SBFN adoption strengthens the credit-to-green-investment channel most where the supervising jurisdiction has the institutional capacity to make the underlying guideline credible, and least — potentially not at all — where it does not.
 
-Hypotheses H2 and H3 are, by construction, statements about how a country-level variable reshapes a firm-level relationship — precisely the two-level structure that Section 4 argues a classical single-level fixed-effects regression is poorly suited to recover with a country-cluster count in the low forties, and that motivates the hierarchical and machine-learning estimators we turn to after reporting that classical benchmark.
+Hypotheses H2 and H3 are, by construction, statements about how a country-level variable reshapes a firm-level relationship. That two-level structure is what Section 4 argues a classical single-level specification is poorly placed to adjudicate on this sample — not because the interaction terms it tests are unidentified, but because a country-cluster count in the low forties makes cluster-robust inference on them unreliable, and because a country-fixed-effects variant would purchase within-country identification at the cost of the level-2 main effects and of resting on only eight adopter economies. That is what motivates the hierarchical and machine-learning estimators we turn to after reporting the classical benchmark.
 
 ### 3.4 An auxiliary hypothesis: firm-level absorptive capacity as an alternative margin
 

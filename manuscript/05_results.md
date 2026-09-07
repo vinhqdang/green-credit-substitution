@@ -32,28 +32,37 @@ credit line is associated with roughly the same increase in the probability of g
 moving from a small to a large firm, and a somewhat larger increase than being an exporter. Column M2
 adds SBFN status and its interaction with credit access: the SBFN main effect is large, negative, and
 precisely estimated (b = -0.991, p < 0.001), while the credit x SBFN interaction is small and
-statistically indistinguishable from zero (b = 0.049, p = 0.773). Column M3's fully saturated triple
-interaction with regulatory quality tells the same story at greater length: every interaction term
+statistically indistinguishable from zero (b = 0.049, p = 0.773). Column M3 adds the fully saturated
+triple interaction with regulatory quality, and it is this column, not the hierarchical model of
+Section 5.3, that carries the paper's direct test of H3: the credit x SBFN x regulatory-quality term
+is small, wrong-signed relative to H3's prediction, and nowhere near significance (b = -0.104,
+se = 0.272, p = 0.702). The rest of M3 tells the same story at greater length: every interaction term
 involving credit access is small and insignificant, while regulatory quality's uninteracted
 relationship with adoption is positive, if only marginally significant in this particular fully-
 saturated specification (b = 0.278, p = 0.110).
 
-As flagged in Section 4.3, this specification cannot include country fixed effects without
-mechanically absorbing the very SBFN and regulatory-quality terms the hypotheses concern, so what
-Table 4 shows is a genuine test of H2/H3, not a placeholder — and that test returns no interaction. The
+As set out in Section 4.3, adding country fixed effects here would absorb the SBFN and
+regulatory-quality main effects entirely, while leaving the interaction terms identified but reliant
+on the contrast between within-country credit variation in this sample's eight adopter economies and
+its thirty-three non-adopters. Table 4 accordingly reports main effects and interactions jointly,
+without country fixed effects; what it shows is a genuine test of H2 and, in M3, of H3, not a
+placeholder — and that test returns no interaction on either. The
 question the remaining stages are built to answer is whether that null result reflects a real
 absence of policy moderation, or an artefact of forcing a two-level question (does a country-level
 policy variable reshape a firm-level financing relationship?) through a single-level model with
 country-clustered standard errors computed over only 41 clusters, a setting in which such standard
 errors are known to be unreliable (Cameron and Miller, 2015).
 
-### 5.3 Bayesian hierarchical model (Table 5) — primary test of H2/H3
+### 5.3 Bayesian hierarchical model (Table 5) — primary test of H2
 
 The hierarchical specification — country-varying random slopes on credit access, cross-level
 interactions with SBFN status and standardized regulatory quality, four chains of 1,000 post-warmup
-draws each, all r-hat <= 1.01 and ess_bulk between 797 and 2,270 — is built specifically to give H2
-and H3 a fair hearing that the absorbed classical specification could not. It does not change the
-conclusion. Table 5 reports the full posterior summary; three results stand out.
+draws each, all r-hat <= 1.01 and ess_bulk between 797 and 2,270 — is built specifically to give H2 a
+fair hearing under inference the 41-cluster classical specification cannot deliver, and to test
+regulatory quality's own two-way moderation alongside it. H3's three-way claim is not tested here
+(Section 4.3); it is tested in Table 4's M3 above and in Section 5.7 below, and returns a null in
+both. This specification does not change the conclusion either. Table 5 reports the full posterior
+summary; three results stand out.
 
 First, the firm-level credit effect (H1) survives unchanged in substance: posterior mean 0.33 (89%
 equal-tailed interval [0.18, 0.49]), comfortably excluding zero. Second, both country-level
@@ -61,10 +70,12 @@ institutional variables retain clean, precisely estimated **main** effects on th
 adoption rate — SBFN membership net-negative (-0.57, 89% ETI [-1.00, -0.09]), regulatory quality
 net-positive (0.34, 89% ETI [0.16, 0.53]) — reproducing, with proper hierarchical uncertainty
 quantification rather than an absorbed or clustered approximation, exactly the level-shift pattern
-Figure 2 shows visually. Third, and centrally for H2 and H3, neither cross-level interaction is
+Figure 2 shows visually. Third, and centrally for H2, neither cross-level interaction is
 distinguishable from zero: credit x SBFN, 0.072 (89% ETI [-0.26, 0.40]); credit x regulatory quality
 (standardized), 0.004 (89% ETI [-0.13, 0.14]) — a near-exact zero on the latter, not merely an
-imprecise one.
+imprecise one. The first of these is the direct H2 test; the second establishes that regulatory
+quality does not moderate the credit-green channel on its own, which is a necessary condition for the
+mechanism H3 posits without being a test of H3 itself.
 
 We read this as an honest and, we think, informative finding rather than a disappointing one: giving
 the moderation hypothesis a hierarchical model built for precisely this two-level question still
@@ -206,7 +217,11 @@ Table 9 reports two specifications. Column M1, without country fixed effects, is
 global-sample analogue of Table 4's primary-sample baseline: credit access remains positive and
 significant (b = 0.198, p = 0.039, N = 89,797, 159 countries), while the SBFN main effect
 (b = -0.171, p = 0.353), the credit x SBFN interaction (b = 0.278, p = 0.430), and every
-regulatory-quality interaction are statistically indistinguishable from zero. Column M2 imposes
+regulatory-quality interaction are statistically indistinguishable from zero. Like Table 4's M3, this
+specification is fully saturated and so retains the credit x SBFN x regulatory-quality term H3
+requires, which is likewise insignificant; Table 9 tabulates the focal two-way terms only. H3
+therefore receives a direct, fully saturated test on both firm-level samples, and returns a null on
+each. Column M2 imposes
 country fixed effects, absorbing the SBFN and regulatory-quality main effects by construction (they
 are collinear with the fixed effect, since both are constant within a given country-year) while
 leaving their firm-level interactions with credit access fully identified, because credit access

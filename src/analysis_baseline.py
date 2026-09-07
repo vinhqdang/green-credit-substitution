@@ -1,11 +1,15 @@
 """
 Table 2 (baseline, "naive" benchmark): pooled OLS/Logit with sector fixed
 effects and country-clustered standard errors. Country fixed effects are
-deliberately NOT included here, because SBFN status is a country-level,
-time-invariant variable in this single-wave cross-section: including
-country FE would perfectly absorb it (and its interactions), leaving
-nothing to estimate. That absorption problem is the paper's methodological
-bridge to the hierarchical model in analysis_multilevel.py.
+deliberately NOT included here. SBFN status is a country-level,
+time-invariant variable in this single-wave cross-section, so country FE
+would absorb its main effect entirely. Its interaction with credit access
+would NOT be absorbed -- that term is firm-level and credit varies within
+country (see analysis_global.py, which exploits exactly this) -- but with
+only 8 adopter economies among 41 clusters, country FE would identify the
+interaction off a thin contrast while making the SBFN level shift
+unreportable. Hence main effects and interactions are estimated jointly
+here, as the benchmark for the hierarchical model in analysis_multilevel.py.
 """
 import numpy as np
 import pandas as pd
