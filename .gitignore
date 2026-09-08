@@ -240,3 +240,4 @@ latex/*_log*.txt
 latex/*.fls
 latex/*.fdb_latexmk
 latex/*.synctex.gz
+latex/*.spl
