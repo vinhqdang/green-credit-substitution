@@ -16,8 +16,8 @@ APA 7th-edition reference style, American spelling throughout.
 as System Change." **Desk-rejected (2026-09)** on four grounds, two of them genuine technical
 errors in the manuscript. See "Desk rejection and corrections" below.
 
-**Corresponding author:** Quang-Vinh Dang (British University Vietnam)
-**Co-author:** Thi-Hong-Hanh Nguyen (Banking Academy Vietnam)
+**Corresponding author:** Quang-Vinh Dang (British University Vietnam), ORCID 0000-0002-3877-8024
+**Co-author:** Thi-Hong-Hanh Nguyen (Banking Academy Vietnam), ORCID 0009-0006-7821-7404
 
 ## What is done
 
@@ -281,11 +281,35 @@ Recompiled and re-verified (pdflatex + bibtex, no undefined references, table re
 - Recompiled and verified (pdflatex + bibtex, no undefined references, no hardcoded Table/Section/
   Figure numbers introduced). `manuscript/*.md` kept in sync.
 
+## Submission package for Borsa Istanbul Review (2026-09-08)
+
+BIR uses **double anonymized review** and requires three separate files. All three are built and
+committed under `latex/`:
+
+1. **`cover_letter.pdf`** (`cover_letter.tex`, mirrored in `cover_letter.md`) -- addressed to
+   Dr. Ali Kutan, Editor. Positions the paper against four BIR-published country-level papers
+   whose firm-level implication this paper tests directly (Jia et al. 2026; Chi & Yang 2023;
+   Shi et al. 2024; Ullah et al. 2024), and discloses the Economic Systems desk rejection and
+   the two corrections up front rather than letting a reviewer find it. Signed for both authors.
+2. **`titlepage.pdf`** (`titlepage.tex`) -- both authors, affiliations, corresponding-author
+   block with full contact details, both ORCID iDs (check digits validated under ISO 7064
+   MOD 11-2), acknowledgements, declaration of interest, funding, CRediT.
+3. **`manuscript.pdf`** (`manuscript.tex`) -- 73 pp., anonymized. Verified clean: no author
+   names, affiliations, or acknowledgements; the replication-repo link is withheld from the
+   Data Availability statement; PDF document properties resolve the author field to
+   "Anonymous for review" rather than leaking a name through metadata.
+
+Editorial Manager form values used at submission:
+
+- **Region of Origin:** Asia Pacific (both authors are Vietnam-based).
+- **Abstract field (150-word limit):** the manuscript's own abstract is 576 words and does not
+  fit, so a 147-word version was written for the form. It drops the overdraft/multiple-testing
+  caveat and the exploratory framing of the firm-size result; both remain in the manuscript.
+  If 150 words turns out to be the *journal's* abstract limit rather than just the form
+  field's, the manuscript abstract needs the same cut.
+
 ## Pending
 
-- **Waiting on reply from the managing editor (Jan-Egbert Sturm, sturm@kof.ethz.ch) regarding
-  a waiver of the €80 submission fee** (available per the journal's guide for authors when
-  all authors are based in a low-income or lower-middle-income country).
 - Repository should be set to **private** before formal submission (to preserve
   double-anonymized review — the Data Availability statement already reflects this), then
   back to public upon acceptance. Not yet done — requires manual action on GitHub
@@ -294,10 +318,17 @@ Recompiled and re-verified (pdflatex + bibtex, no undefined references, table re
   Claude at the corresponding author's request — worth a final human check before submission.
 - Suggested reviewer names/institutional emails (requested by the guide) still need to be
   supplied by the authors.
+- **Co-author email `hanhnth1@hvnh.edu.vn` is unverified.** It entered the repo in the first
+  commit and its provenance cannot be traced from git history. Confirm before submission.
+- **Affiliation string** reads "Banking Academy Vietnam"; the institution's official English
+  name is "Banking Academy *of* Vietnam". Left as-is pending the co-author's preference.
+- The Economic Systems fee-waiver thread (Jan-Egbert Sturm) is **superseded** by the
+  retargeting and needs no follow-up.
 
-## Next steps once the fee-waiver reply arrives
+## Next steps
 
-1. If waived: proceed to submission via Elsevier's Editorial Manager for Economic Systems.
-2. If not waived: confirm payment method, then submit.
-3. Set the GitHub repo to private beforehand; flip back to public after acceptance and update
+1. Confirm the two author-detail items above, then submit via Editorial Manager
+   (https://www.editorialmanager.com/bir/): cover letter, title page, blinded manuscript,
+   plus Highlights (`latex/Highlights.txt`, 5 bullets, all within Elsevier's 85-character cap).
+2. Set the GitHub repo to private beforehand; flip back to public after acceptance and update
    the Data Availability statement with the real link at that point.
