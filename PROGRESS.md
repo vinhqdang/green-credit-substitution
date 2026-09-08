@@ -6,15 +6,23 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: desk-rejected at Economic Systems; corrected and retargeted to Borsa Istanbul Review
+## Status: desk-rejected twice; awaiting a decision on the next target journal
 
-**Target journal:** Borsa Istanbul Review (Elsevier, open access; CiteScore 13.1, IF 5.7).
-Submission portal: https://www.editorialmanager.com/bir/. Single/double anonymized review,
-APA 7th-edition reference style, American spelling throughout.
+**Rejection 2 -- Borsa Istanbul Review (2026-09).** Submitted as BIR-D-26-02719; desk-rejected
+without review by Ali M. Kutan, Editor. The letter is a form letter citing capacity, not
+content: the journal reviews 10-15% of submissions and accepts 4-5%, and declines the rest
+quickly "due to space considerations" so authors can look elsewhere. **No substantive
+criticism was given, so there is nothing here to fix.** The only inference available is that
+the paper did not make the top 10-15% on an editor's fast skim.
 
-**Previous target:** Economic Systems (Elsevier), special issue "Governing the Green Transition
-as System Change." **Desk-rejected (2026-09)** on four grounds, two of them genuine technical
-errors in the manuscript. See "Desk rejection and corrections" below.
+**Rejection 1 -- Economic Systems (2026-09),** special issue "Governing the Green Transition as
+System Change." Desk-rejected on four grounds, two of them genuine technical errors, both since
+corrected. See "Desk rejection and corrections" below.
+
+**Next target:** not yet chosen. Working hypothesis (see "Where to go next"): the common factor
+across both rejections is fit and framing rather than execution -- a firm-level development
+paper whose headline is a null, sent twice to finance/economic-systems outlets, at 73 pp. with
+a 576-word abstract.
 
 **Corresponding author:** Quang-Vinh Dang (British University Vietnam), ORCID 0000-0002-3877-8024
 **Co-author:** Thi-Hong-Hanh Nguyen (Banking Academy Vietnam), ORCID 0009-0006-7821-7404
@@ -325,10 +333,33 @@ Editorial Manager form values used at submission:
 - The Economic Systems fee-waiver thread (Jan-Egbert Sturm) is **superseded** by the
   retargeting and needs no follow-up.
 
+## Where to go next (drafted 2026-09-08, not yet agreed with the authors)
+
+Two desk rejections without review is weak evidence on any single dimension, but the BIR letter
+carries no content, so the useful question is what an editor sees in a ten-minute skim. Four
+things are fixable and worth deciding on before the next submission:
+
+1. **Venue class.** Both targets so far were finance / economic-systems journals. The paper is
+   firm-level development economics using WBES microdata, with an environmental outcome.
+   Candidates that match that description: World Development, Ecological Economics,
+   Environment and Development Economics, Economic Analysis and Policy, Energy Economics,
+   Business Strategy and the Environment.
+2. **Length.** 73 pp. with 9 tables plus appendices, against a typical 25-35 pp. house style.
+   Robustness could move to an online appendix.
+3. **Abstract.** 576 words, and it spends its second half on hedges. A ~200-word version
+   leading with the result would survive a skim better. (`latex/abstract_150w_submission_form.txt`
+   is a 147-word version already written for the BIR form and could be the basis.)
+4. **Framing.** The paper currently reads as "three hypotheses tested, two rejected." The
+   firm-size result (H4) is the actual positive finding and is presently labelled exploratory
+   and placed in Section 5.4. Leading with it would change the paper from a null to a
+   relocation of the question -- without overstating H4, which remains exploratory.
+
+None of this is a defect in the analysis, which stands. It is about what gets read.
+
 ## Next steps
 
-1. Confirm the two author-detail items above, then submit via Editorial Manager
-   (https://www.editorialmanager.com/bir/): cover letter, title page, blinded manuscript,
-   plus Highlights (`latex/Highlights.txt`, 5 bullets, all within Elsevier's 85-character cap).
-2. Set the GitHub repo to private beforehand; flip back to public after acceptance and update
-   the Data Availability statement with the real link at that point.
+1. Agree the next target journal and whether to restructure per the four points above.
+2. Reformat to the chosen journal's house style; re-run the anonymization and metadata checks
+   in `latex/` before resubmitting.
+3. Set the GitHub repo to private before submission; flip back to public after acceptance and
+   update the Data Availability statement with the real link at that point.
