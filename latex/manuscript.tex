@@ -10,18 +10,25 @@
 \usepackage{array}
 \usepackage{hyperref}
 
-\journal{Borsa Istanbul Review}
-
 \begin{document}
 
 \begin{frontmatter}
 
 \title{Credible on Paper? Green Banking Policy, Access to Finance, and Institutional Capacity in the Greening of Firms Worldwide}
 
-\author{Anonymous for review}
+\author[buv]{Quang-Vinh Dang\corref{cor1}}
+\ead{vinh.dq4@buv.edu.vn}
+
+\author[bav]{Thi-Hong-Hanh Nguyen}
+\ead{hanhnth1@hvnh.edu.vn}
+
+\cortext[cor1]{Corresponding author.}
+
+\address[buv]{British University Vietnam, Hung Yen, Vietnam}
+\address[bav]{Banking Academy Vietnam, Hanoi, Vietnam}
 
 \begin{abstract}
-Green banking policy frameworks coordinated through the Sustainable Banking and Finance Network (SBFN) have been adopted across more than sixty emerging and developing economies since 2012, on the premise that supervisory guidelines directing banks to price environmental risk into lending will strengthen the link between firms' access to credit and their green investment behavior. We test this premise using two independent World Bank Enterprise Survey samples. The primary sample harmonizes the Bank's full 2018--2020 Green Economy Module rollout across 41 economies (28{,}042 firms) on a rich seven-item green-practice-adoption outcome, matched to each economy's SBFN policy-adoption status and Worldwide Governance Indicators regulatory quality as of its survey year. Because SBFN status is fixed within country in a single-wave cross-section, a classical country-fixed-effects specification cannot identify its main effect, and identifies its interaction with credit access only off the eight adopter economies in that sample; we show this explicitly, then re-estimate the relationship with a Bayesian hierarchical model (country-varying slopes) and a causal forest that impose no linear-interaction functional form. All three approaches agree: bank credit access is robustly associated with green practice adoption (average marginal effect of 13 percentage points in the baseline specification), but neither SBFN policy adoption nor regulatory quality moderates it---both institutional variables instead shift the general level of green adoption directly. We then subject this finding to the sharpest test we can construct: a second, independently assembled sample of 162 further economies (89{,}797--100{,}115 firms depending on specification), spanning 2021--2026 and reaching, for the first time in this literature, into high-income economies such as Australia, Germany, and Japan, built from a World Bank standardized cross-country database not previously exploited for this purpose. On a narrower CO2-emissions-monitoring outcome and with country fixed effects the primary sample's single-wave design cannot support informatively, credit access remains significant while both SBFN and regulatory-quality interactions remain statistically indistinguishable from zero---the identical qualitative pattern, on a different outcome, a different set of economies, and a materially sharper identification strategy. The causal forest's feature-importance decomposition attributes the bulk of genuine effect heterogeneity in the primary sample (75.6\%) to firm size rather than to either institutional moderator (regulatory quality 19.9\%; SBFN status 2.6\%). One finance-instrument-specific check finds a nominally significant negative credit $\times$ SBFN interaction when finance access is measured via overdraft rather than term credit, though this does not survive a Benjamini--Hochberg correction for multiple comparisons across the full family of interaction tests reported in the paper, and we treat it as suggestive rather than established. We interpret the combined evidence as more consistent with green banking policy's binding constraint operating through firm-level absorptive capacity than through the country-level regulatory capacity its own institutional design targets, though we report this as our best current account of an auxiliary, exploratory finding rather than as a settled result. Finally, because none of the above designs exploits exogenous variation in SBFN adoption \emph{timing}, we additionally build a country-year panel (217 economies, 2000--2024) from World Bank World Development Indicators and estimate a Callaway-Sant'Anna staggered event-study around each economy's own adoption date -- the identification strategy this literature most often calls for. It shows no effect on renewable-energy share and a positive association with CO2 emissions per capita that shrinks by roughly 45\% once GDP per capita is controlled for and whose event-study profile is more consistent with pre-existing differences in adopting economies' growth trajectories than with a causal effect of adoption; this independent, differently-identified test converges on the same substantive conclusion as the firm-level analysis.
+Green banking policies, coordinated through the Sustainable Banking and Finance Network (SBFN) across sixty-plus emerging economies, assume that supervisory guidelines directing banks to price environmental risk strengthen the link between firms' credit access and green investment. Using two independent World Bank Enterprise Survey samples (28{,}042 firms, 41 economies; 89{,}797 firms, 162 economies) and four estimators---pooled logit, Bayesian hierarchical, causal forest, and country fixed effects---we find bank credit access robustly predicts green-practice adoption (13 percentage points), but neither SBFN adoption nor regulatory quality moderates this relationship. The estimates are precise, not merely insignificant: the causal forest's credit effect is 0.072 for non-adopter firms versus 0.076 for adopter firms, and is nearly identical across regulatory-quality terciles, ruling out moderation of policy-relevant size. A country-level staggered event-study (217 economies) corroborates this at the macro level. Heterogeneity instead concentrates at firm size, relocating rather than resolving which institutional margin matters.
 \end{abstract}
 
 \begin{keyword}
@@ -36,17 +43,15 @@ green banking policy \sep access to finance \sep institutional complementarity \
 \section{Introduction}
 \label{sec:intro}
 
-Since 2012, more than sixty central banks, banking regulators, and financial-sector regulatory bodies across the emerging and transition world have signed on to a coordinated effort to green their financial systems, adopting national guidelines that direct commercial banks to price environmental and climate risk into lending decisions and to channel credit toward cleaner production. On paper, this represents one of the most ambitious diffusions of environmental financial regulation outside the OECD: economies as different in income, banking-sector depth, and political regime as Bangladesh, Morocco, Mongolia, and Indonesia now report, to the International Finance Corporation's Sustainable Banking and Finance Network (SBFN), formal sustainable-finance roadmaps, green-taxonomy pilots, or mandatory environmental-risk disclosure rules for lenders. Whether that adoption changes what actually happens on a factory floor---whether a firm that can get a bank loan is any more likely to install a wastewater treatment system, switch to a more efficient boiler, or measure its own emissions---is a separate and considerably harder question, and it is the one this paper answers.
+Since 2012, more than sixty central banks and financial regulators across the emerging and transition world have signed on to a coordinated effort to green their financial systems through the IFC's Sustainable Banking and Finance Network (SBFN), directing commercial banks to price environmental risk into lending and channel credit toward cleaner production. Whether that adoption changes what happens on the ground---whether a firm that can get a bank loan is any more likely to install pollution-control equipment or measure its own emissions---is a separate and harder question, and it is the one this paper answers, with enough statistical power to distinguish a true absence of effect from merely an underpowered test of one.
 
-The premise that formal adoption of a policy is not the same as its operation in practice is, of course, not new to institutional economics. A large literature on state capacity and policy credibility has long argued that the same law, regulation, or guideline can produce entirely different real-economy outcomes depending on the administrative and judicial infrastructure available to enforce it \citep{laporta1998,acemoglu2001}. Applied to green finance specifically, a parallel body of work has documented that green credit guidelines in China measurably reshape lending allocation and firm environmental performance \citep{li2023,huang2023,dai2025}, that firms' green investment responds to the financing constraints they face \citep{ghosh2022,costa2024,dehaas2025}, and that the World Bank Enterprise Surveys' own Green Economy module is a workable lens on firm-level environmental behavior across dozens of countries at once \citep{asif2025,phan2026}. What is missing is the connection between these two literatures: a direct test, at firm level and across a wide cross-section of the very economies the green-banking-policy movement targets, of whether the credit-to-green-investment channel that these guidelines are designed to activate is actually stronger where the guidelines exist---and whether that depends on the state capacity to make the guideline credible in the first place.
+A large literature on state capacity argues that a formally identical policy can produce different real-economy outcomes depending on the administrative infrastructure behind it \citep{laporta1998,acemoglu2001}, and recent country-level evidence finds green-finance policy effectiveness itself conditional on governance quality \citep{jia2026,chi2023,shi2024,ullahw2024}. Each of these results implies a firm-level prediction---that the credit-to-green channel should respond to policy more sharply where regulatory capacity is stronger---that has not been tested directly, across a broad cross-section of adopting economies, on firm-level data. A separate strand shows firm-level financing constraints shape green investment \citep{ghosh2022,costa2024,dehaas2025} and that the WBES Green Economy module is a workable lens on firm environmental behavior \citep{asif2025,phan2026}, but nothing yet connects the two literatures at firm level.
 
-This paper closes that gap using firm-level data from two independently assembled samples of World Bank Enterprise Survey (WBES) waves. The primary sample covers 47 country-years fielded between 2018 and 2023 that carry the Bank's full Green Economy module---a battery of questions on emissions monitoring, energy audits, and the adoption of climate-friendly production measures---alongside the Surveys' standard access-to-finance module; a second, global sample extends this to 162 further country-years fielded between 2021 and 2026, reaching for the first time in this literature into high-income economies with no SBFN involvement at all (Section~\ref{sec:methodology}). We match each economy to its Sustainable Banking and Finance Network policy status as of its survey year, distinguishing genuine ex-ante policy adopters from economies that joined only afterward, and to the World Bank's Worldwide Governance Indicators as a measure of the regulatory state capacity available to make that policy credible. Econometrically, we depart deliberately from the pooled fixed-effects specification that has become the default in this literature. Because SBFN status is fixed within country in a single-wave cross-section, a country fixed effect absorbs its main effect entirely, and would identify its interaction with credit access---which remains estimable, being a firm-level term---off only the eight adopter economies in that sample; a naive interaction term estimated by pooled logit, which we report first as a baseline precisely to make this limitation visible rather than to hide it, returns no detectable policy-moderation effect at all. We show that this null result is not evidence of an absent relationship so much as a symptom of forcing a fundamentally hierarchical question (does a level-2, country-level policy variable reshape a level-1, firm-level financing relationship?) into a flat, single-level model with too few country clusters to lean on for inference \citep{cameron2015}. We then re-estimate the same relationship with tools built for exactly this structure: a Bayesian hierarchical logistic model with country-varying slopes \citep{gelman2007,gelman2020}, a causal-forest / double-machine-learning (DML) estimator \citep{wager2018,chernozhukov2018,athey2019grf,athey2019} that lets the treatment effect of credit access vary flexibly across the institutional landscape rather than through a single estimated coefficient, and, on the much larger global sample, a country-fixed-effects specification that the primary sample's single wave cannot support with useful precision.
+We test this using two independently assembled World Bank Enterprise Survey (WBES) samples: a 41-economy primary sample (28{,}042 firms, 2018--2023) carrying the Bank's full Green Economy module, and a 162-economy global sample (89{,}797--100{,}115 firms, 2021--2026) reaching, for the first time in this literature, into high-income economies entirely outside SBFN's remit (Section~\ref{sec:methodology}). We match each economy to its SBFN policy status as of its survey year and to the World Bank's Worldwide Governance Indicators. Because SBFN status is fixed within country in a single wave, a country fixed effect absorbs its main effect entirely; its interaction with credit access remains formally identified, but off only the eight adopter economies in the primary sample, which is why we also estimate a Bayesian hierarchical model with country-varying slopes \citep{gelman2007,gelman2020} and a causal-forest / double-machine-learning estimator \citep{wager2018,chernozhukov2018,athey2019grf,athey2019} that let the data reveal moderation rather than relying on a single fragile interaction term. On the larger global sample, country fixed effects are usable directly. Across all four estimators the answer is the same, and precisely so: the causal forest's credit effect differs by only 0.004 between SBFN adopters and non-adopters, and is flat across regulatory-quality terciles---these are tight estimates that rule out policy-relevant moderation, not underpowered nulls that merely fail to detect one.
 
-This paper contributes to the literature in six respects. First, it provides what is, to our knowledge, the first direct empirical test of whether SBFN-style green banking policy adoption changes the firm-level relationship between finance and green investment, rather than only the aggregate volume of green lending reported by banks themselves---a firm-level, demand-side complement to the bank-level, supply-side evidence that dominates the existing green-credit-policy literature. Second, it extends the World Bank Enterprise Survey's Green Economy module---used until now mostly within single countries or single regional waves---into a harmonized 41-country primary sample spanning Europe, Central Asia, the Caucasus, and the Middle East and North Africa, giving the paper a breadth of institutional variation that a single-country or single-region design cannot offer. Third, and unusually for this literature, we subject the primary sample's central finding to an independently assembled second test: a 162-economy global sample built from a World Bank standardized cross-country database spanning 2021--2026 that, to our knowledge, no published study of green banking policy has yet exploited, extending coverage for the first time into high-income economies entirely outside the SBFN's own remit and allowing a country-fixed-effects specification the primary sample's single-wave design cannot support. That the same qualitative result---a robust finance-green channel, no detectable institutional moderation---survives this independent replication is, we think, considerably more informative than either sample could be alone. Fourth, methodologically, the paper demonstrates---with the same underlying question tested twice, on two different samples, under four different estimators---exactly where and why a classical fixed-effects approach fails to detect (or, when country fixed effects are usable, correctly fails to find) an institutionally-conditioned effect, offering applied researchers working with similarly structured cross-country firm data a concrete illustration of when the extra modeling investment is worth making and when a null result is simply a null result. Fifth, the paper redirects the question of which system-level margin governs green-credit-policy effectiveness: having ruled out a country-institutional interaction across four estimators and two samples, we show (Section~\ref{sec:h4}) that the effect heterogeneity that does exist is concentrated at the level of firm size rather than country institutions, relocating the operative institutional margin from the country-regulatory level to the firm-scale level---a mechanism we introduce as an auxiliary, exploratory hypothesis in Section~\ref{sec:h4} and demonstrate empirically in Section~\ref{sec:causalforest} rather than treat as a pre-registered finding, and are correspondingly explicit about the identification limits (Section~\ref{sec:methodology}) that a purely cross-sectional design, however extensively replicated, still carries. Sixth, and directly in response to that identification-strategy limit, Section~\ref{sec:macrodid} builds an entirely independent country-year panel from World Bank World Development Indicators and estimates a Callaway-Sant'Anna staggered event-study exploiting SBFN's own adoption-timing variation---the design class this literature most often asks for---and finds that it, too, does not support a beneficial institutional effect on aggregate environmental outcomes, converging with the firm-level evidence from a design built specifically to meet an identification bar the firm-level data cannot.
+This paper contributes in five respects. First, it is, to our knowledge, the first direct firm-level test of whether SBFN-style adoption changes the credit-to-green channel, complementing the bank-level, supply-side evidence that dominates this literature. Second, an independently assembled 162-economy global sample replicates the primary sample's result under a materially sharper identification strategy, a different outcome measure, and a set of economies sharing almost no overlap with the primary sample---considerably more informative than either sample alone. Third, because our estimates are precise rather than merely insignificant, we can distinguish a genuine absence of institutional moderation from a design too underpowered to detect one, a distinction most single-country studies in this literature cannot make. Fourth, having ruled out country-institutional moderation across four estimators and two samples, we show (Section~\ref{sec:h4}) that the heterogeneity that does exist concentrates at firm size rather than country institutions, relocating rather than resolving the question of which margin governs policy effectiveness---reported throughout as an exploratory, non-pre-registered finding rather than a settled result. Fifth, because none of the above exploits SBFN's own adoption timing, Section~\ref{sec:macrodid} builds an independent country-year panel and estimates a Callaway-Sant'Anna staggered event-study---the design class this literature most often asks for---which likewise finds no beneficial institutional effect on aggregate environmental outcomes.
 
-The paper also speaks directly to a growing body of recent scholarship on green finance, credit access, and institutional quality in emerging and transition economies. \citet{jia2026} study green credit policy and sustainable production across the BRICS economies and find a positive long-run relationship that is itself strengthened where governance is stronger---a country-level result whose firm-level analogue is precisely what our H2 and H3 test. \citet{chi2023} exploit China's 2016 green-financial-system guidelines in a difference-in-differences design and find a green transition effect concentrated where state environmental governance is strong, and \citet{shi2024}, across 37 Asian economies, find that green finance improves environmental outcomes only where control of corruption is high. \citet{ullahw2024} establish the more general moderation logic we adopt, showing that regulatory quality conditions the financial-development-to-growth relationship rather than merely shifting its level, and \citet{jin2026} documents, across thirty economies at firm level, that firms may decline formal credit altogether---a demand-side margin our realized-access measure cannot observe. Read together, this literature has established that green-finance effectiveness is institutionally conditional at the country level and that credit access is institutionally conditioned at the firm level. What has not been tested, and what this paper contributes, is whether the two combine as the theory implies: whether a dateable green-banking-policy adoption event moderates the finance-to-green-investment relationship at firm level, across a broad cross-section of adopting economies, and whether that moderation depends on regulatory capacity.
-
-The remainder of the paper is organized as follows. Section~\ref{sec:institutions} sets out the institutional background of the SBFN framework and the concepts and trends in green banking policy adoption across our sample. Section~\ref{sec:literature} develops the paper's three hypotheses from the state-capacity and institutional-complementarity literature. Section~\ref{sec:methodology} describes the primary and global samples, variable construction, and the empirical strategy for each. Section~\ref{sec:results} presents baseline, hierarchical, and heterogeneous-effect results on the primary sample, followed by the independent global-sample replication. Section~\ref{sec:discussion} discusses the findings' economic magnitude and their implications for how green credit policy is designed and sequenced, and Section~\ref{sec:conclusion} concludes.
+Section~\ref{sec:institutions} sets out SBFN's institutional background; Section~\ref{sec:literature} develops the paper's hypotheses; Section~\ref{sec:methodology} describes data and empirical strategy; Section~\ref{sec:results} presents results; Section~\ref{sec:discussion} discusses implications; and Section~\ref{sec:conclusion} concludes.
 
 \section{Institutional background: green banking policy in emerging and transition economies}
 \label{sec:institutions}
@@ -372,81 +377,12 @@ Large & 0.0569 & -0.0428 & 0.1565 \\
 \subsection{Small-sample supplementary check: waste-minimization adoption}
 \label{sec:extension}
 
-Before turning to the global-sample replication that is this paper's second major test (Section~\ref{sec:global}), Table~\ref{tab:extension} reports a smaller supplementary check using waste-minimization adoption --- an outcome not captured in the standardized cross-country database underlying the global sample, and so a genuinely independent (if small-sample) data point --- available in four economies whose Green Economy modules asked this item under directly comparable wording: India 2022, Indonesia 2023, Peru 2023, and Timor-Leste 2021. Three of these four are themselves SBFN members at various progression stages, so this sample cannot re-test the SBFN-adoption contrast; what it can test is whether the credit-to-green channel documented in Sections~\ref{sec:baseline}--\ref{sec:causalforest} is a peculiarity of the ECA-MENA sample or generalizes elsewhere. It generalizes: pooled across the four economies, having an overdraft facility is associated with significantly higher odds of waste-minimization adoption ($b=0.422$, $p<0.001$, $N=9{,}038$, 4 countries). The direction of the core finance-green relationship replicates on a different continent, a different half-decade, and a narrower outcome definition than the one anchoring Sections~\ref{sec:baseline}--\ref{sec:causalforest} --- a preview, on four economies, of the much larger replication in Section~\ref{sec:global}.
-
-\begin{table}[htbp]
-\centering
-\caption{Small-sample supplementary check: descriptive rates.}
-\label{tab:extension}
-\begin{footnotesize}
-\begin{tabular}{lcccc}
-\toprule
-Economy & $N$ & Waste-min.\ rate & Overdraft rate & SBFN member \\
-\midrule
-India 2022 & 9{,}376 & 0.515 & 0.621 & 1 \\
-Indonesia 2023 & 2{,}955 & 0.336 & 0.144 & 1 \\
-Peru 2023 & 987 & 0.806 & 0.549 & 1 \\
-Timor-Leste 2021 & 238 & 0.061 & 0.089 & 0 \\
-\bottomrule
-\end{tabular}
-\end{footnotesize}
-\end{table}
+Before turning to the global-sample replication that is this paper's second major test (Section~\ref{sec:global}), we report a smaller supplementary check using waste-minimization adoption---an outcome not captured in the standardized cross-country database underlying the global sample, and so a genuinely independent (if small-sample) data point---available in four economies whose Green Economy modules asked this item under directly comparable wording: India 2022, Indonesia 2023, Peru 2023, and Timor-Leste 2021 (descriptive rates in Supplementary Table~S1). Three of these four are themselves SBFN members, so this sample cannot re-test the SBFN-adoption contrast; what it can test is whether the credit-to-green channel documented in Sections~\ref{sec:baseline}--\ref{sec:causalforest} generalizes beyond the ECA-MENA sample. It does: pooled across the four economies, having an overdraft facility is associated with significantly higher odds of waste-minimization adoption ($b=0.422$, $p<0.001$, $N=9{,}038$, 4 countries)---a preview, on a different continent and half-decade, of the much larger replication in Section~\ref{sec:global}.
 
 \subsection{Additional robustness}
+\label{sec:robustness}
 
-Table~\ref{tab:robustness} subjects the primary-sample finding to four further checks, all retaining sector fixed effects, firm controls, and country-clustered standard errors (no country fixed effects, for the reason given in Section~\ref{sec:methodology}). First, replacing the binary outcome with the continuous seven-item green-adoption index and estimating by OLS reproduces the same pattern to the decimal: credit access positive and significant ($b=0.053$, $p<0.001$), SBFN main effect negative and significant ($b=-0.092$, $p<0.001$), interaction indistinguishable from zero ($b=0.006$, $p=0.739$).
-
-Second, replacing bank credit access with two alternative finance measures produces one genuine point of nuance worth reporting rather than smoothing over. Using overdraft-facility access instead of a credit line/loan, the main overdraft effect remains positive and significant ($b=0.274$, $p=0.011$), the SBFN main effect remains negative and significant ($b=-0.905$, $p<0.001$)---but the overdraft $\times$ SBFN interaction is now negative and significant ($b=-0.346$, $p=0.031$), the one interaction term in the entire paper that clears a conventional significance threshold, and it runs opposite to the direction H2 predicts. Using the reverse-coded perceived finance-obstacle measure in place of realized access, by contrast, both the main effect and its SBFN interaction are precisely zero ($b=-0.010$, $p=0.827$; interaction $b=-0.012$, $p=0.849$)---consistent with the descriptive correlation noted in Section~\ref{sec:descriptive}. We read the overdraft result as suggestive rather than conclusive given it is one significant coefficient among more than a dozen interaction tests across the paper, but it is at least directionally consistent with a substantive story worth flagging for future work: if SBFN-guided lending is channelled preferentially through the term loans and credit lines that finance long-horizon capital expenditure, rather than through short-term overdraft facilities, we might expect exactly this pattern---a null-to-positive interaction on credit lines and a negative one on overdrafts---though our data cannot directly test whether SBFN-guided credit is disproportionately term-structured.
-
-Third, splitting the sample into manufacturing ($N=13{,}340$) and services ($N=9{,}538$) subsamples shows the credit-access main effect, the SBFN main effect, and the null credit $\times$ SBFN interaction all replicate within each sector separately (manufacturing: credit $b=0.480$, $p<0.001$, interaction $b=-0.040$, $p=0.826$; services: credit $b=0.448$, $p<0.001$, interaction $b=0.195$, $p=0.426$)---the paper's central null is not an artifact of pooling two structurally different production technologies.
-
-Because the overdraft interaction (the one coefficient in the paper that clears a conventional significance threshold) is one of many credit $\times$ institutional-moderator tests reported across the frequentist specifications in this paper, we additionally apply a Benjamini--Hochberg false-discovery-rate correction across the full family of 13 such coefficients reported under a classical (non-Bayesian, non-forest) estimator in Tables~\ref{tab:baseline}, \ref{tab:robustness}, and \ref{tab:global} (Table~\ref{tab:fdr}; full calculation reported in the replication package). The overdraft interaction's raw $p=0.031$ becomes $p=0.403$ after correction, and no coefficient in the family survives at a false discovery rate of 0.10 or even 0.40. We read this as reinforcing, with a formal multiple-testing accounting rather than only a qualitative caveat, the suggestive-not-conclusive framing we already give this result in Section~\ref{sec:discussion}: an isolated nominally-significant interaction among more than a dozen tested is exactly what a pure false-discovery process would be expected to produce roughly one time in twenty, and this correction does not let us reject that account.
-
-\begin{table}[htbp]
-\centering
-\caption{Multiple-testing correction: Benjamini--Hochberg false discovery rate applied to every credit $\times$ institutional-moderator interaction coefficient reported under a frequentist estimator (Tables~\ref{tab:baseline}, \ref{tab:robustness}, \ref{tab:global}). Table~\ref{tab:baseline} model M3 entries marked $\dagger$ are approximate $p$-values recovered from the reported coefficient and standard error via a normal approximation ($z=\text{coef}/\text{se}$), since the text reports only the coefficient and standard error for these terms.}
-\label{tab:fdr}
-\begin{footnotesize}
-\begin{tabular}{llccc}
-\toprule
-Source & Term & Raw $p$ & BH-adjusted $p$ \\
-\midrule
-Table~\ref{tab:robustness} (b1) Overdraft & Overdraft $\times$ SBFN & 0.031 & 0.403 \\
-Table~\ref{tab:global} M2 (country FE) & Credit $\times$ SBFN & 0.205 & 0.799 \\
-Table~\ref{tab:global} M1 (no country FE) & Credit $\times$ Reg.\ quality$^\dagger$ & 0.301 & 0.799 \\
-Table~\ref{tab:baseline} M3$^\dagger$ & Credit $\times$ Reg.\ quality & 0.310 & 0.799 \\
-Table~\ref{tab:global} M2 (country FE) & Credit $\times$ Reg.\ quality & 0.346 & 0.799 \\
-Table~\ref{tab:robustness} (c2) Services & Credit $\times$ SBFN & 0.426 & 0.799 \\
-Table~\ref{tab:global} M1 (no country FE) & Credit $\times$ SBFN & 0.430 & 0.799 \\
-Table~\ref{tab:baseline} M3$^\dagger$ & Credit $\times$ SBFN $\times$ Reg.\ quality & 0.702 & 0.892 \\
-Table~\ref{tab:robustness} (a) Continuous index, OLS & Credit $\times$ SBFN & 0.739 & 0.892 \\
-Table~\ref{tab:baseline} M2 & Credit $\times$ SBFN & 0.773 & 0.892 \\
-Table~\ref{tab:robustness} (c1) Manufacturing & Credit $\times$ SBFN & 0.826 & 0.892 \\
-Table~\ref{tab:robustness} (b2) Finance obstacle (reverse-coded) & Obstacle $\times$ SBFN & 0.849 & 0.892 \\
-Table~\ref{tab:baseline} M3$^\dagger$ & Credit $\times$ SBFN & 0.892 & 0.892 \\
-\bottomrule
-\end{tabular}
-\end{footnotesize}
-\end{table}
-
-\begin{table}[htbp]
-\centering
-\caption{Additional robustness checks.}
-\label{tab:robustness}
-\begin{footnotesize}
-\begin{tabular}{lccc}
-\toprule
-Specification & Finance coef.\ (p) & SBFN coef.\ (p) & Interaction coef.\ (p) \\
-\midrule
-(a) Continuous index, OLS & 0.053 (0.000) & -0.092 (0.000) & 0.006 (0.739) \\
-(b1) Overdraft & 0.274 (0.011) & -0.905 (0.000) & -0.346 (0.031) \\
-(b2) Finance obstacle (reverse-coded) & -0.010 (0.827) & -1.011 (0.000) & -0.012 (0.849) \\
-(c1) Manufacturing subsample & 0.480 (0.000) & -1.047 (0.000) & -0.040 (0.826) \\
-(c2) Services subsample & 0.448 (0.000) & -0.914 (0.001) & 0.195 (0.426) \\
-\bottomrule
-\end{tabular}
-\end{footnotesize}
-\end{table}
+Supplementary Table~S2 subjects the primary-sample finding to four further checks (sector fixed effects, firm controls, country-clustered standard errors; no country fixed effects, for the reason given in Section~\ref{sec:methodology}). Replacing the binary outcome with the continuous seven-item green-adoption index reproduces the same pattern by OLS. Replacing bank credit access with two alternative finance measures produces one point of nuance: using overdraft-facility access, the overdraft $\times$ SBFN interaction is negative and significant ($b=-0.346$, $p=0.031$)---the one interaction term in the paper that clears a conventional significance threshold, and it runs opposite to H2's predicted direction---whereas using the reverse-coded perceived finance-obstacle measure, both the main effect and its SBFN interaction are precisely zero. Splitting the sample into manufacturing and services subsamples shows the credit-access main effect and the null credit $\times$ SBFN interaction replicate within each sector separately. We read the overdraft result as suggestive rather than conclusive: it is one significant coefficient among more than a dozen interaction tests across the paper, and a Benjamini--Hochberg false-discovery-rate correction applied to that full family (Supplementary Table~S3) pushes its raw $p=0.031$ to $p=0.403$---no coefficient in the family survives at a false discovery rate of 0.10 or even 0.40, exactly what a pure false-discovery process would be expected to produce roughly one time in twenty.
 
 \subsection{Global-sample replication with country fixed effects}
 \label{sec:global}
@@ -588,7 +524,7 @@ This complicates rather than confirms the implicit premise of a green-credit-pol
 
 Two further limits are worth naming directly. First, SBFN guidelines could in principle be working on the \emph{extensive} margin of who obtains credit at all, rather than the \emph{intensive} margin our interaction terms test; testing that would require modeling credit access itself as a function of SBFN status, which our demand-side design does not do. Second, every outcome in this paper is firm-reported, and we cannot rule out a compliance-reporting-versus-practice gap between what firms report and what banks report to their own supervisor---a limit no firm-level survey instrument can fully resolve on its own. Read together with Section~\ref{sec:macrodid}, whose null is, to our knowledge, the first test of the SBFN framework's own theory of change against outcomes on the ground rather than its own tracked policy-stage progression, both point the same way: a framework can look like it is working by every measure the network itself tracks while the channel it is meant to move remains, on this evidence, unmoved.
 
-The one interaction that clears a conventional significance threshold---a negative credit $\times$ SBFN effect for overdraft rather than term-credit access (Section~\ref{sec:results})---is more consistent with this redirection than with a simple policy failure: overdrafts finance working capital, not the long-horizon expenditure our outcome measures, so a supervisor successfully steering credit toward term instruments would produce exactly this pattern. We flag it as suggestive only: it is one significant coefficient among many tested, and does not survive a Benjamini--Hochberg correction at any conventional false discovery rate (Table~\ref{tab:fdr}).
+The one interaction that clears a conventional significance threshold---a negative credit $\times$ SBFN effect for overdraft rather than term-credit access (Section~\ref{sec:results})---is more consistent with this redirection than with a simple policy failure: overdrafts finance working capital, not the long-horizon expenditure our outcome measures, so a supervisor successfully steering credit toward term instruments would produce exactly this pattern. We flag it as suggestive only: it is one significant coefficient among many tested, and does not survive a Benjamini--Hochberg correction at any conventional false discovery rate (Supplementary Table~S3).
 
 Read against the broader themes of state capacity and policy credibility, our results sit closer to a state-capacity-is-necessary-but-firm-level-frictions-bind-independently story than a straightforward complementarity one. Regulatory quality raises the baseline propensity to adopt green practices, but is not the missing ingredient that lets a green banking guideline reshape the credit-to-green channel specifically. The binding constraint looks less like whether the supervising jurisdiction can make its guideline credible, and more like whether firms below a certain scale can absorb a green investment's fixed costs once credit is available---a question one level down from the one the SBFN framework is designed to answer.
 
@@ -599,122 +535,24 @@ This paper set out to test whether the wave of green banking policy adoption coo
 
 For policy, the implication is not that green banking guidelines are ineffective, but that our evidence does not support treating them as a lever for widening the green-investment gap between financed and unfinanced firms---the margin most of this literature implicitly assumes they operate on. If our tentative loan-tenor reading of the overdraft result is correct, policymakers may find more traction focusing on the term-lending instruments that actually finance green capital expenditure, and on complementary measures---technical assistance, matching grants, credit guarantees---that address smaller firms' absorptive-capacity constraints directly.
 
-We close with seven limitations. First, both firm-level samples are single cross-sections (Section~\ref{sec:methodology} explains why a genuine panel does not exist for this outcome): they cannot rule out reverse causality or unobserved country characteristics correlated with both SBFN adoption and baseline green-adoption propensity, and the global sample's fixed effects sharpen this only for the interaction terms, not the credit main effect. Second, SBFN membership is a binary proxy for what the network's own framework treats as a graded process; the global sample's regional roster entries (the CEMAC and Eastern Caribbean groupings, Section~\ref{sec:methodology}) additionally rest on an inference about coverage rather than an explicit per-country statement. Third, the four-economy waste-minimization check cannot re-test the SBFN contrast (three of its four economies are members) and combines non-identical outcome items by construction of WBES's own shortened module design---a data-availability constraint, not a methodological choice. Fourth, the global sample's CO2-monitoring outcome is a single item, narrower than the primary sample's seven-item composite; that the same pattern holds on it is reassuring but does not establish it would hold on a richer measure. Fifth, the Worldwide Governance Indicators measure is a broad governance indicator, not a banking-supervision-specific capacity measure. Sixth, our design tests only the intensive margin of the credit-to-green channel and cannot rule out that SBFN policy operates on the extensive margin of who obtains credit, nor distinguish firm-reported practice adoption from a bank-compliance-reporting gap (Section~\ref{sec:discussion}). Seventh, Section~\ref{sec:macrodid}'s event-study is an ecological-level test of a related but distinct question; its one significant result (CO2 per capita) is netted against a single covariate, and we cannot rule out that a richer set of development-stage controls would shrink it further, or that some genuine, small, confounded relationship remains. We leave each of these to future work.
+We close with seven limitations. First, both firm-level samples are single cross-sections (Section~\ref{sec:methodology} explains why a genuine panel does not exist for this outcome): they cannot rule out reverse causality or unobserved country characteristics correlated with both SBFN adoption and baseline green-adoption propensity, and the global sample's fixed effects sharpen this only for the interaction terms, not the credit main effect. Second, SBFN membership is a binary proxy for what the network's own framework treats as a graded process; the global sample's regional roster entries (the CEMAC and Eastern Caribbean groupings, Section~\ref{sec:methodology}) additionally rest on an inference about coverage rather than an explicit per-country statement. Third, the four-economy waste-minimization check cannot re-test the SBFN contrast (three of its four economies are members) and combines non-identical outcome items by construction of WBES's own shortened module design---a data-availability constraint, not a methodological choice. Fourth, the global sample's CO2-monitoring outcome is a single item, narrower than the primary sample's seven-item composite; that the same pattern holds on it is reassuring but does not establish it would hold on a richer measure. Fifth, the Worldwide Governance Indicators measure is a broad governance indicator, not a banking-supervision-specific capacity measure. Sixth, our design tests only the intensive margin of the credit-to-green channel and cannot rule out that SBFN policy operates on the extensive margin of who obtains credit in the first place---a margin our realized-access measure cannot observe, since some firms decline formal credit altogether \citep{jin2026}---nor distinguish firm-reported practice adoption from a bank-compliance-reporting gap (Section~\ref{sec:discussion}). Seventh, Section~\ref{sec:macrodid}'s event-study is an ecological-level test of a related but distinct question; its one significant result (CO2 per capita) is netted against a single covariate, and we cannot rule out that a richer set of development-stage controls would shrink it further, or that some genuine, small, confounded relationship remains. We leave each of these to future work.
 
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
 
 During the preparation of this work the author(s) used AI-assisted tools to help polish the writing. After using these tools, the author(s) reviewed and edited the content as needed and take full responsibility for the content of the published article.
 
-\appendix
+\section*{Supplementary material}
 
-\section{SBFN policy status and regulatory quality, full sample}
-\label{app:sbfn}
-
-Table~\ref{tab:appendixa} reports, for all 47 economy-years in the paper's primary and small-sample supplementary check, the SBFN membership status coded for the analysis, the join year where applicable, the SBFN Multi-Tiered Progress Framework stage in force nearest the survey year, and the exact year of the Worldwide Governance Indicators observation used. Full per-country source citations (the specific SBFN Global Progress Report, country addendum, or accession announcement consulted for every determination) are available in the online supplementary material. The analogous 162-economy table for the global sample (Section~\ref{sec:methodology}) is summarized by region in \ref{app:globalsbfn} and provided in full in the online supplementary material and the replication package.
-
-{\footnotesize
-\begin{longtable}{p{2.3cm}ccp{4.0cm}c}
-\caption{SBFN policy status and regulatory quality, full 47-economy sample.} \label{tab:appendixa} \\
-\toprule
-Economy & SBFN member & Join year & Stage at survey & WGI year \\
-\midrule
-\endfirsthead
-\toprule
-Economy & SBFN member & Join year & Stage at survey & WGI year \\
-\midrule
-\endhead
-Albania 2019 & 0 & --- & None & 2019 \\
-Armenia 2020 & 0 & --- & None & 2020 \\
-Azerbaijan 2019 & 0 & --- & None & 2019 \\
-Bangladesh 2022 & 1 & 2012 & Advancing (ESG Integration) & 2022 \\
-Belarus 2018 & 0 & --- & None & 2018 \\
-Bosnia and Herzegovina 2019 & 0 & --- & None & 2019 \\
-Bulgaria 2019 & 0 & --- & None & 2019 \\
-Croatia 2019 & 0 & --- & None & 2019 \\
-Cyprus 2019 & 0 & --- & None & 2019 \\
-Czechia 2019 & 0 & --- & None & 2019 \\
-Egypt 2020 & 1 & 2016 & Formulating (Preparation) & 2020 \\
-Estonia 2019 & 0 & --- & None & 2019 \\
-Georgia 2019 & 1 & 2017 & Developing (Implementation) & 2019 \\
-Greece 2018 & 0 & --- & None & 2018 \\
-Hungary 2019 & 0 & --- & None & 2019 \\
-India 2022 & 1 & 2016 & Developing (Commitment) & 2022 \\
-Indonesia 2023 & 1 & 2012 & Consolidating (Maturing) & 2023 \\
-Italy 2019 & 0 & --- & None & 2019 \\
-Jordan 2019 & 1 & 2016 & Commitment (Preparation) & 2019 \\
-Kazakhstan 2019 & 0 & --- & None & 2019 \\
-Kosovo 2019 & 0 & --- & None & 2019 \\
-Kyrgyz Republic 2019 & 1 & 2018 & Commitment (Preparation) & 2019 \\
-Latvia 2019 & 0 & --- & None & 2019 \\
-Lebanon 2019 & 0 & --- & None & 2019 \\
-Lithuania 2019 & 0 & --- & None & 2019 \\
-Malta 2019 & 0 & --- & None & 2019 \\
-Moldova 2019 & 0 & --- & None & 2019 \\
-Mongolia 2019 & 1 & 2012 & Advancing (Implementation) & 2019 \\
-Montenegro 2019 & 0 & --- & None & 2019 \\
-Morocco 2019 & 1 & 2014 & Advancing (Implementation) & 2019 \\
-North Macedonia 2019 & 0 & --- & None & 2019 \\
-Peru 2023 & 1 & 2013 & Advancing (ESG Integration) & 2023 \\
-Philippines 2023 & 1 & 2013 & Advancing (ESG Integration) & 2023 \\
-Poland 2019 & 0 & --- & None & 2019 \\
-Portugal 2019 & 0 & --- & None & 2019 \\
-Romania 2019 & 0 & --- & None & 2019 \\
-Russia 2019 & 0 & --- & None & 2019 \\
-Serbia 2019 & 0 & --- & None & 2019 \\
-Slovak Republic 2019 & 0 & --- & None & 2019 \\
-Slovenia 2019 & 0 & --- & None & 2019 \\
-Tajikistan 2019 & 0 & --- & None & 2019 \\
-Timor-Leste 2021 & 0 & --- & None & 2021 \\
-Tunisia 2020 & 1 & 2019 & Unverified & 2020 \\
-Türkiye 2019 & 1 & 2015 & Developing (Implementation) & 2019 \\
-Ukraine 2019 & 0 & --- & None & 2019 \\
-Uzbekistan 2019 & 0 & --- & None & 2019 \\
-West Bank and Gaza 2019 & 0 & --- & None & 2019 \\
-\bottomrule
-\end{longtable}
-}
-
-\section{Bayesian model convergence diagnostics}
-\label{app:diagnostics}
-
-Convergence diagnostics for every focal parameter of the hierarchical model reported in Table~\ref{tab:multilevel} are included directly in that table ($\hat{R}$ column); the full posterior summary also includes $\text{ess}_{\text{bulk}}$ ranging from 797 (SBFN member) to 2{,}270 (credit $\times$ regulatory quality), comfortably above the conventional minimum threshold of 400 effective samples per parameter for stable posterior summaries at four chains. No divergent transitions were flagged during sampling (NUTS via the nutpie sampler, four chains of 1{,}000 post-warmup draws each after 1{,}000 tuning iterations).
-
-\section{Global-sample SBFN status, regional summary}
-\label{app:globalsbfn}
-
-Of the 162 global-sample economy-years, 61 are coded as SBFN members as of their survey year and 101 as non-members. Table~\ref{tab:globalsbfnregion} reports the regional distribution of the 61 members, drawn from the SBFN data portal's regional classification; five of the 61 (Peru, Philippines, Timor-Leste, Bangladesh, and Indonesia) carry the deeper per-country sourcing already reported in \ref{app:sbfn}, having been determined during the primary sample's original research pass rather than from the portal roster alone.
-
-\begin{table}[htbp]
-\centering
-\caption{Global-sample SBFN members, by SBFN region.}
-\label{tab:globalsbfnregion}
-\begin{tabular}{lc}
-\toprule
-Region & Member economy-years \\
-\midrule
-Latin America and Caribbean & 17 \\
-Africa & 12 \\
-Europe and Central Asia & 11 \\
-East Asia and Pacific & 11 \\
-South Asia & 6 \\
-Middle East and North Africa & 4 \\
-\midrule
-Total & 61 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\section*{Additional material}
-
-\subsection*{Online appendix}
-
-\ref{app:sbfn}, \ref{app:diagnostics}, and \ref{app:globalsbfn} appear above; per-country source citations at the level of detail compiled during data construction (individual SBFN Global Progress Report page references, country-addendum URLs, and IFC accession-announcement links for every non-obvious determination in the primary sample; the full 162-row global-sample SBFN/WGI table underlying \ref{app:globalsbfn}) are available in the online supplementary material accompanying this submission.
+The full per-economy SBFN membership and regulatory-quality coding for both samples, Bayesian
+convergence diagnostics, the global sample's SBFN membership by region, and the additional
+robustness checks and multiple-testing correction referenced above (Section~\ref{sec:extension},
+\ref{sec:robustness}) are reported in the Supplementary Material accompanying this submission.
 
 \subsection*{Data availability}
 
-Data in support of the findings of this study is available from the corresponding author upon reasonable request, subject to the World Bank Enterprise Surveys' own terms of use for the underlying firm-level microdata (enterprisesurveys.org, free registration required), including the standardized cross-country database and Productivity Database underlying the global sample. The country-level SBFN policy-status (including the SBFN data portal's member roster underlying the global sample) and Worldwide Governance Indicators datasets constructed for this paper, the country-year World Development Indicators panel and Callaway-Sant'Anna event-study code underlying Section~\ref{sec:macrodid} (all freely redistributable, no registration required), together with the full analysis and replication code, are available in a public GitHub repository; the repository link is withheld from this anonymized manuscript, and repository access is restricted for the duration of double-anonymized review, to avoid identifying the authors to reviewers. The link will be provided to the editor upon submission and made publicly accessible again to readers upon acceptance.
+Data in support of the findings of this study is available from the corresponding author upon reasonable request, subject to the World Bank Enterprise Surveys' own terms of use for the underlying firm-level microdata (enterprisesurveys.org, free registration required), including the standardized cross-country database and Productivity Database underlying the global sample. The country-level SBFN policy-status (including the SBFN data portal's member roster underlying the global sample) and Worldwide Governance Indicators datasets constructed for this paper, the country-year World Development Indicators panel and Callaway-Sant'Anna event-study code underlying Section~\ref{sec:macrodid} (all freely redistributable, no registration required), together with the full analysis and replication code, are available at \url{https://github.com/vinhqdang/green-credit-substitution}.
 
-% Reference list in APA 7th-edition format (Borsa Istanbul Review reference style).
+% Reference list in author-date format.
 % Generated from references.bib; kept inline so the submitted source is self-contained.
 \begin{thebibliography}{99}
 

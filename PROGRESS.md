@@ -19,10 +19,10 @@ the paper did not make the top 10-15% on an editor's fast skim.
 System Change." Desk-rejected on four grounds, two of them genuine technical errors, both since
 corrected. See "Desk rejection and corrections" below.
 
-**Next target:** not yet chosen. Working hypothesis (see "Where to go next"): the common factor
-across both rejections is fit and framing rather than execution -- a firm-level development
-paper whose headline is a null, sent twice to finance/economic-systems outlets, at 73 pp. with
-a 576-word abstract.
+**Next target: Environment and Development Economics (Cambridge University Press), chosen and
+built for (2026-09-09).** See "Retargeting to Environment and Development Economics" below for
+the completed reframe, what moved to a new Supplementary Material file, and what is still open
+before submission.
 
 **Corresponding author:** Quang-Vinh Dang (British University Vietnam), ORCID 0000-0002-3877-8024
 **Co-author:** Thi-Hong-Hanh Nguyen (Banking Academy Vietnam), ORCID 0009-0006-7821-7404
@@ -377,37 +377,120 @@ APC-discount country list (they require lower-middle income *and* GDP under $200
 plan on a T&F discount. Several Elsevier/Wiley APC figures came from aggregators because
 ScienceDirect and Wiley returned 403 -- immaterial while taking the subscription route.
 
-## Restructuring plan (agreed 2026-09-09): full reframe
+## Restructuring plan (agreed 2026-09-09, then corrected before execution)
 
 Two desk rejections without review is weak evidence on any single dimension, and the BIR letter
 carries no content at all, so the operative question is what an editor sees in a ten-minute skim.
-The authors chose a full reframe over a length-only cut. Three changes, none of which touches the
-analysis:
+The authors initially asked for a full reframe leading with the firm-size result (H4). **That
+specific plan was not executed, and should not be**: the causal forest's overall ATE is 0.073
+with a 95% CI of [-0.040, 0.186] -- it spans zero -- and the size-stratified effects (0.080 /
+0.075 / 0.057) all have wide, overlapping, zero-spanning intervals and run opposite to the
+fixed-cost story the paper's own H4 predicts. Leading a resubmission with a variance share
+(75.6%) computed on top of an insignificant, non-monotonic, non-pre-registered result would not
+survive review and would read, after two rejections, as straining for a positive finding. See
+the point below for what was built instead.
 
-1. **Length.** Cut to a ~9,000-word core with the robustness battery in an online appendix.
-   Every shortlisted venue caps at 7,000-10,000 words, so this is required regardless of target.
-2. **Abstract.** Replace the 576-word abstract, whose second half is hedges, with a ~200-word
-   version leading with the result. `latex/abstract_150w_submission_form.txt` (147 words, written
-   for the BIR form) is the basis.
-3. **Framing.** The paper currently reads as "three hypotheses tested, two rejected." The
-   firm-size result (H4) is the actual positive finding and sits in Section 5.4 labelled
-   exploratory. Lead with it instead, so the paper relocates the institutional question rather
-   than merely nulling it -- while keeping H4's exploratory status explicit, since it was not
-   pre-specified and does not resolve into a monotonic size gradient. **The reframe must not
-   become an overclaim**; that would trade a fixable presentation problem for an unfixable
-   integrity one.
+## Retargeting to Environment and Development Economics (2026-09-09)
 
-None of this is a defect in the analysis, which stands unchanged. It is about what gets read.
+**Target chosen and built for:** Environment and Development Economics (Cambridge University
+Press). Free via the subscription route (no submission fee, per the authors' hard constraint);
+verified precedent publishing multi-country Enterprise-Survey/BEEPS firm-level work (Fayek and
+Zaki, "Does 'going green' promote global value chain integration?", *EDE*, Sept 2026,
+41 countries; an unnamed 2023 *EDE* paper on environmental management and productivity growth,
+also 41 countries, 2017-2019 BEEPS) -- both confirmed by direct search, not taken on an earlier
+agent's word alone, before being cited in the cover letter. Co-editors: Allen Blackman, Carlos
+Chavez, Susana Ferreira, Jintao Xu (verified against the journal's own editorial-board page);
+the cover letter addresses "The Co-Editors" rather than naming one, since responsibility is
+shared. Abstract cap confirmed at 150 words; manuscript length "not exceed 36 pages including
+title page, text, footnotes, references, tables and figures" (Cambridge's own instructions
+page); "supplementary materials may be submitted separately" -- the basis for the Supplementary
+Material split below. Author-date citation confirmed, matching the paper's existing style.
+**Not confirmed:** whether review is single- or double-anonymized. The instructions describe the
+manuscript's own first page as carrying author names/affiliations/emails, which reads as
+single-anonymous, and the rebuild below proceeds on that basis -- but this should be verified
+before submission (edejournal@gmail.com, or the ScholarOne portal itself) since it is inferred,
+not stated outright.
 
-**Venue-dependent step, deferred:** economics framing (EDE, World Development) versus management
-framing (BSE) versus climate-policy framing (PLOS Climate) differs in vocabulary and in which
-literature the introduction anchors to. The three changes above are common to all of them, so
-they are safe to do before the target is fixed.
+**What changed, precisely:**
+
+1. **Reframe: precision of the null, not the firm-size result.** The abstract and Introduction
+   now lead with the paper's actual strength -- five estimators, ~118,000 firms, and *tight*
+   confidence intervals, not merely wide ones (credit x SBFN differs by 0.004 between adopters
+   and non-adopters in the causal forest; the hierarchical model's credit x regulatory-quality
+   posterior is 0.004, 89% ETI [-0.13, 0.14]). This lets the paper claim it can distinguish a
+   genuine absence of institutional moderation from an underpowered failure to detect one -- a
+   distinction most single-country studies in this literature cannot make. The firm-size finding
+   (H4) stays exactly where it was, in Section 5.4, labelled exploratory, not promoted.
+2. **Abstract:** rewritten to exactly 150 words (was 576), built around the precision framing.
+   Also placed on the new `titlepage.tex`, which now carries an abstract, keywords and JEL codes
+   (EDE requires all three on the title page) -- it did not before.
+3. **Introduction:** cut from 1,509 to 670 words (56%), same reframe, every citation preserved.
+   One citation (`jin2026`, on credit self-rationing) moved from the intro to the Sixth
+   Limitation in the Conclusion, where it fits thematically, rather than dropped -- avoiding an
+   orphaned, uncited bibliography entry.
+4. **Supplementary Material split (new file, `latex/supplementary_material.tex`, compiles to
+   6 pp.):** moved out, verbatim, with cross-references to main-text tables rewritten as prose
+   (`"the main text's baseline logit table"`) rather than `\ref`, since a table label in one
+   `.tex` file cannot resolve in another:
+   - The small-sample waste-minimization check (was Table 7) -> Supplementary Table S1.
+   - The additional-robustness battery (was Table 9) -> Supplementary Table S2.
+   - The Benjamini-Hochberg FDR correction (was Table 8) -> Supplementary Table S3.
+   - Appendix A (full 47-economy SBFN/WGI coding), Appendix B (Bayesian convergence
+     diagnostics), Appendix C (global-sample SBFN regional summary) -> moved in full.
+   The main text keeps short (3-6 sentence) summaries of each result in place, with the
+   original section labels (`sec:extension`, `sec:robustness`) intact so nothing that pointed to
+   them elsewhere breaks, and points to the specific Supplementary table by name.
+5. **Data availability:** dropped the double-anonymized/"link withheld" framing (built for BIR)
+   and cited the real repository URL directly, since the current review-type assumption is
+   single-anonymous. **Revert this if EDE turns out to require double-anonymized review.**
+6. **Title page (`titlepage.tex`) and manuscript author block:** both now carry real author
+   names/affiliations/emails/ORCIDs (manuscript previously said "Anonymous for review" for BIR's
+   double-anonymized workflow); `\journal{Borsa Istanbul Review}` removed from both files rather
+   than repointed, since printing a journal-name banner on the manuscript itself is an
+   Elsevier-template convention this Cambridge journal doesn't use.
+7. **Cover letter:** re-addressed to EDE's co-editors; fit paragraph rebuilt around the two
+   verified EDE precedent papers above (dropped the four BIR-published-paper citations used for
+   the previous target, which are unrelated to EDE's own track record); added the precision-of-null
+   sentence; kept the disclosure paragraph about the two corrected identification errors
+   verbatim, since it remains accurate and the right thing to volunteer regardless of venue;
+   dropped the double-anonymized clause in the closing paragraph to match point 5.
+
+**Length: not yet confirmed against the 36-page cap, and this is a real open item, not a
+formality.** Prose word count (excluding tables, figures, bibliography) is now 9,104 words, down
+from 10,618 -- and three whole tables plus three appendices moved out entirely. But the compiled
+`manuscript.pdf` is 61 pages (down from 73) because it still uses `elsarticle`'s `review` class
+option, which forces double line spacing and wide margins for a review/track-changes format --
+not remotely comparable, page-for-page, to Cambridge's own compact typeset layout. **9,104 words
+of prose plus 6 tables and 6 figures is the number to reason from, not 61 pages.** Whether that
+clears 36 CUP-typeset pages was not verified by producing an actual CUP-style layout, and is the
+single largest remaining risk before submission.
+
+**Known gap: `manuscript/*.md` is now stale.** This session edited only `latex/manuscript.tex`
+(and `latex/supplementary_material.tex`, new). The parallel `manuscript/*.md` files -- which a
+past session's own commit history says should be kept in sync with the `.tex` -- were not
+updated to match the trimmed abstract, Introduction, or the Supplementary Material split. Sync
+these before relying on the `.md` files for anything, or treat `latex/manuscript.tex` as the
+sole source of truth going forward.
+
+All four submission files compile clean (two-pass `pdflatex`, no errors, no undefined
+references): `manuscript.tex` (61 pp., real author names in PDF metadata), `supplementary_material.tex`
+(6 pp., new), `titlepage.tex` (2 pp., now with abstract/keywords/JEL added), `cover_letter.tex`
+(2 pp.).
 
 ## Next steps
 
-1. Agree the next target journal and whether to restructure per the four points above.
-2. Reformat to the chosen journal's house style; re-run the anonymization and metadata checks
-   in `latex/` before resubmitting.
-3. Set the GitHub repo to private before submission; flip back to public after acceptance and
+1. **Confirm EDE's review-anonymization type** (single vs. double) before submitting -- the
+   current build assumes single-anonymous based on the instructions page's wording, not a
+   direct statement. If double-anonymized, revert the Data Availability section (point 5 above)
+   and rebuild a blinded manuscript variant, reusing the BIR-era anonymization pattern.
+2. **Get an honest read on the 36-page cap.** The 61-page PDF is not a meaningful proxy; either
+   retypeset a portion in a compact single-spaced layout to sanity-check, or treat the
+   9,104-word / 6-table / 6-figure count as the working budget and trim further if a co-editor's
+   desk screen flags length.
+3. Sync `manuscript/*.md` to `latex/manuscript.tex`, or retire the `.md` mirror if it is no
+   longer maintained.
+4. Confirm the two still-open author-detail items from the BIR submission (unverified co-author
+   email `hanhnth1@hvnh.edu.vn`; "Banking Academy Vietnam" vs. the institution's official
+   "Banking Academy *of* Vietnam") -- both carry over unchanged to this submission.
+5. Set the GitHub repo to private before submission; flip back to public after acceptance and
    update the Data Availability statement with the real link at that point.

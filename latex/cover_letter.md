@@ -1,47 +1,45 @@
 # Cover letter
 
-Written for the Editorial Manager cover-letter field / upload for *Borsa Istanbul Review*
-(https://www.editorialmanager.com/bir/). See `cover_letter.pdf` for the submission-ready typeset
-version.
+Written for the ScholarOne cover-letter upload for *Environment and Development Economics*
+(Cambridge University Press). See `cover_letter.pdf` for the submission-ready typeset version.
 
 ---
 
-Dear Dr. Kutan,
+Dear Co-Editors,
 
 We submit "Credible on Paper? Green Banking Policy, Access to Finance, and Institutional Capacity in
-the Greening of Firms Worldwide" for consideration as an original research paper in *Borsa Istanbul
-Review*.
+the Greening of Firms Worldwide" for consideration as a research article in *Environment and
+Development Economics*.
 
 The paper asks whether green banking policy adoption — specifically, membership of the IFC-convened
 Sustainable Banking and Finance Network, which now spans more than sixty emerging and developing
 economies — changes the firm-level relationship between access to bank credit and green investment
 behavior, and whether that depends on the regulatory capacity available to make the supervisory
 guideline credible. It is, to our knowledge, the first firm-level test of that premise across a broad
-cross-section of adopting economies rather than within a single jurisdiction.
-
-We think the paper belongs in this journal specifically because it sits on a question the journal has
-been building toward from the country side. *Borsa Istanbul Review* has published evidence that green
-credit policy raises sustainable production across the BRICS economies and that governance quality
-strengthens that relationship (Jia, Farooq, Alomair, and Aljughaiman, 2026), that China's
-green-financial-system guidelines drive firms' green transition most where state environmental
-governance is strong (Chi and Yang, 2023), that green finance improves environmental outcomes only
-where control of corruption is high (Shi, Zhu, and Khan, 2024), and that regulatory quality conditions
-rather than merely shifts the financial-development-to-growth relationship (Ullah, Zubir, and Ariff,
-2024). Each of those results implies a firm-level prediction: the credit-to-green channel should
-respond to green banking policy more sharply where regulatory capacity is stronger. Our contribution
-is to test that prediction directly, on firm-level data, and to report that it does not hold.
+cross-section of adopting economies rather than within a single jurisdiction, and it is built
+throughout on the World Bank Enterprise Surveys family of instruments that this journal has published
+firm-level environmental work on before — including cross-country studies of environmental management
+and productivity growth (41 countries, 2017-2019), and of green practices and global-value-chain
+integration, both using the Business Environment and Enterprise Performance Survey (BEEPS), the same
+World Bank/EBRD survey family our own primary sample draws on. We see the paper as a direct extension
+of that line of work to the specific policy-credibility question this journal's scope names
+explicitly.
 
 Using two independently assembled World Bank Enterprise Survey samples — a 41-economy harmonized
 sample on a seven-item green-practice outcome, and a second 162-economy sample reaching into
 high-income economies entirely outside the network's remit — we find that bank credit access is
 robustly associated with green practice adoption, but that neither SBFN adoption nor regulatory
 quality moderates that relationship under any of four estimators, on either sample. Both institutional
-variables instead shift the general *level* of green adoption. A country-level Callaway-Sant'Anna
-staggered event-study on an independent World Development Indicators panel (217 economies, 2000-2024)
-converges on the same conclusion from a different data source, unit of analysis, and identification
-strategy. Where effect heterogeneity does exist, the causal forest locates it at firm size rather than
-country institutions — which we report as an auxiliary, exploratory finding, and which relocates rather
-than resolves the institutional question.
+variables instead shift the general *level* of green adoption. What we think earns this null a hearing
+rather than a shrug is that the estimates are precise, not merely insignificant: the causal forest's
+credit effect differs by only 0.004 between SBFN adopters and non-adopters, and is flat across
+regulatory-quality terciles — a design able to distinguish a genuine absence of moderation from one
+too underpowered to detect it, which most single-country studies in this literature cannot do. A
+country-level Callaway-Sant'Anna staggered event-study on an independent World Development Indicators
+panel (217 economies, 2000-2024) converges on the same conclusion from a different data source, unit
+of analysis, and identification strategy. Where effect heterogeneity does exist, the causal forest
+locates it at firm size rather than country institutions — which we report as an auxiliary,
+exploratory finding, and which relocates rather than resolves the institutional question.
 
 We want to disclose one thing directly rather than let a reviewer discover it. An earlier version of
 this manuscript was submitted elsewhere and desk-rejected, correctly, for two errors in how it
@@ -65,10 +63,8 @@ on an independent macro data source and report it in Section 6, including its on
 and our reasons for not reading it causally. Five tests, three data sources, three units of analysis,
 and one genuinely quasi-experimental design converge on the same substantive answer.
 
-The manuscript is prepared for double anonymized review: author details appear only in the separate
-title page file, and the replication repository link is withheld from the manuscript and will be
-supplied to the editorial office on request. This manuscript is not under consideration elsewhere, and
-the authors declare no competing interests.
+This manuscript is not under consideration elsewhere, and the authors declare no competing interests.
+Data and code are available in a public GitHub repository, cited in the manuscript.
 
 Sincerely,
 

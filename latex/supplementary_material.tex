@@ -1,0 +1,280 @@
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{hyperref}
+
+\title{Supplementary Material for \\ \emph{Credible on Paper? Green Banking Policy, Access to Finance, and Institutional Capacity in the Greening of Firms Worldwide}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+This file reports supplementary tables referenced in the main text: a small-sample supplementary
+check on a narrower outcome (Table~S1), additional robustness checks and their multiple-testing
+correction (Tables~S2--S3), the full per-economy SBFN and regulatory-quality coding underlying the
+primary sample (Table~S4), Bayesian convergence diagnostics (Section~S5), and the global sample's
+SBFN membership by region (Table~S6). Section and table numbers here (S1, S2, \ldots) are internal
+to this supplementary file and distinct from the main text's own numbering, which this file's
+prose refers to descriptively (e.g., ``the main text's baseline logit table'') rather than by
+number, since table numbers in the main text are subject to change on revision.
+
+\section{Small-sample supplementary check: waste-minimization adoption}
+\label{sec:s-extension}
+
+Before the global-sample replication that is the paper's second major test, we report a smaller
+supplementary check using waste-minimization adoption---an outcome not captured in the standardized
+cross-country database underlying the global sample, and so a genuinely independent (if
+small-sample) data point---available in four economies whose Green Economy modules asked this item
+under directly comparable wording: India 2022, Indonesia 2023, Peru 2023, and Timor-Leste 2021.
+Three of these four are themselves SBFN members at various progression stages, so this sample
+cannot re-test the SBFN-adoption contrast; what it can test is whether the credit-to-green channel
+documented in the main text's baseline, hierarchical, and causal-forest results is a peculiarity of
+the ECA-MENA sample or generalizes elsewhere. It generalizes: pooled across the four economies,
+having an overdraft facility is associated with significantly higher odds of waste-minimization
+adoption ($b=0.422$, $p<0.001$, $N=9{,}038$, 4 countries). The direction of the core finance-green
+relationship replicates on a different continent, a different half-decade, and a narrower outcome
+definition than the one anchoring the main text's primary-sample results---a preview, on four
+economies, of the much larger replication in the global sample.
+
+\begin{table}[htbp]
+\centering
+\caption{Small-sample supplementary check: descriptive rates.}
+\label{tab:s-extension}
+\begin{footnotesize}
+\begin{tabular}{lcccc}
+\toprule
+Economy & $N$ & Waste-min.\ rate & Overdraft rate & SBFN member \\
+\midrule
+India 2022 & 9{,}376 & 0.515 & 0.621 & 1 \\
+Indonesia 2023 & 2{,}955 & 0.336 & 0.144 & 1 \\
+Peru 2023 & 987 & 0.806 & 0.549 & 1 \\
+Timor-Leste 2021 & 238 & 0.061 & 0.089 & 0 \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+
+\section{Additional robustness checks}
+\label{sec:s-robustness}
+
+Table~\ref{tab:s-robustness} subjects the primary-sample finding to four further checks, all
+retaining sector fixed effects, firm controls, and country-clustered standard errors (no country
+fixed effects, for the reason given in the main text). First, replacing the binary outcome with the
+continuous seven-item green-adoption index and estimating by OLS reproduces the same pattern to the
+decimal: credit access positive and significant ($b=0.053$, $p<0.001$), SBFN main effect negative
+and significant ($b=-0.092$, $p<0.001$), interaction indistinguishable from zero ($b=0.006$,
+$p=0.739$).
+
+Second, replacing bank credit access with two alternative finance measures produces one genuine
+point of nuance worth reporting rather than smoothing over. Using overdraft-facility access instead
+of a credit line/loan, the main overdraft effect remains positive and significant ($b=0.274$,
+$p=0.011$), the SBFN main effect remains negative and significant ($b=-0.905$, $p<0.001$)---but the
+overdraft $\times$ SBFN interaction is now negative and significant ($b=-0.346$, $p=0.031$), the one
+interaction term in the entire paper that clears a conventional significance threshold, and it runs
+opposite to the direction H2 predicts. Using the reverse-coded perceived finance-obstacle measure in
+place of realized access, by contrast, both the main effect and its SBFN interaction are precisely
+zero ($b=-0.010$, $p=0.827$; interaction $b=-0.012$, $p=0.849$)---consistent with the descriptive
+correlation noted in the main text. We read the overdraft result as suggestive rather than
+conclusive given it is one significant coefficient among more than a dozen interaction tests across
+the paper (see Table~\ref{tab:s-fdr} below), but it is at least directionally consistent with a
+substantive story worth flagging for future work: if SBFN-guided lending is channelled preferentially
+through the term loans and credit lines that finance long-horizon capital expenditure, rather than
+through short-term overdraft facilities, we might expect exactly this pattern---a null-to-positive
+interaction on credit lines and a negative one on overdrafts---though our data cannot directly test
+whether SBFN-guided credit is disproportionately term-structured.
+
+Third, splitting the sample into manufacturing ($N=13{,}340$) and services ($N=9{,}538$) subsamples
+shows the credit-access main effect, the SBFN main effect, and the null credit $\times$ SBFN
+interaction all replicate within each sector separately (manufacturing: credit $b=0.480$, $p<0.001$,
+interaction $b=-0.040$, $p=0.826$; services: credit $b=0.448$, $p<0.001$, interaction $b=0.195$,
+$p=0.426$)---the paper's central null is not an artifact of pooling two structurally different
+production technologies.
+
+\begin{table}[htbp]
+\centering
+\caption{Additional robustness checks.}
+\label{tab:s-robustness}
+\begin{footnotesize}
+\begin{tabular}{lccc}
+\toprule
+Specification & Finance coef.\ (p) & SBFN coef.\ (p) & Interaction coef.\ (p) \\
+\midrule
+(a) Continuous index, OLS & 0.053 (0.000) & -0.092 (0.000) & 0.006 (0.739) \\
+(b1) Overdraft & 0.274 (0.011) & -0.905 (0.000) & -0.346 (0.031) \\
+(b2) Finance obstacle (reverse-coded) & -0.010 (0.827) & -1.011 (0.000) & -0.012 (0.849) \\
+(c1) Manufacturing subsample & 0.480 (0.000) & -1.047 (0.000) & -0.040 (0.826) \\
+(c2) Services subsample & 0.448 (0.000) & -0.914 (0.001) & 0.195 (0.426) \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+
+Because the overdraft interaction (the one coefficient in the paper that clears a conventional
+significance threshold) is one of many credit $\times$ institutional-moderator tests reported across
+the frequentist specifications in this paper, we additionally apply a Benjamini--Hochberg
+false-discovery-rate correction across the full family of 13 such coefficients reported under a
+classical (non-Bayesian, non-forest) estimator in the main text's baseline, robustness, and
+global-sample regression tables (Table~\ref{tab:s-fdr} below; full calculation in the replication
+package). The overdraft interaction's raw $p=0.031$ becomes $p=0.403$ after correction, and no
+coefficient in the family survives at a false discovery rate of 0.10 or even 0.40. We read this as
+reinforcing, with a formal multiple-testing accounting rather than only a qualitative caveat, the
+suggestive-not-conclusive framing the main text's Discussion already gives this result: an isolated
+nominally-significant interaction among more than a dozen tested is exactly what a pure
+false-discovery process would be expected to produce roughly one time in twenty, and this correction
+does not let us reject that account.
+
+\begin{table}[htbp]
+\centering
+\caption{Multiple-testing correction: Benjamini--Hochberg false discovery rate applied to every
+credit $\times$ institutional-moderator interaction coefficient reported under a frequentist
+estimator (main text's baseline, robustness, and global-sample regression tables above). Entries
+marked $\dagger$ are approximate $p$-values recovered from the reported coefficient and standard
+error via a normal approximation ($z=\text{coef}/\text{se}$), since the main text reports only the
+coefficient and standard error for these terms.}
+\label{tab:s-fdr}
+\begin{footnotesize}
+\begin{tabular}{llccc}
+\toprule
+Source & Term & Raw $p$ & BH-adjusted $p$ \\
+\midrule
+Table~\ref{tab:s-robustness} (b1) Overdraft & Overdraft $\times$ SBFN & 0.031 & 0.403 \\
+Main text, global sample, M2 (country FE) & Credit $\times$ SBFN & 0.205 & 0.799 \\
+Main text, global sample, M1 (no country FE) & Credit $\times$ Reg.\ quality$^\dagger$ & 0.301 & 0.799 \\
+Main text, baseline M3$^\dagger$ & Credit $\times$ Reg.\ quality & 0.310 & 0.799 \\
+Main text, global sample, M2 (country FE) & Credit $\times$ Reg.\ quality & 0.346 & 0.799 \\
+Table~\ref{tab:s-robustness} (c2) Services & Credit $\times$ SBFN & 0.426 & 0.799 \\
+Main text, global sample, M1 (no country FE) & Credit $\times$ SBFN & 0.430 & 0.799 \\
+Main text, baseline M3$^\dagger$ & Credit $\times$ SBFN $\times$ Reg.\ quality & 0.702 & 0.892 \\
+Table~\ref{tab:s-robustness} (a) Continuous index, OLS & Credit $\times$ SBFN & 0.739 & 0.892 \\
+Main text, baseline M2 & Credit $\times$ SBFN & 0.773 & 0.892 \\
+Table~\ref{tab:s-robustness} (c1) Manufacturing & Credit $\times$ SBFN & 0.826 & 0.892 \\
+Table~\ref{tab:s-robustness} (b2) Finance obstacle (reverse-coded) & Obstacle $\times$ SBFN & 0.849 & 0.892 \\
+Main text, baseline M3$^\dagger$ & Credit $\times$ SBFN & 0.892 & 0.892 \\
+\bottomrule
+\end{tabular}
+\end{footnotesize}
+\end{table}
+
+\section{SBFN policy status and regulatory quality, full sample}
+\label{app:sbfn}
+
+Table~\ref{tab:appendixa} reports, for all 47 economy-years in the paper's primary and small-sample
+supplementary check, the SBFN membership status coded for the analysis, the join year where
+applicable, the SBFN Multi-Tiered Progress Framework stage in force nearest the survey year, and the
+exact year of the Worldwide Governance Indicators observation used. Full per-country source
+citations (the specific SBFN Global Progress Report, country addendum, or accession announcement
+consulted for every determination) are available in the replication package. The analogous
+162-economy table for the global sample is summarized by region in Table~\ref{tab:globalsbfnregion}
+below and provided in full in the replication package.
+
+{\footnotesize
+\begin{longtable}{p{2.3cm}ccp{4.0cm}c}
+\caption{SBFN policy status and regulatory quality, full 47-economy sample.} \label{tab:appendixa} \\
+\toprule
+Economy & SBFN member & Join year & Stage at survey & WGI year \\
+\midrule
+\endfirsthead
+\toprule
+Economy & SBFN member & Join year & Stage at survey & WGI year \\
+\midrule
+\endhead
+Albania 2019 & 0 & --- & None & 2019 \\
+Armenia 2020 & 0 & --- & None & 2020 \\
+Azerbaijan 2019 & 0 & --- & None & 2019 \\
+Bangladesh 2022 & 1 & 2012 & Advancing (ESG Integration) & 2022 \\
+Belarus 2018 & 0 & --- & None & 2018 \\
+Bosnia and Herzegovina 2019 & 0 & --- & None & 2019 \\
+Bulgaria 2019 & 0 & --- & None & 2019 \\
+Croatia 2019 & 0 & --- & None & 2019 \\
+Cyprus 2019 & 0 & --- & None & 2019 \\
+Czechia 2019 & 0 & --- & None & 2019 \\
+Egypt 2020 & 1 & 2016 & Formulating (Preparation) & 2020 \\
+Estonia 2019 & 0 & --- & None & 2019 \\
+Georgia 2019 & 1 & 2017 & Developing (Implementation) & 2019 \\
+Greece 2018 & 0 & --- & None & 2018 \\
+Hungary 2019 & 0 & --- & None & 2019 \\
+India 2022 & 1 & 2016 & Developing (Commitment) & 2022 \\
+Indonesia 2023 & 1 & 2012 & Consolidating (Maturing) & 2023 \\
+Italy 2019 & 0 & --- & None & 2019 \\
+Jordan 2019 & 1 & 2016 & Commitment (Preparation) & 2019 \\
+Kazakhstan 2019 & 0 & --- & None & 2019 \\
+Kosovo 2019 & 0 & --- & None & 2019 \\
+Kyrgyz Republic 2019 & 1 & 2018 & Commitment (Preparation) & 2019 \\
+Latvia 2019 & 0 & --- & None & 2019 \\
+Lebanon 2019 & 0 & --- & None & 2019 \\
+Lithuania 2019 & 0 & --- & None & 2019 \\
+Malta 2019 & 0 & --- & None & 2019 \\
+Moldova 2019 & 0 & --- & None & 2019 \\
+Mongolia 2019 & 1 & 2012 & Advancing (Implementation) & 2019 \\
+Montenegro 2019 & 0 & --- & None & 2019 \\
+Morocco 2019 & 1 & 2014 & Advancing (Implementation) & 2019 \\
+North Macedonia 2019 & 0 & --- & None & 2019 \\
+Peru 2023 & 1 & 2013 & Advancing (ESG Integration) & 2023 \\
+Philippines 2023 & 1 & 2013 & Advancing (ESG Integration) & 2023 \\
+Poland 2019 & 0 & --- & None & 2019 \\
+Portugal 2019 & 0 & --- & None & 2019 \\
+Romania 2019 & 0 & --- & None & 2019 \\
+Russia 2019 & 0 & --- & None & 2019 \\
+Serbia 2019 & 0 & --- & None & 2019 \\
+Slovak Republic 2019 & 0 & --- & None & 2019 \\
+Slovenia 2019 & 0 & --- & None & 2019 \\
+Tajikistan 2019 & 0 & --- & None & 2019 \\
+Timor-Leste 2021 & 0 & --- & None & 2021 \\
+Tunisia 2020 & 1 & 2019 & Unverified & 2020 \\
+Türkiye 2019 & 1 & 2015 & Developing (Implementation) & 2019 \\
+Ukraine 2019 & 0 & --- & None & 2019 \\
+Uzbekistan 2019 & 0 & --- & None & 2019 \\
+West Bank and Gaza 2019 & 0 & --- & None & 2019 \\
+\bottomrule
+\end{longtable}
+}
+
+\section{Bayesian model convergence diagnostics}
+\label{app:diagnostics}
+
+Convergence diagnostics for every focal parameter of the hierarchical model reported in the main
+text are included directly in that table ($\hat{R}$ column); the full posterior summary also
+includes $\text{ess}_{\text{bulk}}$ ranging from 797 (SBFN member) to 2{,}270 (credit $\times$
+regulatory quality), comfortably above the conventional minimum threshold of 400 effective samples
+per parameter for stable posterior summaries at four chains. No divergent transitions were flagged
+during sampling (NUTS via the nutpie sampler, four chains of 1{,}000 post-warmup draws each after
+1{,}000 tuning iterations).
+
+\section{Global-sample SBFN status, regional summary}
+\label{app:globalsbfn}
+
+Of the 162 global-sample economy-years, 61 are coded as SBFN members as of their survey year and 101
+as non-members. Table~\ref{tab:globalsbfnregion} reports the regional distribution of the 61
+members, drawn from the SBFN data portal's regional classification; five of the 61 (Peru,
+Philippines, Timor-Leste, Bangladesh, and Indonesia) carry the deeper per-country sourcing already
+reported in Table~\ref{tab:appendixa} above, having been determined during the primary sample's
+original research pass rather than from the portal roster alone.
+
+\begin{table}[htbp]
+\centering
+\caption{Global-sample SBFN members, by SBFN region.}
+\label{tab:globalsbfnregion}
+\begin{tabular}{lc}
+\toprule
+Region & Member economy-years \\
+\midrule
+Latin America and Caribbean & 17 \\
+Africa & 12 \\
+Europe and Central Asia & 11 \\
+East Asia and Pacific & 11 \\
+South Asia & 6 \\
+Middle East and North Africa & 4 \\
+\midrule
+Total & 61 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}
