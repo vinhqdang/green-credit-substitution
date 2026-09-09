@@ -6,7 +6,16 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: desk-rejected twice; awaiting a decision on the next target journal
+## Status: submitted to Environment and Development Economics (2026-09-09) -- awaiting decision
+
+**Submitted 2026-09-09** via ScholarOne to *Environment and Development Economics* (Cambridge
+University Press): cover letter, title page, manuscript, and supplementary material, per the
+"Retargeting to Environment and Development Economics" section below. No funding to report; AI
+use declared per the journal's AI-contributions policy, consistent with the manuscript's own AI
+declaration. Nothing further to do until a decision or reviewer/editor comments arrive -- next
+session should check ScholarOne / email for status before doing anything else on this paper.
+
+## Status (superseded above): desk-rejected twice; awaiting a decision on the next target journal
 
 **Rejection 2 -- Borsa Istanbul Review (2026-09).** Submitted as BIR-D-26-02719; desk-rejected
 without review by Ali M. Kutan, Editor. The letter is a form letter citing capacity, not
@@ -477,20 +486,28 @@ references): `manuscript.tex` (61 pp., real author names in PDF metadata), `supp
 (6 pp., new), `titlepage.tex` (2 pp., now with abstract/keywords/JEL added), `cover_letter.tex`
 (2 pp.).
 
-## Next steps
+## Next steps (post-submission, 2026-09-09)
 
-1. **Confirm EDE's review-anonymization type** (single vs. double) before submitting -- the
-   current build assumes single-anonymous based on the instructions page's wording, not a
-   direct statement. If double-anonymized, revert the Data Availability section (point 5 above)
-   and rebuild a blinded manuscript variant, reusing the BIR-era anonymization pattern.
-2. **Get an honest read on the 36-page cap.** The 61-page PDF is not a meaningful proxy; either
-   retypeset a portion in a compact single-spaced layout to sanity-check, or treat the
-   9,104-word / 6-table / 6-figure count as the working budget and trim further if a co-editor's
-   desk screen flags length.
-3. Sync `manuscript/*.md` to `latex/manuscript.tex`, or retire the `.md` mirror if it is no
-   longer maintained.
-4. Confirm the two still-open author-detail items from the BIR submission (unverified co-author
-   email `hanhnth1@hvnh.edu.vn`; "Banking Academy Vietnam" vs. the institution's official
-   "Banking Academy *of* Vietnam") -- both carry over unchanged to this submission.
+**Submitted as-is; the pre-submission items below are now moot for this round** (can't be
+undone retroactively) but stay relevant if this submission comes back for revision, or for the
+next manuscript:
+
+1. ~~Confirm EDE's review-anonymization type before submitting~~ -- moot now; ScholarOne's own
+   submission form (ATTACH/reference) did not surface a separate blinding requirement, consistent
+   with the single-anonymous assumption the build proceeded on. If reviewer comments ever suggest
+   otherwise, revisit the Data Availability section (see the retargeting note above) then.
+2. ~~Get an honest read on the 36-page cap~~ -- moot now; the submission went in at 61 PDF pages
+   / 9,104 prose words under `elsarticle`'s double-spaced review layout, without independently
+   confirming that clears 36 CUP-typeset pages. If length becomes an editorial objection, that's
+   the first thing to revisit.
+3. **Watch for a decision or an editor/reviewer request.** Nothing to do until then -- check
+   ScholarOne / email at the start of the next session on this paper before taking any other
+   action.
+4. Sync `manuscript/*.md` to `latex/manuscript.tex`, or retire the `.md` mirror if it is no
+   longer maintained -- still open, do this before the next edit to either.
+5. Confirm the two still-open author-detail items carried over from the BIR submission:
+   unverified co-author email `hanhnth1@hvnh.edu.vn`, and "Banking Academy Vietnam" vs. the
+   institution's official "Banking Academy *of* Vietnam" -- worth resolving before any revision
+   round, not urgent while awaiting a first decision.
 5. Set the GitHub repo to private before submission; flip back to public after acceptance and
    update the Data Availability statement with the real link at that point.
