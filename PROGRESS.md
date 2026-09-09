@@ -333,28 +333,76 @@ Editorial Manager form values used at submission:
 - The Economic Systems fee-waiver thread (Jan-Egbert Sturm) is **superseded** by the
   retargeting and needs no follow-up.
 
-## Where to go next (drafted 2026-09-08, not yet agreed with the authors)
+## Journal search (2026-09-09): verified fees and shortlist
 
-Two desk rejections without review is weak evidence on any single dimension, but the BIR letter
-carries no content, so the useful question is what an editor sees in a ten-minute skim. Four
-things are fixable and worth deciding on before the next submission:
+**Author constraint: no submission fee.** Fees below verified against publisher pages, not recalled.
 
-1. **Venue class.** Both targets so far were finance / economic-systems journals. The paper is
-   firm-level development economics using WBES microdata, with an environmental outcome.
-   Candidates that match that description: World Development, Ecological Economics,
-   Environment and Development Economics, Economic Analysis and Policy, Energy Economics,
-   Business Strategy and the Environment.
-2. **Length.** 73 pp. with 9 tables plus appendices, against a typical 25-35 pp. house style.
-   Robustness could move to an online appendix.
-3. **Abstract.** 576 words, and it spends its second half on hedges. A ~200-word version
-   leading with the result would survive a skim better. (`latex/abstract_150w_submission_form.txt`
-   is a 147-word version already written for the BIR form and could be the basis.)
-4. **Framing.** The paper currently reads as "three hypotheses tested, two rejected." The
-   firm-size result (H4) is the actual positive finding and is presently labelled exploratory
-   and placed in Section 5.4. Leading with it would change the paper from a null to a
-   relocation of the question -- without overstating H4, which remains exploratory.
+**Passes the no-fee filter** (all hybrid or waived, so publishing costs $0):
 
-None of this is a defect in the analysis, which stands. It is about what gets read.
+| Journal | Submission fee | Cost to publish | Median length |
+|---|---|---|---|
+| Environment and Development Economics (CUP) | none | $0 subscription route (gold OA GBP 2,610 optional) | 21 typeset pp. |
+| Business Strategy and the Environment (Wiley) | none | $0 subscription route (OA $4,700 optional) | -- |
+| PLOS Climate | none | **$0 guaranteed** -- APC auto-waived for Research4Life Group A/B corresponding authors; Vietnam is Group B | -- |
+| World Development (Elsevier) | not on Elsevier's fee list | $0 subscription route | -- |
+| Journal of Environmental Management; Energy Policy | not on Elsevier's fee list | $0 subscription route | 7,000-10,000 words |
+| Journal of Development Effectiveness (T&F); Emerging Markets Finance and Trade (T&F) | none | $0 subscription route | -- |
+
+**Excluded on the no-fee rule.** Elsevier's submission-fee page names Emerging Markets Review
+($150), International Review of Financial Analysis ($175), Finance Research Letters ($200) and
+Energy Economics as fee-charging. Also excluded: JIFMIM ($125), Economic Modelling ($125),
+Economic Analysis and Policy ($125, levied even on desk rejection), Pacific-Basin Finance Journal
+($220), Research in International Business and Finance ($150 plus mandatory gold OA from
+2026-09-15). This removes the finance route almost entirely, which is acceptable -- it was the
+weakest scope fit.
+
+**Excluded on other grounds.** Journal of Development Economics and World Bank Economic Review
+(identification bar; WBER also caps main text at 7,000 words). Environmental Science & Policy
+(hard 7,000-word cap, over-length papers auto-returned). Journal of Cleaner Production
+(Clarivate expression of concern over self-citation). Finance Research Letters also carries an
+editorial-integrity concern (12 Elsevier retractions, Dec 2025).
+
+**Recommended target: Environment and Development Economics.** Free; Cambridge, so it counts
+institutionally; median 21 typeset pages is a reachable target; and it has verified precedent
+publishing multi-country Enterprise Survey firm-level work, so a cross-sectional design is house
+style rather than an exception -- which directly addresses this paper's known weakness.
+**Alternative:** Business Strategy and the Environment, which published a 2026 paper using the
+same WBES Green Economy module and the same seven-item outcomes, at the cost of a management
+rather than economics framing. **Safety net:** PLOS Climate, the only venue found whose stated
+criteria judge validity rather than novelty or impact, and which welcomes nulls.
+
+**Caveats recorded by the searches.** No journal assessed has a published null-results policy
+except PLOS and the Journal of Development Effectiveness. Vietnam is NOT on the Taylor & Francis
+APC-discount country list (they require lower-middle income *and* GDP under $200bn), so do not
+plan on a T&F discount. Several Elsevier/Wiley APC figures came from aggregators because
+ScienceDirect and Wiley returned 403 -- immaterial while taking the subscription route.
+
+## Restructuring plan (agreed 2026-09-09): full reframe
+
+Two desk rejections without review is weak evidence on any single dimension, and the BIR letter
+carries no content at all, so the operative question is what an editor sees in a ten-minute skim.
+The authors chose a full reframe over a length-only cut. Three changes, none of which touches the
+analysis:
+
+1. **Length.** Cut to a ~9,000-word core with the robustness battery in an online appendix.
+   Every shortlisted venue caps at 7,000-10,000 words, so this is required regardless of target.
+2. **Abstract.** Replace the 576-word abstract, whose second half is hedges, with a ~200-word
+   version leading with the result. `latex/abstract_150w_submission_form.txt` (147 words, written
+   for the BIR form) is the basis.
+3. **Framing.** The paper currently reads as "three hypotheses tested, two rejected." The
+   firm-size result (H4) is the actual positive finding and sits in Section 5.4 labelled
+   exploratory. Lead with it instead, so the paper relocates the institutional question rather
+   than merely nulling it -- while keeping H4's exploratory status explicit, since it was not
+   pre-specified and does not resolve into a monotonic size gradient. **The reframe must not
+   become an overclaim**; that would trade a fixable presentation problem for an unfixable
+   integrity one.
+
+None of this is a defect in the analysis, which stands unchanged. It is about what gets read.
+
+**Venue-dependent step, deferred:** economics framing (EDE, World Development) versus management
+framing (BSE) versus climate-policy framing (PLOS Climate) differs in vocabulary and in which
+literature the introduction anchors to. The three changes above are common to all of them, so
+they are safe to do before the target is fixed.
 
 ## Next steps
 
