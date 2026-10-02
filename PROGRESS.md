@@ -6,14 +6,31 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: submitted to Environment and Development Economics (2026-09-09) -- awaiting decision
+## Status: desk-rejected three times; next step not yet decided
+
+**Rejection 3 -- Environment and Development Economics (2026-10-01).** Manuscript EDE-2026-0765,
+submitted 2026-09-09, desk-rejected without review by Jintao Xu, Co-Editor. Stated reason: "The
+contribution of the paper to an already large literature is insufficient for further
+consideration." **This is the first rejection that names a substantive reason**, and it comes
+from a venue whose scope and precedent were verified to fit, so venue mismatch no longer
+explains it. Read across all three:
+
+| Journal | Reason given | What it tells us |
+|---|---|---|
+| Economic Systems | Two prose errors on identification (fixed); construct validity; interpretation outruns evidence | Execution problems, since corrected |
+| Borsa Istanbul Review | Form letter, capacity | Nothing specific |
+| Environment and Development Economics | Contribution insufficient relative to existing literature | The core finding is not seen as new enough |
+
+The likely reading: the affirmative result (credit access predicts green adoption) is already
+well established, and the novel part (no SBFN moderation) is a cross-sectional null on a binary
+membership indicator. Editors at novelty-screening journals see a thin increment. Reframing and
+retargeting have now been tried; the remaining options change either the venue's screening
+criterion or the paper's substance.
 
 **Submitted 2026-09-09** via ScholarOne to *Environment and Development Economics* (Cambridge
 University Press): cover letter, title page, manuscript, and supplementary material, per the
-"Retargeting to Environment and Development Economics" section below. No funding to report; AI
-use declared per the journal's AI-contributions policy, consistent with the manuscript's own AI
-declaration. Nothing further to do until a decision or reviewer/editor comments arrive -- next
-session should check ScholarOne / email for status before doing anything else on this paper.
+"Retargeting to Environment and Development Economics" section below. No funding reported; AI use
+declared per the journal's AI-contributions policy.
 
 ## Status (superseded above): desk-rejected twice; awaiting a decision on the next target journal
 
@@ -486,7 +503,24 @@ references): `manuscript.tex` (61 pp., real author names in PDF metadata), `supp
 (6 pp., new), `titlepage.tex` (2 pp., now with abstract/keywords/JEL added), `cover_letter.tex`
 (2 pp.).
 
-## Next steps (post-submission, 2026-09-09)
+## Options after the EDE rejection (2026-10-02, not yet agreed)
+
+1. **Venue whose screen is soundness, not novelty.** PLOS Climate states that it judges
+   methodological validity and explicitly not novelty or significance, welcomes null results,
+   and waives fees automatically for Research4Life Group B corresponding authors (Vietnam).
+   It is the one shortlisted venue whose stated criteria directly answer EDE's objection.
+   Journal of Development Effectiveness has a documented null-welcoming policy but is
+   impact-evaluation oriented, so the cross-sectional firm design is a weaker fit there.
+2. **Strengthen the substance before another novelty-screened venue.** Candidates that could
+   raise the contribution: replace the binary SBFN indicator with the network's graded
+   progression stage; replace WGI with a banking-supervision-specific capacity measure; or test
+   the extensive margin (does SBFN change who gets credit), which the paper currently lists as
+   a limitation. Each needs the WBES microdata, which is not in this repository
+   (`data/processed/*.parquet` is gitignored), so this is a re-analysis project, not an edit.
+3. **Keep shopping to novelty-screened venues as-is.** Not recommended: EDE's reason would
+   likely recur.
+
+## Next steps (post-submission, 2026-09-09, superseded by the options above)
 
 **Submitted as-is; the pre-submission items below are now moot for this round** (can't be
 undone retroactively) but stay relevant if this submission comes back for revision, or for the
