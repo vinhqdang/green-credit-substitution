@@ -2,12 +2,13 @@
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
 
 \begin{document}
 
 \begin{frontmatter}
 
-\title{Credible on Paper? Green Banking Policy, Access to Finance, and Institutional Capacity in the Greening of Firms Worldwide}
+\title{Credible on Paper? Evaluating the Effect of Green Banking Policy on Firms' Green Investment in Emerging Economies}
 
 \author[buv]{Quang-Vinh Dang\corref{cor1}}
 \ead{vinh.dq4@buv.edu.vn}
@@ -21,11 +22,11 @@
 \address[bav]{Banking Academy Vietnam, Hanoi, Vietnam}
 
 \begin{abstract}
-Green banking policies, coordinated through the Sustainable Banking and Finance Network (SBFN) across sixty-plus emerging economies, assume that supervisory guidelines directing banks to price environmental risk strengthen the link between firms' credit access and green investment. Using two independent World Bank Enterprise Survey samples (28{,}042 firms, 41 economies; 89{,}797 firms, 162 economies) and four estimators---pooled logit, Bayesian hierarchical, causal forest, and country fixed effects---we find bank credit access robustly predicts green-practice adoption (13 percentage points), but neither SBFN adoption nor regulatory quality moderates this relationship. The estimates are precise, not merely insignificant: the causal forest's credit effect is 0.072 for non-adopter firms versus 0.076 for adopter firms, and is nearly identical across regulatory-quality terciles, ruling out moderation of policy-relevant size. A country-level staggered event-study (217 economies) corroborates this at the macro level. Heterogeneity instead concentrates at firm size, relocating rather than resolving which institutional margin matters.
+More than sixty emerging and developing economies have adopted green banking guidelines through the Sustainable Banking and Finance Network (SBFN). The policy's theory of change holds that supervisory guidelines lead banks to price environmental risk, so that credit flows to firms investing in cleaner production. We evaluate two links in that chain. At firm level, using two independent World Bank Enterprise Survey samples (28{,}042 firms in 41 economies; 89{,}797 firms in 162 economies) and four estimators, bank credit is associated with 13-percentage-point higher green-practice adoption, but the association is the same in adopting and non-adopting economies (0.076 versus 0.072 in a causal forest) and does not vary with regulatory quality. At country level, a staggered-adoption event study of 217 economies finds no effect on renewable-energy share, and a CO2 association that appears to reflect which economies join. The guidelines show no detectable effect on the margin they target.
 \end{abstract}
 
 \begin{keyword}
-green banking policy \sep access to finance \sep institutional complementarity \sep firm-level green investment \sep causal forest \sep hierarchical Bayesian model
+green banking policy \sep policy evaluation \sep theory of change \sep access to finance \sep staggered difference-in-differences \sep causal forest
 \JEL G21 \sep O16 \sep Q56 \sep D22 \sep C11
 \end{keyword}
 
@@ -38,13 +39,19 @@ green banking policy \sep access to finance \sep institutional complementarity \
 \noindent\textbf{ORCID:} Quang-Vinh Dang: 0000-0002-3877-8024. Thi-Hong-Hanh Nguyen: 0009-0006-7821-7404.
 
 \vspace{0.5cm}
+\noindent\textbf{Word count:} 9{,}578 words of main text, excluding tables, figures and references; 8 tables and 6 figures.
+
+\vspace{0.5cm}
 \noindent\textbf{Acknowledgements:} We thank the Enterprise Analysis Unit of the Development Economics Global Indicators Department of the World Bank Group for making the Enterprise Surveys data available.
 
 \vspace{0.5cm}
-\noindent\textbf{Declaration of interest:} Declarations of interest: none.
+\noindent\textbf{Disclosure statement:} No potential conflict of interest was reported by the authors.
 
 \vspace{0.5cm}
 \noindent\textbf{Funding:} This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\vspace{0.5cm}
+\noindent\textbf{Data availability statement:} The firm-level microdata are available from the World Bank Enterprise Surveys (enterprisesurveys.org, free registration required) under the Surveys' terms of use. The country-level datasets constructed for this paper and the full analysis and replication code are available at \url{https://github.com/vinhqdang/green-credit-substitution}.
 
 \vspace{0.5cm}
 \noindent\textbf{CRediT authorship contribution statement:} \textbf{Quang-Vinh Dang:} Conceptualization, Methodology, Software, Formal analysis, Data curation, Writing -- original draft. \textbf{Thi-Hong-Hanh Nguyen:} Conceptualization, Investigation, Validation, Writing -- review \& editing.

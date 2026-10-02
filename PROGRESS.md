@@ -6,7 +6,43 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: desk-rejected three times; next step not yet decided
+## Status: retargeted to Journal of Development Effectiveness (2026-10-02), ready to submit
+
+**Target chosen by the authors: Journal of Development Effectiveness** (Taylor & Francis, with
+3ie). Verified: hybrid "Open Select" journal, so publishing via the subscription route costs
+nothing; no submission fee found; double-anonymized review; explicit "learning from our
+mistakes" policy that welcomes papers reporting no or negative impact. Editors-in-Chief per
+3ie's page: Marie Gaarder, Susan W. Parker, Sudhanshu Handa. **Not verified** (T&F pages
+returned 403): the word limit, abstract limit and reference style. Check these in the
+submission portal before uploading.
+
+**How the paper was redirected (no new analysis):** reframed as an evaluation of SBFN adoption
+against the policy's own theory of change.
+- New title: "Credible on Paper? Evaluating the Effect of Green Banking Policy on Firms' Green
+  Investment in Emerging Economies".
+- New 148-word abstract in evaluation terms; keywords now include policy evaluation, theory of
+  change and staggered difference-in-differences.
+- Introduction: opens with the gap between SBFN's output monitoring and firm outcomes;
+  contributions restated as evaluation contributions.
+- New Section 2.1 "The policy's theory of change and what this evaluation tests": a five-link
+  chain (adoption, bank response, credit allocation, firm response, aggregate outcome). The paper
+  tests link 4 (Section 5) and link 5 (Section 6), and states plainly that links 2 and 3 are not
+  observed, so a firm-level null cannot locate where the chain breaks.
+- Section 6 renamed from "Supplementary evidence..." to "Evaluating the aggregate outcome: a
+  staggered-adoption event study"; opening paragraph tied to link 5.
+- New Section 7.1 "Lessons for policy and for evaluation": outcome indicators alongside output
+  indicators; re-field the WBES Green Economy module to allow within-country evaluation;
+  firm-side complements to bank-side guidelines (firm-size result flagged as exploratory).
+- Manuscript re-anonymized (author block, PDF metadata, repository link withheld); author
+  details, ORCIDs, word count, T&F-style disclosure, funding and data-availability statements
+  on the separate title page. Cover letter re-addressed to the editors-in-chief and no longer
+  discusses earlier submissions.
+- Counts for the submission form: 9,578 words of main text (excluding tables, figures and
+  references), **8 tables**, 6 figures. Correction: the EDE submission form was given "6
+  tables", which was wrong; the main text had 8 tables then too.
+
+All four files compile cleanly; the compiled manuscript and supplementary PDFs contain no author
+identifiers.
 
 **Rejection 3 -- Environment and Development Economics (2026-10-01).** Manuscript EDE-2026-0765,
 submitted 2026-09-09, desk-rejected without review by Jintao Xu, Co-Editor. Stated reason: "The
