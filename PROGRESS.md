@@ -37,12 +37,64 @@ against the policy's own theory of change.
   details, ORCIDs, word count, T&F-style disclosure, funding and data-availability statements
   on the separate title page. Cover letter re-addressed to the editors-in-chief and no longer
   discusses earlier submissions.
-- Counts for the submission form: 9,578 words of main text (excluding tables, figures and
+- (Superseded by the guideline check below.) Counts at that stage: 9,578 words of main text (excluding tables, figures and
   references), **8 tables**, 6 figures. Correction: the EDE submission form was given "6
   tables", which was wrong; the main text had 8 tables then too.
 
 All four files compile cleanly; the compiled manuscript and supplementary PDFs contain no author
 identifiers.
+
+### Checked against JDE's instructions for authors (2026-10-02, text supplied by the authors)
+
+The first JDE build failed several stated requirements. Fixed:
+
+- **Length:** limit is 8,000 words *including* abstract, tables, references, captions and notes.
+  The build was 12,587. Rewrote the main text from ~10,000 to 3,783 words, moved the variable
+  definitions, sample composition and firm-size CATE tables to the supplement, and dropped ten
+  peripherally cited references. **Now 5,412 words inclusive** (abstract 195, text 3,783, tables
+  488, captions 66, references 880). Every estimate is unchanged.
+- **Abstract:** unstructured, max 200 words, and must include a short (max 100 words) statement of
+  the practical contribution to policy making. Now 195 words with a 43-word policy statement.
+- **Style:** British (-ise) spelling and single quotation marks throughout text, tables and
+  captions. Reference titles keep double quotes, as T&F's own Chicago guide requires.
+- **References:** T&F Chicago author-date. In-text citations no longer have a comma before the
+  year; three-author works list all three names. Reference list is generated from
+  `references.bib` by `latex/make_bibliography.py` into `latex/chicago_refs.tex` (full given
+  names, title case, place of publication for books), restricted to cited keys (32).
+- **Order:** tables (one per page) and figures now follow the references, via `endfloat`.
+- **Footer:** removed the elsarticle 'Preprint submitted to Elsevier' footer.
+- **Two manuscripts:** `manuscript.pdf` (anonymous) and `manuscript_with_authors.pdf`, both from
+  `manuscript.tex`; the second sets `\withauthors` and adds names, affiliations, emails, ORCIDs,
+  the repository link and the contributors' notes. The separate `titlepage.tex` was removed as
+  redundant.
+- **Statements:** acknowledgements, disclosure ('The authors report there are no competing
+  interests to declare.'), funding, generative-AI declaration and data availability, in T&F order.
+- **Upload bundle:** `python3 latex/make_submission_files.py` writes `latex/submission_jde/`
+  (git-ignored): both manuscript PDFs, the supplement, the cover letter, `Figure1.tif` to
+  `Figure6.tif` (300 dpi, numbered in manuscript order) and `LaTeX_source_files.zip`, which was
+  checked to compile on its own.
+- **Supplement:** renumbered S1 to S8 for tables and sections, so main-text references match.
+- Main-text counts for the submission form: 5,412 words, 5 tables, 6 figures.
+
+**Still needed from the authors before upload:**
+
+1. **Biographical note for each author** (max 200 words each). The with-authors manuscript has
+   marked placeholders under 'Notes on contributors'.
+2. **Confirm the generative-AI declaration.** The old wording ('help polish the writing')
+   understated actual use, so it now reads that AI tools assisted with drafting, editing and
+   restructuring the text and with writing and checking analysis code. T&F's guidance also asks
+   authors to name the tool; the statement currently does not.
+3. **Colour figures:** colour online is free, colour in print costs GBP 300 per figure. Choose
+   online-only colour when asked.
+4. Optional: T&F encourages depositing the data in a repository with a DOI (e.g. Zenodo) rather
+   than GitHub alone.
+
+Not required: the JDE author reflexivity statement applies to primary data collection in a
+low- or middle-income country with no local author. This paper uses secondary WBES data.
+
+CRediT roles for the portal: Quang-Vinh Dang, Conceptualization, Methodology, Software, Formal
+analysis, Data curation, Writing -- original draft. Thi-Hong-Hanh Nguyen, Conceptualization,
+Investigation, Validation, Writing -- review & editing.
 
 **Rejection 3 -- Environment and Development Economics (2026-10-01).** Manuscript EDE-2026-0765,
 submitted 2026-09-09, desk-rejected without review by Jintao Xu, Co-Editor. Stated reason: "The

@@ -8,6 +8,8 @@
 \usepackage{longtable}
 \usepackage{array}
 \usepackage{hyperref}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
 
 \title{Supplementary Material for \\ \emph{Credible on Paper? Evaluating the Effect of Green Banking Policy on Firms' Green Investment in Emerging Economies}}
 \author{}
@@ -16,28 +18,131 @@
 \begin{document}
 \maketitle
 
-This file reports supplementary tables referenced in the main text: a small-sample supplementary
-check on a narrower outcome (Table~S1), additional robustness checks and their multiple-testing
-correction (Tables~S2--S3), the full per-economy SBFN and regulatory-quality coding underlying the
-primary sample (Table~S4), Bayesian convergence diagnostics (Section~S5), and the global sample's
-SBFN membership by region (Table~S6). Section and table numbers here (S1, S2, \ldots) are internal
-to this supplementary file and distinct from the main text's own numbering, which this file's
-prose refers to descriptively (e.g., ``the main text's baseline logit table'') rather than by
-number, since table numbers in the main text are subject to change on revision.
+This file reports material referred to in the main text. Tables~S1 and S2 give variable definitions and the composition of the primary sample. Table~S3 reports the causal forest's conditional effects by firm-size category. Table~S4 describes the small-sample check on waste-minimisation adoption, and Tables~S5 and S6 report additional robustness checks and the multiple-testing correction. Table~S7 gives the SBFN and regulatory-quality coding for every primary and supplementary economy, Section~S7 the Bayesian convergence diagnostics, and Table~S8 the global sample's SBFN membership by region. Main-text tables are referred to by description rather than by number.
 
-\section{Small-sample supplementary check: waste-minimization adoption}
+\section{Variable definitions}
+\label{sec:s-vardef}
+
+Table~\ref{tab:s-vardef} lists every variable used in the firm-level analysis, with its WBES question code and source.
+
+\begin{table}[htbp]
+\centering
+\caption{Variable definitions and sources.}
+\label{tab:s-vardef}
+\begin{scriptsize}
+\begin{tabular}{p{3.2cm}p{3.5cm}p{2.1cm}p{4.1cm}}
+\toprule
+Variable & Definition & WBES code & Source \\
+\midrule
+\texttt{green\_\allowbreak adoption\_\allowbreak binary} & =1 if firm adopted $\geq$1 of 7 Green Economy practices in last 3 years & BMGc23b, c23d, c23e, c23f, c23j, c25, e5 & WBES Green Economy Module (2018--2020) \\
+\texttt{fin\_\allowbreak has\_\allowbreak credit\_\allowbreak line} & =1 if firm has a line of credit or loan & K8 & WBES Access to Finance Module \\
+\texttt{sbfn\_\allowbreak member} & =1 if SBFN policy adopted as of survey year & n/a & SBFN Global Progress Reports; data.sbfnetwork.org \\
+\texttt{wgi\_\allowbreak regulatory\_\allowbreak quality} & WGI Regulatory Quality estimate, survey year & n/a & World Bank DataBank API (\texttt{GOV\_\allowbreak WGI\_\allowbreak RQ\_\allowbreak EST}) \\
+\texttt{size\_cat} & Firm size stratum (Small/Medium/Large) & A6A & WBES Sampling Frame \\
+\texttt{sector\_\allowbreak broad} & Broad sector (Manufacturing/Services/Construction) & A4AX & WBES Sampling Frame \\
+\texttt{log\_sales} & Log of total annual sales & D2 & WBES General Information Module \\
+\texttt{foreign\_\allowbreak owned\_\allowbreak dummy} & =1 if any foreign ownership share $>$0\% & B2B & WBES Ownership Module \\
+\texttt{exporter\_\allowbreak dummy} & =1 if any export sales share $>$0\% & D3B, D3C & WBES Sales Module \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\end{table}
+
+\section{Sample composition}
+\label{sec:s-composition}
+
+Table~\ref{tab:s-composition} reports, for each of the 41 primary-sample economies, the number of firms, survey year, SBFN status, regulatory quality, and unconditional rates of green-practice adoption and bank credit.
+
+{\footnotesize
+\begin{longtable}{p{3.4cm}rrrrrr}
+\caption{Sample composition, by economy.} \label{tab:s-composition} \\
+\toprule
+Economy & $N$ firms & Year & SBFN & Reg.\ qual.\ & Green rate & Credit rate \\
+\midrule
+\endfirsthead
+\toprule
+Economy & $N$ firms & Year & SBFN & Reg.\ qual.\ & Green rate & Credit rate \\
+\midrule
+\endhead
+Albania 2019 & 377 & 2019 & 0 & 0.09 & 0.609 & 0.407 \\
+Armenia 2020 & 546 & 2020 & 0 & 0.21 & 0.684 & 0.482 \\
+Azerbaijan 2019 & 225 & 2019 & 0 & -0.10 & 0.418 & 0.180 \\
+Belarus 2018 & 600 & 2018 & 0 & -0.79 & 0.662 & 0.425 \\
+Bosnia and Herzegovina 2019 & 362 & 2019 & 0 & -0.38 & 0.581 & 0.565 \\
+Bulgaria 2019 & 772 & 2019 & 0 & 0.46 & 0.604 & 0.467 \\
+Croatia 2019 & 404 & 2019 & 0 & 0.38 & 0.708 & 0.448 \\
+Cyprus 2019 & 240 & 2019 & 0 & 1.04 & 0.746 & 0.711 \\
+Czechia 2019 & 502 & 2019 & 0 & 1.12 & 0.725 & 0.526 \\
+Egypt 2020 & 3{,}075 & 2020 & 1 & -0.64 & 0.303 & 0.065 \\
+Estonia 2019 & 360 & 2019 & 0 & 1.54 & 0.738 & 0.412 \\
+Georgia 2019 & 581 & 2019 & 1 & 0.88 & 0.441 & 0.501 \\
+Greece 2018 & 600 & 2018 & 0 & 0.29 & 0.825 & 0.499 \\
+Hungary 2019 & 805 & 2019 & 0 & 0.46 & 0.673 & 0.537 \\
+Italy 2019 & 760 & 2019 & 0 & 0.70 & 0.506 & 0.230 \\
+Jordan 2019 & 601 & 2019 & 1 & 0.16 & 0.471 & 0.248 \\
+Kazakhstan 2019 & 1{,}446 & 2019 & 0 & 0.11 & 0.519 & 0.257 \\
+Kosovo 2019 & 271 & 2019 & 0 & -0.38 & 0.698 & 0.425 \\
+Kyrgyz Republic 2019 & 360 & 2019 & 1 & -0.42 & 0.606 & 0.299 \\
+Latvia 2019 & 359 & 2019 & 0 & 1.00 & 0.824 & 0.386 \\
+Lebanon 2019 & 532 & 2019 & 0 & -0.56 & 0.452 & 0.365 \\
+Lithuania 2019 & 358 & 2019 & 0 & 0.98 & 0.678 & 0.342 \\
+Malta 2019 & 242 & 2019 & 0 & 0.83 & 0.901 & 0.479 \\
+Moldova 2019 & 360 & 2019 & 0 & -0.11 & 0.619 & 0.328 \\
+Mongolia 2019 & 360 & 2019 & 1 & -0.07 & 0.625 & 0.492 \\
+Montenegro 2019 & 150 & 2019 & 0 & 0.29 & 0.387 & 0.576 \\
+Morocco 2019 & 1{,}096 & 2019 & 1 & 0.03 & 0.478 & 0.251 \\
+North Macedonia 2019 & 360 & 2019 & 0 & 0.19 & 0.572 & 0.508 \\
+Poland 2019 & 1{,}369 & 2019 & 0 & 0.83 & 0.569 & 0.403 \\
+Portugal 2019 & 1{,}062 & 2019 & 0 & 1.00 & 0.812 & 0.600 \\
+Romania 2019 & 814 & 2019 & 0 & 0.36 & 0.438 & 0.474 \\
+Russia 2019 & 1{,}323 & 2019 & 0 & -0.35 & 0.503 & 0.310 \\
+Serbia 2019 & 361 & 2019 & 0 & 0.06 & 0.654 & 0.585 \\
+Slovak Republic 2019 & 429 & 2019 & 0 & 0.73 & 0.782 & 0.386 \\
+Slovenia 2019 & 409 & 2019 & 0 & 0.88 & 0.793 & 0.674 \\
+Tajikistan 2019 & 352 & 2019 & 0 & -0.80 & 0.523 & 0.194 \\
+Tunisia 2020 & 615 & 2020 & 1 & -0.11 & 0.391 & 0.413 \\
+Türkiye 2019 & 1{,}663 & 2019 & 1 & -0.02 & 0.346 & 0.345 \\
+Ukraine 2019 & 1{,}337 & 2019 & 0 & -0.29 & 0.715 & 0.244 \\
+Uzbekistan 2019 & 1{,}239 & 2019 & 0 & -0.92 & 0.751 & 0.240 \\
+West Bank and Gaza 2019 & 365 & 2019 & 0 & -0.15 & 0.428 & 0.178 \\
+\bottomrule
+\multicolumn{7}{p{13.5cm}}{\footnotesize \emph{Note:} Reg.\ qual.\ is the WGI Regulatory Quality estimate for the survey year. Green rate is the unconditional share of firms reporting adoption of at least one Green Economy practice. Credit rate is the share of firms reporting a bank credit line or loan.}
+\end{longtable}
+}
+
+\section{Causal forest effects by firm size}
+\label{sec:s-sizecate}
+
+Table~\ref{tab:s-sizecate} reports the causal forest's conditional average treatment effects of bank credit by the Enterprise Surveys' firm-size strata. The estimates show no monotonic gradient, and all intervals overlap and include zero.
+
+\begin{table}[htbp]
+\centering
+\caption{Causal forest CATEs by firm-size category.}
+\label{tab:s-sizecate}
+\begin{tabular}{lccc}
+\toprule
+Size category & CATE & 95\% CI low & 95\% CI high \\
+\midrule
+Small & 0.0797 & -0.0409 & 0.2004 \\
+Medium & 0.0747 & -0.0344 & 0.1838 \\
+Large & 0.0569 & -0.0428 & 0.1565 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Small-sample supplementary check: waste-minimisation adoption}
 \label{sec:s-extension}
 
 Before the global-sample replication that is the paper's second major test, we report a smaller
-supplementary check using waste-minimization adoption---an outcome not captured in the standardized
+supplementary check using waste-minimisation adoption---an outcome not captured in the standardised
 cross-country database underlying the global sample, and so a genuinely independent (if
 small-sample) data point---available in four economies whose Green Economy modules asked this item
 under directly comparable wording: India 2022, Indonesia 2023, Peru 2023, and Timor-Leste 2021.
 Three of these four are themselves SBFN members at various progression stages, so this sample
 cannot re-test the SBFN-adoption contrast; what it can test is whether the credit-to-green channel
 documented in the main text's baseline, hierarchical, and causal-forest results is a peculiarity of
-the ECA-MENA sample or generalizes elsewhere. It generalizes: pooled across the four economies,
-having an overdraft facility is associated with significantly higher odds of waste-minimization
+the ECA-MENA sample or generalises elsewhere. It generalises: pooled across the four economies,
+having an overdraft facility is associated with significantly higher odds of waste-minimisation
 adoption ($b=0.422$, $p<0.001$, $N=9{,}038$, 4 countries). The direction of the core finance-green
 relationship replicates on a different continent, a different half-decade, and a narrower outcome
 definition than the one anchoring the main text's primary-sample results---a preview, on four
@@ -79,7 +184,7 @@ $p=0.011$), the SBFN main effect remains negative and significant ($b=-0.905$, $
 overdraft $\times$ SBFN interaction is now negative and significant ($b=-0.346$, $p=0.031$), the one
 interaction term in the entire paper that clears a conventional significance threshold, and it runs
 opposite to the direction H2 predicts. Using the reverse-coded perceived finance-obstacle measure in
-place of realized access, by contrast, both the main effect and its SBFN interaction are precisely
+place of realised access, by contrast, both the main effect and its SBFN interaction are precisely
 zero ($b=-0.010$, $p=0.827$; interaction $b=-0.012$, $p=0.849$)---consistent with the descriptive
 correlation noted in the main text. We read the overdraft result as suggestive rather than
 conclusive given it is one significant coefficient among more than a dozen interaction tests across
@@ -94,7 +199,7 @@ Third, splitting the sample into manufacturing ($N=13{,}340$) and services ($N=9
 shows the credit-access main effect, the SBFN main effect, and the null credit $\times$ SBFN
 interaction all replicate within each sector separately (manufacturing: credit $b=0.480$, $p<0.001$,
 interaction $b=-0.040$, $p=0.826$; services: credit $b=0.448$, $p<0.001$, interaction $b=0.195$,
-$p=0.426$)---the paper's central null is not an artifact of pooling two structurally different
+$p=0.426$)---the paper's central null is not an artefact of pooling two structurally different
 production technologies.
 
 \begin{table}[htbp]
@@ -171,7 +276,7 @@ applicable, the SBFN Multi-Tiered Progress Framework stage in force nearest the 
 exact year of the Worldwide Governance Indicators observation used. Full per-country source
 citations (the specific SBFN Global Progress Report, country addendum, or accession announcement
 consulted for every determination) are available in the replication package. The analogous
-162-economy table for the global sample is summarized by region in Table~\ref{tab:globalsbfnregion}
+162-economy table for the global sample is summarised by region in Table~\ref{tab:globalsbfnregion}
 below and provided in full in the replication package.
 
 {\footnotesize
