@@ -6,7 +6,26 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: retargeted to Journal of Development Effectiveness (2026-10-02), ready to submit
+## Status: submitted to Journal of Development Effectiveness (2026-10-02), awaiting decision
+
+**Submitted 2026-10-02** through the Taylor & Francis submission portal: anonymous manuscript,
+manuscript with author details, supplementary material, cover letter, Figure1-6.tif and the
+LaTeX source zip, as built by `latex/make_submission_files.py`. Form values: 5,412 words
+(inclusive count), 5 tables, 6 figures, abstract 191 words. Manuscript ID not yet recorded; add
+it here when the acknowledgement email arrives.
+
+**Open items after submission:**
+- The with-author-details manuscript in this repository still has placeholder text under 'Notes
+  on contributors' (biographical notes). If that file was uploaded unchanged, the editorial
+  office's copy has placeholders too. Reviewers see only the anonymous version, so review is
+  unaffected, but the bios must be supplied, at the latest on acceptance.
+- The generative-AI declaration was revised to describe actual use (drafting, editing and
+  restructuring the text; writing and checking analysis code) but does not name the tool. The
+  authors had not confirmed this wording before submission.
+- If asked about colour figures, choose colour online only (print colour costs GBP 300 per
+  figure).
+
+Next step: nothing until the journal responds. A desk decision is likely within a few weeks.
 
 **Target chosen by the authors: Journal of Development Effectiveness** (Taylor & Francis, with
 3ie). Verified: hybrid "Open Select" journal, so publishing via the subscription route costs
