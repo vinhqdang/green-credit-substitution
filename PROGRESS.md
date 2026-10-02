@@ -369,7 +369,7 @@ Editorial Manager form values used at submission:
 |---|---|---|---|
 | Environment and Development Economics (CUP) | none | $0 subscription route (gold OA GBP 2,610 optional) | 21 typeset pp. |
 | Business Strategy and the Environment (Wiley) | none | $0 subscription route (OA $4,700 optional) | -- |
-| PLOS Climate | none | **$0 guaranteed** -- APC auto-waived for Research4Life Group A/B corresponding authors; Vietnam is Group B | -- |
+| PLOS Climate | none | **NOT free -- corrected 2026-10-02.** APC $2,596; Research4Life Group B (Vietnam) is reduced to $940, not waived. Only Group A is free. See the correction under "Options after the EDE rejection" | -- |
 | World Development (Elsevier) | not on Elsevier's fee list | $0 subscription route | -- |
 | Journal of Environmental Management; Energy Policy | not on Elsevier's fee list | $0 subscription route | 7,000-10,000 words |
 | Journal of Development Effectiveness (T&F); Emerging Markets Finance and Trade (T&F) | none | $0 subscription route | -- |
@@ -505,12 +505,19 @@ references): `manuscript.tex` (61 pp., real author names in PDF metadata), `supp
 
 ## Options after the EDE rejection (2026-10-02, not yet agreed)
 
-1. **Venue whose screen is soundness, not novelty.** PLOS Climate states that it judges
-   methodological validity and explicitly not novelty or significance, welcomes null results,
-   and waives fees automatically for Research4Life Group B corresponding authors (Vietnam).
-   It is the one shortlisted venue whose stated criteria directly answer EDE's objection.
-   Journal of Development Effectiveness has a documented null-welcoming policy but is
-   impact-evaluation oriented, so the cross-sectional firm design is a weaker fit there.
+1. **Free venue (hybrid journal, decline open access, pay $0).** The authors cannot pay an APC.
+   **Correction:** the earlier claim that PLOS Climate is free for Vietnam was wrong. PLOS's
+   own fees page (checked 2026-10-02) says Group A authors publish free, but Group B authors
+   pay a reduced $940 for PLOS Climate (list price $2,596). A web-search summary also says
+   Vietnam graduates out of Research4Life on 2027-01-01, which would remove even that discount;
+   research4life.org returned 403, so this is unconfirmed. PLOS is therefore out. Fully free
+   options are hybrid journals with no submission fee, publishing via the subscription route:
+   - Journal of Development Effectiveness (Taylor & Francis): explicitly welcomes "no, or a
+     negative, impact" results. Weak spot: it is impact-evaluation oriented, and the firm-level
+     design is cross-sectional.
+   - Review of Development Economics (Wiley): has published a near-identical Enterprise
+     Surveys low-carbon-transition paper (2025), median length 18 pp., with a lower
+     identification bar than the journals tried so far.
 2. **Strengthen the substance before another novelty-screened venue.** Candidates that could
    raise the contribution: replace the binary SBFN indicator with the network's graded
    progression stage; replace WGI with a banking-supervision-specific capacity measure; or test
