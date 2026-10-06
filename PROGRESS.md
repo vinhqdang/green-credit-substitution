@@ -6,7 +6,23 @@ session tied to the RMIT account/affiliation, not BUV. Flagging here so this can
 e.g. to check whether anything needs reconciling against RMIT's own AI-use or institutional
 policies before submission, given the paper's corresponding author is listed under BUV.
 
-## Status: submitted to Journal of Development Effectiveness (2026-10-02), awaiting decision
+## Status: JDE submission returned for corrections (2026-10-06), to be resubmitted
+
+**2026-10-06: the JDE editorial office unsubmitted the manuscript** (portal record 261419443)
+for two administrative defects, so it is NOT under review and the note below saying 'awaiting
+decision' is out of date:
+1. The anonymous manuscript contained an Acknowledgements section. Fixed: the section now sits
+   inside the `\withauthors` branch of `latex/manuscript.tex`, so only the with-author-details
+   copy has it. Both PDFs rebuilt and checked; the upload bundle was regenerated.
+2. The corresponding author's email in the portal differs from the one in the manuscript
+   (`vinh.dq4@buv.edu.vn`). Not yet resolved: the authors must either change the portal account
+   email to match the manuscript or tell us which address to put in the manuscript. Both copies
+   must carry the same address.
+
+To resubmit: author dashboard at https://rp.tandfonline.com/dashboard/, find the manuscript,
+click 'Resume', and replace the anonymous manuscript with the rebuilt PDF.
+
+Original submission note (superseded):
 
 **Submitted 2026-10-02** through the Taylor & Francis submission portal: anonymous manuscript,
 manuscript with author details, supplementary material, cover letter, Figure1-6.tif and the
