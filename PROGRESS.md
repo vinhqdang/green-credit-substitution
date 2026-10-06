@@ -14,13 +14,15 @@ decision' is out of date:
 1. The anonymous manuscript contained an Acknowledgements section. Fixed: the section now sits
    inside the `\withauthors` branch of `latex/manuscript.tex`, so only the with-author-details
    copy has it. Both PDFs rebuilt and checked; the upload bundle was regenerated.
-2. The corresponding author's email in the portal differs from the one in the manuscript
-   (`vinh.dq4@buv.edu.vn`). Not yet resolved: the authors must either change the portal account
-   email to match the manuscript or tell us which address to put in the manuscript. Both copies
-   must carry the same address.
+2. The corresponding author's email in the portal (`dqvinh87@gmail.com`, which the authors cannot
+   edit) differed from the manuscript (`vinh.dq4@buv.edu.vn`). Fixed by changing the manuscript
+   and the cover letter to `dqvinh87@gmail.com`; both PDFs and the cover letter were rebuilt and
+   checked. The co-author's email is unchanged. Note this makes the corresponding-author address
+   a personal Gmail rather than the BUV address; the affiliation line still says BUV.
 
 To resubmit: author dashboard at https://rp.tandfonline.com/dashboard/, find the manuscript,
-click 'Resume', and replace the anonymous manuscript with the rebuilt PDF.
+click 'Resume', and replace the anonymous manuscript, the manuscript with author details and
+the cover letter with the rebuilt PDFs in `latex/submission_jde/`.
 
 Original submission note (superseded):
 

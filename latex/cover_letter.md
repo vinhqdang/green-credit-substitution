@@ -23,7 +23,7 @@ Sincerely,
 
 Quang-Vinh Dang (corresponding author)
 British University Vietnam, Hung Yen, Vietnam
-vinh.dq4@buv.edu.vn
+dqvinh87@gmail.com
 
 Thi-Hong-Hanh Nguyen
 Banking Academy Vietnam, Hanoi, Vietnam
